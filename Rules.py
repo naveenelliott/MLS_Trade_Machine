@@ -60,7 +60,7 @@ overall_players['age'] = overall_players['birth_date'].apply(calculate_age)
 del overall_players['birth_date'], overall_players['guaranteed_compensation']
 
 overall_players.loc[overall_players['player_name'] == 'Jasper Löeffelsend', 'nationality'] = 'Germany'
-overall_players.loc[overall_players['player_name'] == 'Jasper Löeffelsend', 'nationality'] = 'USA'
+overall_players.loc[overall_players['player_name'] == 'Noah Cobb', 'nationality'] = 'USA'
 
 overall_players['American'] = (overall_players['nationality'] == 'USA').astype(int)
 
