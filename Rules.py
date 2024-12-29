@@ -75,4 +75,4 @@ overall_players.loc[overall_players['player_name'] == 'Noah Cobb', 'age'] = 19
 
 del overall_players['nationality']
 
-
+overall_players.to_csv('Processed_ASI_Data.csv', index=False)
