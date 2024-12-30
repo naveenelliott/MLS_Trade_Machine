@@ -75,4 +75,39 @@ overall_players.loc[overall_players['player_name'] == 'Noah Cobb', 'age'] = 19
 
 del overall_players['nationality']
 
+team_mapping = {
+    'COL': 'Colorado Rapids',
+    'SEA': 'Seattle Sounders FC',
+    'CHI': 'Chicago Fire FC',
+    'FCD': 'FC Dallas',
+    'NER': 'New England Revolution',
+    'CLT': 'Charlotte FC',
+    'RSL': 'Real Salt Lake',
+    'MIN': 'Minnesota United FC',
+    'HOU': 'Houston Dynamo FC',
+    'SJE': 'San Jose Earthquakes',
+    'STL': 'St. Louis City SC',
+    'NSH': 'Nashville SC',
+    'MTL': 'CF Montréal',
+    'DCU': 'D.C. United',
+    'NYC': 'New York City FC',
+    'LAG': 'LA Galaxy',
+    'CIN': 'FC Cincinnati',
+    'MIA': 'Inter Miami CF',
+    'SKC': 'Sporting Kansas City',
+    'ATL': 'Atlanta United FC',
+    'LAFC': 'Los Angeles FC',
+    'CLB': 'Columbus Crew',
+    'ATX': 'Austin FC',
+    'POR': 'Portland Timbers',
+    'NYRB': 'New York Red Bulls',
+    'ORL': 'Orlando City SC',
+    'VAN': 'Vancouver Whitecaps FC',
+    'PHI': 'Philadelphia Union',
+    'TOR': 'Toronto FC'
+}
+
+overall_players['team_name'] = overall_players['team_abbreviation'].map(team_mapping)
+
+
 overall_players.to_csv('Processed_ASI_Data.csv', index=False)
