@@ -7,14 +7,76 @@ asi_data = pd.read_csv('Processed_ASI_Data.csv')
 # Page configuration
 st.set_page_config(page_title='MLS Trade Machine', page_icon='Handshake.png')
 
+
 # App title
-st.title("MLS Trade Machine")
+st.markdown(
+    """
+    <style>
+    @font-face {
+        font-family: 'AccidentalPresidency';
+        src: url('AccidentalPresidency.ttf');
+    }
+    .center-title {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        font-family: 'AccidentalPresidency', sans-serif;
+    }
+    </style>
+    <h1 class="center-title">MLS Trade Machine</h1>
+    """,
+    unsafe_allow_html=True
+)
+
+
+st.markdown(
+    """
+    <style>
+    @font-face {
+        font-family: 'Belanosima';
+        src: url('Belanosima-SemiBold.ttf'); /* Ensure the file is accessible */
+    }
+    .subheader-text {
+        font-family: 'Belanosima', sans-serif;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: black; /* Optional: Customize the color */
+        margin-bottom: 0.5em; /* Add space below the subheader */
+    }
+    </style>
+    <div class="subheader-text">
+        This application simplifies the rules of MLS to determine whether a team can acquire specific player(s).
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Description
-st.markdown("Select the two teams to view players to trade between teams.")
+st.markdown(
+    """
+    <style>
+    @font-face {
+        font-family: 'CookbookNormalRegular';
+        src: url('CookbookNormalRegular-6YmjD.ttf');
+    }
+    .description-text {
+        font-family: 'CookbookNormalRegular', sans-serif;
+        font-size: 0.95em;
+        line-height: 1.6; /* Adjust spacing for readability */
+        margin-bottom: 0.7em; /* Add space below the subheader */
+    }
+    </style>
+    <div class="description-text">
+        1) Select the two teams you would like to make a transaction between OR select a first team and toggle the free agents button.<br>
+        2) If two teams are selected, then toggle the player(s) you would like to trade between teams. If Free Agents are toggled, type the desired free agent into the search box and select their name.<br>
+        3) Scroll down to see whether a team can make that transaction.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Create two columns for team selection
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 # Get the unique team names and sort them
 teams = sorted(list(asi_data['team_name'].unique()))
@@ -36,7 +98,7 @@ selected_team2 = st.session_state.get('selected_team2', teams_for_second_selecti
 if selected_team2 not in teams_for_second_selection:
     selected_team2 = teams_for_second_selection[0]  # Default to the first available team if invalid
 
-with col2:
+with col3:
     selected_team2 = st.selectbox('Choose the Second Team:', teams_for_second_selection, index=teams_for_second_selection.index(selected_team2))
     st.session_state['selected_team2'] = selected_team2
 
@@ -101,7 +163,7 @@ with col1:
         if st.checkbox(player['player_name'], key=f"team1_{player['player_name']}"):
             selected_players_team1.append(player)
 
-with col2:
+with col3:
     for _, player in second_team_players.iterrows():
         if st.checkbox(player['player_name'], key=f"team2_{player['player_name']}"):
             selected_players_team2.append(player)
