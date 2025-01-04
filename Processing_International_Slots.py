@@ -37,8 +37,8 @@ combined_df["NO."] = (
 )
 
 
-combined_df.to_csv('INTERNATIONAL_SLOTS.csv')
+combined_df.to_csv('INTERNATIONAL_SLOTS.csv', index=False)
 
 slot_numbers = combined_df.groupby("Team").size().reset_index(name="Slot Numbers")
 
-slot_numbers.to_csv('INT_SLOT_NUMBERS.csv')
+slot_numbers.to_csv('INT_SLOT_NUMBERS.csv', index=False)

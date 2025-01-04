@@ -1,664 +1,688 @@
-player_name,primary_broad_position,primary_general_position,season_name,base_salary,ASA_team_abbreviation,age,American,Roster Category,Player Category,Player Status,website_team
-wayne frederick,MF,AM,2024.0,71401.0,COL,20.0,0,,,,colorado
-jonathan lewis,MF,W,2024.0,410000.0,COL,27.0,1,Senior,,,colorado
-michael edwards,DF,CB,2024.0,130000.0,COL,24.0,1,Supplemental Slots 21-24,Homegrown,,colorado
-matthew edwards,DF,CB,2024.0,71401.0,ATL,21.0,1,Supplemental Slots 21-24,Homegrown,,colorado
-jackson travis,DF,FB,2024.0,89716.0,COL,20.0,1,,,,colorado
-kimani stewart-baynes,MF,W,2024.0,71401.0,COL,19.0,0,,,,colorado
-djordje mihailovic,MF,AM,2024.0,1350000.0,COL,26.0,1,Senior,"Homegrown, Designated Player",,colorado
-darren yapi,FW,ST,2024.0,89716.0,COL,20.0,1,Supplemental Slots 25-28,Homegrown,,colorado
-keegan rosenberry,DF,FB,2024.0,400000.0,COL,31.0,1,Senior,,,colorado
-cole bassett,MF,AM,2024.0,850000.0,COL,23.0,1,Senior,Homegrown,,colorado
-zack steffen,GK,GK,2024.0,900000.0,COL,29.0,1,,,,colorado
-connor ronan,MF,DM,2024.0,470000.0,COL,26.0,0,Senior,International,,colorado
-andreas maxs,DF,CB,2024.0,1150000.0,COL,30.0,0,Senior,International,,colorado
-calvin harris,MF,W,2024.0,125000.0,COL,24.0,0,Supplemental Slots 21-24,Generation adidas,,colorado
-adam beaudry,GK,GK,2024.0,71401.0,COL,18.0,1,,Homegrown,,colorado
-lalas abubakar,DF,CB,2024.0,665000.0,COL,30.0,0,Senior,,,dallas
-sam vines,DF,FB,2024.0,850000.0,COL,25.0,1,Supplemental Slots 21-24,"Homegrown, U22 Initiative",,colorado
-omir fernandez,MF,W,2024.0,575000.0,COL,25.0,1,Senior,Homegrown,,colorado
-oliver larraz,MF,DM,2024.0,100000.0,COL,23.0,1,Supplemental Slots 29-30,Homegrown,,colorado
-sebastian anderson,DF,FB,2024.0,150000.0,COL,22.0,1,Supplemental Slots 21-24,Homegrown,,colorado
-cody baker,DF,FB,2024.0,89716.0,SEA,20.0,1,Supplemental Slots 29-30,Homegrown,,seattle
-georgi minoungou,MF,W,2024.0,89716.0,SEA,22.0,0,,,,seattle
-paul rothrock,MF,W,2024.0,89716.0,SEA,25.0,1,,,,seattle
-yeimar gomez andrade,DF,CB,2024.0,750000.0,SEA,32.0,0,Senior,International,,seattle
-pedro de la vega,MF,W,2024.0,785000.0,SEA,23.0,0,,Young Designated Player,,seattle
-andrew thomas,GK,GK,2024.0,150000.0,SEA,26.0,1,Supplemental Slots 21-24,,,seattle
-albert rusnak,MF,AM,2024.0,2150000.0,SEA,30.0,0,Senior,Designated Player,,seattle
-jon bell,DF,CB,2024.0,100444.0,SEA,27.0,1,Supplemental Slots 21-24,,,seattle
-jordan morris,MF,W,2024.0,1683750.0,SEA,30.0,1,Senior,,,seattle
-alex roldan,DF,FB,2024.0,465000.0,SEA,28.0,1,Senior,,,seattle
-obed vargas,MF,DM,2024.0,89716.0,SEA,19.0,1,Supplemental Slots 25-28,Homegrown,,seattle
-nouhou,DF,FB,2024.0,550000.0,SEA,27.0,0,Senior,,,seattle
-jackson ragen,DF,CB,2024.0,98261.0,SEA,26.0,1,Supplemental Slots 25-28,,,seattle
-reed baker-whiting,DF,FB,2024.0,100000.0,SEA,19.0,1,Supplemental Slots 29-30,Homegrown,,seattle
-josh atencio,MF,DM,2024.0,350000.0,SEA,22.0,1,Senior,Homegrown,,seattle
-stefan frei,GK,GK,2024.0,600000.0,SEA,38.0,1,Senior,,,seattle
-wyatt omsberg,DF,CB,2024.0,200000.0,CHI,29.0,1,Senior,,,chicago
-gaston gimenez,MF,DM,2024.0,1600000.0,CHI,33.0,0,Senior,Designated Player,,chicago
-andrew gutman,DF,FB,2024.0,600000.0,CHI,28.0,1,Senior,Homegrown,,chicago
-maren haile-selassie,MF,W,2024.0,344000.0,CHI,25.0,0,Senior,International,,chicago
-kellyn acosta,MF,CM,2024.0,1392188.0,CHI,29.0,1,Senior,,,chicago
-mauricio pineda,DF,CB,2024.0,345000.0,CHI,27.0,1,Senior,Homegrown,,chicago
-tom barlow,FW,ST,2024.0,250000.0,CHI,29.0,1,Senior,,,chicago
-spencer richey,GK,GK,2024.0,165000.0,CHI,32.0,1,Senior,,,chicago
-chris brady,GK,GK,2024.0,225000.0,CHI,20.0,1,Senior,Homegrown,,chicago
-allan arigoni,DF,FB,2024.0,462000.0,CHI,26.0,0,Senior,International,,chicago
-fabian herbers,MF,W,2024.0,400000.0,CHI,31.0,0,Senior,,,chicago
-arnaud souquet,DF,FB,2024.0,620012.0,CHI,32.0,0,Senior,,,chicago
-brian gutierrez,MF,W,2024.0,803409.0,CHI,21.0,1,Senior,"Homegrown, U22 Initiative",,chicago
-georgios koutsias,FW,ST,2024.0,470800.0,CHI,20.0,0,Senior,"International, U22 Initiative",,chicago
-javier casas,MF,DM,2024.0,89716.0,CHI,21.0,1,Supplemental Slots 25-28,Homegrown,,chicago
-rafael czichos,DF,CB,2024.0,1300000.0,CHI,34.0,0,Senior,International,,chicago
-chris mueller,MF,W,2024.0,650004.0,CHI,28.0,1,Senior,,,chicago
-jonathan dean,DF,FB,2024.0,115000.0,CHI,27.0,1,Supplemental Slots 21-24,,,chicago
-tobias salquist,DF,CB,2024.0,400000.0,CHI,29.0,0,Senior,International,,chicago
-chase gasper,DF,FB,2024.0,500000.0,CHI,28.0,1,Senior,,,chicago
-carlos teran,DF,CB,2024.0,529000.0,CHI,24.0,0,Senior,,,chicago
-justin reynolds,DF,FB,2024.0,71401.0,CHI,20.0,1,Supplemental Slots 29-30,Homegrown,,chicago
-hugo cuypers,FW,ST,2024.0,3238000.0,CHI,27.0,0,Senior,"Designated Player, International",,chicago
-ariel lassiter,DF,FB,2024.0,230000.0,CHI,30.0,0,Senior,,,chicago
-nkosi tafari,DF,CB,2024.0,347750.0,FCD,27.0,1,Supplemental Slots 25-28,,,dallas
-maarten paes,GK,GK,2024.0,325000.0,FCD,26.0,0,Senior,,,dallas
-paul arriola,MF,W,2024.0,1550000.0,FCD,29.0,1,Senior,,,dallas
-petar musa,FW,ST,2024.0,1800000.0,FCD,26.0,0,Senior,Designated Player,,dallas
-sebastian lletget,MF,CM,2024.0,750000.0,FCD,32.0,1,Senior,,,dallas
-carl sainte,MF,DM,2024.0,71401.0,FCD,22.0,0,,,,dallas
-jesus ferreira,FW,ST,2024.0,2000000.0,FCD,24.0,1,Senior,Designated Player,,dallas
-herbert endeley,DF,FB,2024.0,71401.0,FCD,23.0,1,Supplemental Slots 25-28,,,dallas
-marco farfan,DF,FB,2024.0,512000.0,FCD,26.0,1,Senior,,,dallas
-bernard kamungo,MF,W,2024.0,89716.0,FCD,22.0,0,Supplemental Slots 21-24,,,dallas
-alan velasco,FW,W,2024.0,1250000.0,FCD,22.0,0,Senior,"International, Young Designated Player",,dallas
-tomas pondeca,MF,AM,2024.0,71401.0,FCD,23.0,1,Supplemental Slots 25-28,,,dallas
-tsiki ntsabeleng,MF,CM,2024.0,89716.0,FCD,26.0,0,Supplemental Slots 21-24,,,dallas
-show,MF,CM,2024.0,462000.0,FCD,25.0,0,,,,dallas
-paxton pomykal,MF,CM,2024.0,950000.0,FCD,25.0,1,Senior,,,dallas
-sam junqua,DF,FB,2024.0,200000.0,FCD,28.0,1,Senior,,,dallas
-nolan norris,MF,CM,2024.0,89716.0,FCD,19.0,1,Supplemental Slots 29-30,Homegrown,,dallas
-sebastien ibeagha,DF,CB,2024.0,620000.0,FCD,32.0,1,Senior,,,dallas
-logan farrington,FW,ST,2024.0,71401.0,FCD,23.0,1,,,,dallas
-tarik scott,MF,W,2024.0,89716.0,FCD,19.0,1,,Homegrown,,dallas
-ryan spaulding,DF,FB,2024.0,89716.0,NER,26.0,1,Senior,,,newengland
-emmanuel boateng,MF,W,2024.0,155000.0,NER,30.0,0,Senior,,,newengland
-giacomo vrioni,FW,ST,2024.0,1700000.0,NER,26.0,0,Senior,"Designated Player, International",,newengland
-peyton miller,DF,FB,2024.0,71401.0,NER,17.0,1,,,,newengland
-aljaz ivacic,GK,GK,2024.0,385000.0,NER,30.0,0,Senior,International,,newengland
-malcolm fry,FW,ST,2024.0,71401.0,NER,19.0,1,,,,newengland
-will sands,DF,FB,2024.0,125000.0,NER,24.0,1,Supplemental Slots 21-24,Homegrown,,newengland
-matt polster,MF,DM,2024.0,550000.0,NER,31.0,1,Senior,,,newengland
-dave romney,DF,CB,2024.0,675000.0,NER,31.0,1,Senior,,,sanjose
-tommy mcnamara,MF,CM,2024.0,435000.0,NER,33.0,1,Senior,,,newengland
-luca langoni,MF,W,2024.0,610000.0,NER,22.0,0,,,,newengland
-nick lima,DF,FB,2024.0,375000.0,NER,30.0,1,Senior,,,sanjose
-ian harkes,MF,DM,2024.0,275000.0,NER,29.0,1,,,,sanjose
-mark-anthony kaye,MF,CM,2024.0,750000.0,NER,30.0,0,Senior,,,sanjose
-brandon bye,DF,FB,2024.0,375000.0,NER,29.0,1,Senior,,,newengland
-tomas chancalay,MF,W,2024.0,950000.0,NER,25.0,0,Senior,"International, Designated Player",,newengland
-dylan borrero,MF,W,2024.0,600000.0,NER,22.0,0,Senior,"International, U22 Initiative",,newengland
-xavier arreaga,DF,CB,2024.0,775000.0,NER,30.0,0,Senior,,,newengland
-andrew farrell,DF,CB,2024.0,683750.0,NER,32.0,1,Senior,,,newengland
-nacho gil,MF,W,2024.0,400000.0,NER,29.0,0,Senior,International,,newengland
-noel buck,MF,DM,2024.0,89716.0,NER,19.0,1,Supplemental Slots 25-28,Homegrown,,newengland
-jack panayotou,MF,W,2024.0,89716.0,NER,20.0,1,Supplemental Slots 29-30,Homegrown,,newengland
-esmir bajraktarevic,MF,W,2024.0,115000.0,NER,19.0,1,Senior,Homegrown,,newengland
-alhassan yusuf,MF,DM,2024.0,800000.0,NER,24.0,0,,,,newengland
-tim parker,DF,CB,2024.0,1000000.0,NER,31.0,1,Senior,,,newengland
-bobby wood,FW,ST,2024.0,450000.0,NER,32.0,1,Senior,,,newengland
-ashley westwood,MF,DM,2024.0,750000.0,CLT,34.0,0,,,,charlotte
-kristijan kahlina,GK,GK,2024.0,550000.0,CLT,32.0,0,Senior,International,,charlotte
-nimfasha berchimas,MF,W,2024.0,89716.0,CLT,16.0,1,,,,charlotte
-tim ream,DF,FB,2024.0,500000.0,CLT,37.0,1,,,,charlotte
-idan toklomati,MF,W,2024.0,390000.0,CLT,20.0,0,,,,charlotte
-ben bender,MF,CM,2024.0,115000.0,CLT,23.0,1,Supplemental Slots 21-24,Generation adidas,Loaned Out,charlotte
-djibril diani,MF,DM,2024.0,260000.0,CLT,26.0,0,,,,charlotte
-liel abada,MF,W,2024.0,2300000.0,CLT,23.0,0,,,,charlotte
-nicholas scardina,MF,W,2024.0,71401.0,CLT,23.0,1,Supplemental Slots 31,,Loaned Out,charlotte
-brandt bronico,MF,DM,2024.0,350000.0,CLT,29.0,1,Senior,,,charlotte
-karol swiderski,FW,ST,2024.0,2200000.0,CLT,27.0,0,Senior,"International, Designated Player",,charlotte
-bill tuiloma,DF,CB,2024.0,460000.0,CLT,29.0,0,Senior,,,charlotte
-tyger smalls,FW,W,2024.0,71401.0,CLT,23.0,0,,,,charlotte
-nathan byrne,DF,FB,2024.0,560000.0,CLT,32.0,0,Senior,,,charlotte
-brandon cambridge,FW,W,2024.0,89716.0,CLT,22.0,0,Supplemental Slots 29-30,Homegrown,,charlotte
-andrew privett,DF,CB,2024.0,71401.0,CLT,24.0,1,Supplemental Slots 25-28,,,charlotte
-patrick agyemang,FW,ST,2024.0,71401.0,CLT,24.0,0,Supplemental Slots 25-28,,,charlotte
-jere uronen,DF,FB,2024.0,525000.0,CLT,30.0,0,Senior,International,,charlotte
-kerwin vargas,MF,W,2024.0,400000.0,CLT,22.0,0,Senior,"International, U22 Initiative",,charlotte
-adilson malanda,DF,CB,2024.0,325000.0,CLT,23.0,0,Senior,International,,charlotte
-nikola petkovic,MF,CM,2024.0,360000.0,CLT,21.0,0,,,,charlotte
-philip quinton,DF,CB,2024.0,89716.0,RSL,25.0,1,,,,saltlake
-diego luna,MF,W,2024.0,400000.0,RSL,21.0,1,Supplemental Slots 21-24,Homegrown,,saltlake
-alexandros katranis,DF,FB,2024.0,400000.0,RSL,26.0,0,,,,saltlake
-tommy silva,DF,FB,2024.0,71401.0,RSL,22.0,1,,,,saltlake
-andrew brody,DF,FB,2024.0,275000.0,RSL,29.0,1,Supplemental Slots 21-24,Homegrown,,saltlake
-anderson julio,FW,ST,2024.0,750000.0,RSL,28.0,0,Senior,International,,saltlake
-noel caliskan,MF,DM,2024.0,89716.0,RSL,24.0,0,Supplemental Slots 25-28,International,,saltlake
-nelson palacio,MF,CM,2024.0,330000.0,RSL,23.0,0,Senior,"U22 Initiative, International",,saltlake
-lachlan brook,MF,W,2024.0,252000.0,RSL,23.0,0,,,,saltlake
-brayan vera,DF,CB,2024.0,475000.0,RSL,25.0,0,Senior,,Unavailable,saltlake
-justen glad,DF,CB,2024.0,1150000.0,RSL,27.0,1,Senior,Homegrown,,saltlake
-zavier gozo,FW,ST,2024.0,71401.0,RSL,17.0,1,,,,saltlake
-matthew bell,MF,W,2024.0,71401.0,RSL,22.0,0,,,,saltlake
-dominik marczuk,MF,W,2024.0,600000.0,RSL,21.0,0,,,,saltlake
-pablo ruiz,MF,CM,2024.0,825000.0,RSL,26.0,0,Senior,,,saltlake
-gavin beavers,GK,GK,2024.0,120000.0,RSL,19.0,1,Supplemental Slots 25-28,Homegrown,Unavailable,saltlake
-bode hidalgo,DF,FB,2024.0,125000.0,RSL,22.0,1,Supplemental Slots 25-28,Homegrown,,saltlake
-cristian arango,FW,ST,2024.0,1899996.0,RSL,29.0,0,Senior,"Designated Player, International",,saltlake
-javain brown,DF,FB,2024.0,205000.0,RSL,25.0,0,Senior,,,saltlake
-emeka eneli,MF,DM,2024.0,89716.0,RSL,25.0,1,Supplemental Slots 25-28,,,saltlake
-matt crooks,MF,AM,2024.0,1000000.0,RSL,30.0,0,,,,saltlake
-diogo goncalves,MF,AM,2024.0,1650000.0,RSL,27.0,0,,,,saltlake
-zac macmath,GK,GK,2024.0,350000.0,RSL,33.0,1,Senior,,,saltlake
-braian ojeda,MF,DM,2024.0,600000.0,RSL,24.0,0,Senior,International,,saltlake
-joaquin pereyra,MF,W,2024.0,610000.0,MIN,26.0,0,,"Designated Player, International",,minnesota
-devin padelford,DF,CB,2024.0,89716.0,MIN,21.0,1,Supplemental Slots 29-30,Homegrown,,minnesota
-samuel shashoua,MF,W,2024.0,89716.0,MIN,25.0,0,Supplemental Slots 21-24,,,minnesota
-hassani dotson,MF,DM,2024.0,500000.0,MIN,27.0,1,Senior,,,minnesota
-loic mesanvi,FW,W,2024.0,71401.0,MIN,21.0,0,,,,minnesota
-michael boxall,DF,CB,2024.0,675000.0,MIN,36.0,0,Senior,,,minnesota
-jordan adebayo-smith,FW,ST,2024.0,71401.0,MIN,23.0,1,Supplemental Slots 25-28,,,minnesota
-morris duggan,DF,CB,2024.0,71401.0,MIN,24.0,0,Supplemental Slots 25-28,International,Loaned Out,minnesota
-alec smir,GK,GK,2024.0,89716.0,MIN,25.0,1,Senior,,,minnesota
-joseph rosales,DF,FB,2024.0,93988.0,MIN,24.0,0,Supplemental Slots 21-24,,,minnesota
-bongokuhle hlongwane,MF,W,2024.0,605000.0,MIN,24.0,0,Senior,U22 Initiative,,minnesota
-kelvin yeboah,FW,ST,2024.0,1225000.0,MIN,24.0,0,Senior,"Designated Player, International",,minnesota
-jefferson diaz,DF,CB,2024.0,350000.0,MIN,24.0,0,Senior,International,,minnesota
-dayne st. clair,GK,GK,2024.0,460000.0,MIN,27.0,0,Senior,,,minnesota
-alejandro bran,MF,CM,2024.0,125000.0,MIN,23.0,0,Senior,International,,minnesota
-teemu pukki,FW,ST,2024.0,3200000.0,MIN,34.0,0,Senior,"Designated Player, International",,minnesota
-robin lod,MF,W,2024.0,1500000.0,MIN,31.0,0,Senior,,,minnesota
-carlos harvey,DF,CB,2024.0,71401.0,MIN,24.0,0,Supplemental Slots 25-28,,,minnesota
-anthony markanich,DF,FB,2024.0,89716.0,MIN,25.0,1,Signed,,,minnesota
-gabe segal,FW,ST,2024.0,71401.0,HOU,23.0,1,Signed,,,houston
-ibrahim aliyu,MF,W,2024.0,450000.0,HOU,22.0,0,Senior,U22 Initiative,,houston
-coco carrasquilla,MF,W,2024.0,550000.0,HOU,26.0,0,Senior,International,,houston
-griffin dorsey,DF,FB,2024.0,475000.0,HOU,25.0,1,Senior,Generation adidas,,houston
-amine bassi,MF,AM,2024.0,605000.0,HOU,27.0,0,Senior,,,houston
-sebastian ferreira,FW,ST,2024.0,1920000.0,HOU,26.0,0,Senior,"International, Designated Player",,houston
-franco escobar,DF,FB,2024.0,475000.0,HOU,29.0,0,Senior,,,houston
-brooklyn raines,MF,CM,2024.0,100000.0,HOU,19.0,1,Signed,Homegrown,,houston
-jefferson valverde,DF,FB,2024.0,159996.0,HOU,25.0,0,,,,houston
-sebastian kowalczyk,FW,ST,2024.0,461000.0,HOU,26.0,0,Supplemental Slots 21-24,International,,houston
-ezequiel ponce,FW,ST,2024.0,2560000.0,HOU,27.0,0,,,,houston
-erik sviatchenko,DF,CB,2024.0,774996.0,HOU,33.0,0,Senior,International,,houston
-micael,DF,CB,2024.0,135000.0,HOU,24.0,0,Senior,International,,houston
-ethan bartlow,DF,CB,2024.0,250000.0,HOU,24.0,1,Senior,,,houston
-artur,MF,DM,2024.0,700000.0,HOU,28.0,0,Senior,,,houston
-lawrence ennali,MF,W,2024.0,450000.0,HOU,22.0,0,,,,houston
-michael baldisimo,MF,CM,2024.0,105000.0,SJE,24.0,0,Supplemental Slots 21-24,Homegrown,,sanjose
-jack skahan,MF,CM,2024.0,150000.0,SJE,26.0,1,Supplemental Slots 21-24,,,sanjose
-tommy thompson,DF,FB,2024.0,89716.0,SJE,29.0,1,Supplemental Slots 21-24,Homegrown,,sanjose
-cristian espinoza,MF,W,2024.0,1820000.0,SJE,29.0,0,Senior,Designated Player,,sanjose
-alfredo morales,MF,DM,2024.0,300000.0,SJE,34.0,1,Senior,,,sanjose
-preston judd,FW,ST,2024.0,89716.0,SJE,25.0,1,Supplemental Slots 21-24,,,sanjose
-daniel munie,DF,CB,2024.0,71401.0,SJE,24.0,1,Supplemental Slots 25-28,,,sanjose
-oscar verhoeven,DF,FB,2024.0,89716.0,SJE,18.0,1,Signed,Homegrown,,sanjose
-bruno wilson,DF,CB,2024.0,1000000.0,SJE,28.0,0,Senior,International,,sanjose
-tanner beason,DF,CB,2024.0,300000.0,SJE,27.0,1,Senior,,,sanjose
-niko tsakiris,MF,DM,2024.0,110000.0,SJE,19.0,1,Supplemental Slots 29-30,Homegrown,,sanjose
-will richmond,MF,W,2024.0,89716.0,SJE,24.0,1,Supplemental Slots 25-28,Homegrown,,sanjose
-william yarbrough,GK,GK,2024.0,385000.0,SJE,35.0,1,Senior,,,sanjose
-jeremy ebobisse,FW,ST,2024.0,859478.0,SJE,27.0,1,Senior,,,sanjose
-hernan lopez,MF,AM,2024.0,850000.0,SJE,24.0,0,,,,sanjose
-carlos gruezo,MF,DM,2024.0,1460000.0,SJE,29.0,0,Senior,Designated Player,,sanjose
-ousseni bouda,FW,ST,2024.0,125000.0,SJE,24.0,0,Senior,Generation adidas,,sanjose
-amahl pellegrino,MF,W,2024.0,850000.0,SJE,34.0,0,Senior,International,,sanjose
-rodrigues,DF,CB,2024.0,650000.0,SJE,27.0,0,Senior,International,,sanjose
-daniel,GK,GK,2024.0,425000.0,SJE,30.0,0,Senior,International,,sanjose
-paul marie,DF,FB,2024.0,300000.0,SJE,29.0,0,Senior,,,sanjose
-jamar ricketts,MF,W,2024.0,71401.0,SJE,23.0,1,,,,sanjose
-benji kikanovic,MF,W,2024.0,292000.0,SJE,24.0,1,Senior,,,sanjose
-indiana vassilev,MF,W,2024.0,270000.0,STL,23.0,1,Senior,,,stlouis
-jake nerwinski,DF,FB,2024.0,250000.0,STL,30.0,1,Senior,,,stlouis
-hosei kijima,MF,AM,2024.0,71401.0,STL,22.0,0,,,,stlouis
-eduard lowen,MF,CM,2024.0,1200000.0,STL,27.0,0,Senior,"Designated Player, International",,stlouis
-tomas totland,DF,FB,2024.0,273000.0,STL,25.0,0,,,,stlouis
-nokkvi thorisson,MF,W,2024.0,180000.0,STL,25.0,0,Senior,International,,stlouis
-caden glover,FW,ST,2024.0,89716.0,STL,17.0,1,,Homegrown,,stlouis
-kyle hiebert,DF,CB,2024.0,159996.0,STL,27.0,0,Senior,,Unavailable,stlouis
-roman burki,GK,GK,2024.0,1525000.0,STL,34.0,0,Senior,,Unavailable,stlouis
-henry kessler,DF,CB,2024.0,1000000.0,STL,26.0,1,Senior,,,stlouis
-akil watts,DF,FB,2024.0,74096.0,STL,24.0,1,Supplemental Slots 25-28,,,stlouis
-ben lundt,GK,GK,2024.0,125000.0,STL,29.0,0,Supplemental Slots 21-24,,,stlouis
-marcel hartel,MF,W,2024.0,1797600.0,STL,28.0,0,,"Designated Player, International",,stlouis
-chris durkin,MF,DM,2024.0,450000.0,STL,24.0,1,Supplemental Slots 25-28,"Homegrown, U22 Initiative",,stlouis
-cedric teuchert,FW,ST,2024.0,950000.0,STL,27.0,0,,,,stlouis
-rasmus alm,MF,W,2024.0,265500.0,STL,29.0,0,Senior,International,,stlouis
-tomas ostrak,MF,W,2024.0,700000.0,STL,24.0,0,Ineligible - Injured List,International,Season Ending Injury,stlouis
-josh yaro,DF,CB,2024.0,89716.0,STL,30.0,0,Senior,,,stlouis
-joakim nilsson,DF,CB,2024.0,1135000.0,STL,30.0,0,Senior,International,Injured List,stlouis
-jake girdwood-reich,MF,CM,2024.0,266200.0,STL,20.0,0,,,,stlouis
-njabulo blom,MF,DM,2024.0,300000.0,STL,25.0,0,Senior,International,,stlouis
-jannes horn,DF,FB,2024.0,318000.0,STL,27.0,0,,,,stlouis
-simon becher,FW,ST,2024.0,138000.0,STL,25.0,1,Drafted,,,stlouis
-shaq moore,DF,FB,2024.0,800000.0,NSH,28.0,1,Senior,,,nashville
-taylor washington,DF,FB,2024.0,89716.0,NSH,31.0,1,Supplemental Slots 21-24,,,nashville
-dru yearwood,MF,CM,2024.0,550000.0,NSH,24.0,0,Senior,,,nashville
-patrick yazbek,MF,CM,2024.0,375000.0,NSH,22.0,0,,,,nashville
-brent kallman,DF,CB,2024.0,89716.0,NSH,34.0,1,Senior,,,nashville
-daniel lovitz,DF,FB,2024.0,556244.0,NSH,33.0,1,Senior,,,nashville
-sean davis,MF,DM,2024.0,910000.0,NSH,31.0,1,Senior,Homegrown,,nashville
-elliot panicco,GK,GK,2024.0,114000.0,NSH,28.0,1,Supplemental Slots 21-24,,,nashville
-josh bauer,DF,CB,2024.0,94202.0,NSH,26.0,1,Supplemental Slots 21-24,,,nashville
-anibal godoy,MF,CM,2024.0,650000.0,NSH,34.0,0,Senior,,,nashville
-joe willis,GK,GK,2024.0,600000.0,NSH,36.0,1,Senior,,,nashville
-forster ajago,FW,ST,2024.0,71401.0,NSH,23.0,0,,,,nashville
-alex muyl,MF,W,2024.0,525000.0,NSH,29.0,1,Senior,Homegrown,,nashville
-julian gaines,DF,FB,2024.0,71401.0,NSH,22.0,1,Supplemental Slots 21-24,,,nashville
-isaiah jones,MF,CM,2024.0,71401.0,NSH,18.0,1,Supplemental Slots 25-28,,,nashville
-sam surridge,FW,ST,2024.0,2500000.0,NSH,26.0,0,Senior,"Designated Player, International",,nashville
-walker zimmerman,DF,CB,2024.0,3200000.0,NSH,31.0,1,Senior,,,nashville
-jack maher,DF,CB,2024.0,700000.0,NSH,25.0,1,Senior,Generation adidas,,nashville
-hany mukhtar,FW,ST,2024.0,3800000.0,NSH,29.0,0,Senior,Designated Player,,nashville
-joey skinner,MF,W,2024.0,71401.0,NSH,21.0,1,Supplemental Slots 25-28,Generation adidas,,nashville
-lukas macnaughton,DF,CB,2024.0,100000.0,NSH,29.0,0,Senior,,,nashville
-tyler boyd,MF,W,2024.0,770000.0,NSH,29.0,1,Senior,,,nashville
-teal bunbury,FW,ST,2024.0,250000.0,NSH,34.0,1,Senior,,,nashville
-amar sejdic,MF,CM,2024.0,89716.0,NSH,28.0,1,Supplemental Slots 21-24,,,nashville
-jacob shaffelburg,MF,W,2024.0,350000.0,NSH,25.0,0,Supplemental Slots 29-30,Homegrown,,nashville
-dawid bugaj,DF,FB,2024.0,240000.0,MTL,20.0,0,,,,montreal
-caden clark,MF,AM,2024.0,350000.0,MTL,21.0,1,Senior,,,montreal
-alessandro biello,MF,CM,2024.0,71401.0,MTL,18.0,0,,,,montreal
-jahkeele marshall-rutty,DF,FB,2024.0,175000.0,MTL,20.0,0,Supplemental Slots 25-28,Homegrown,,montreal
-jonathan sirois,GK,GK,2024.0,135000.0,MTL,23.0,0,Supplemental Slots 29-30,Homegrown,Professional,montreal
-nathan saliba,MF,CM,2024.0,130000.0,MTL,20.0,0,Supplemental Slots 29-30,Homegrown,,montreal
-samuel piette,MF,CM,2024.0,397375.0,MTL,30.0,0,Senior,,,montreal
-fernando alvarez,DF,CB,2024.0,225000.0,MTL,21.0,1,,,,montreal
-george campbell,DF,CB,2024.0,400000.0,MTL,23.0,1,Supplemental Slots 25-28,Homegrown,,montreal
-tom pearce,DF,FB,2024.0,450000.0,MTL,26.0,0,,,,montreal
-jules-anthony vilsaint,MF,AM,2024.0,89716.0,MTL,21.0,0,Supplemental Slots 21-24,International,,montreal
-bryce duke,MF,AM,2024.0,325000.0,MTL,23.0,1,Senior,Homegrown,,montreal
-joel waterman,DF,CB,2024.0,336000.0,MTL,28.0,0,Senior,,,montreal
-dominic iankov,MF,AM,2024.0,350000.0,MTL,24.0,0,,,,montreal
-kwadwo opoku,FW,W,2024.0,344828.0,MTL,23.0,0,Senior,International,,montreal
-sebastian breza,GK,GK,2024.0,89716.0,MTL,26.0,0,Supplemental Slots 21-24,,,montreal
-matias coccaro,FW,ST,2024.0,800000.0,MTL,27.0,0,,,,montreal
-ousman jabang,DF,CB,2024.0,71401.0,MTL,23.0,1,Supplemental Slots 25-28,,Loaned Out,montreal
-sunusi ibrahim,FW,ST,2024.0,350000.0,MTL,22.0,0,Senior,"International, U22 Initiative",,montreal
-jacob murrell,FW,ST,2024.0,71401.0,DCU,20.0,1,,,,dcunited
-jackson hopkins,MF,CM,2024.0,89716.0,DCU,20.0,1,Supplemental Slots 29-30,Homegrown,,dcunited
-jared stroud,MF,W,2024.0,230000.0,DCU,28.0,1,Supplemental Slots 21-24,,,dcunited
-aaron herrera,DF,FB,2024.0,750000.0,DCU,27.0,1,,,,columbus
-aaron herrera,DF,FB,2024.0,750000.0,DCU,27.0,1,Senior,Homegrown,,dcunited
-andres herrera,DF,FB,2024.0,650000.0,CLB,26.0,0,,,,columbus
-andres herrera,DF,FB,2024.0,650000.0,CLB,26.0,0,Senior,Homegrown,,dcunited
-mateusz klich,MF,CM,2024.0,1900000.0,DCU,34.0,0,Senior,"Designated Player, International",,dcunited
-martin rodriguez,MF,CM,2024.0,1100000.0,DCU,30.0,0,Senior,Homegrown,,skc
-memo rodriguez,MF,W,2024.0,89716.0,SKC,29.0,1,Senior,Homegrown,,skc
-theodore ku-dipietro,MF,W,2024.0,300000.0,DCU,22.0,1,Supplemental Slots 25-28,Homegrown,,dcunited
-lucas bartlett,DF,CB,2024.0,89716.0,DCU,27.0,1,Supplemental Slots 21-24,,,dcunited
-christian benteke,FW,ST,2024.0,4250000.0,DCU,34.0,0,Senior,Designated Player,,dcunited
-matti peltola,DF,CB,2024.0,681818.0,DCU,22.0,0,,,,dcunited
-kristian fletcher,FW,W,2024.0,120000.0,DCU,19.0,1,Supplemental Slots 29-30,Homegrown,,dcunited
-david schnegg,DF,FB,2024.0,400000.0,DCU,26.0,0,,,,dcunited
-conner antley,DF,FB,2024.0,89716.0,DCU,29.0,1,,,,dcunited
-matai akinmboni,DF,CB,2024.0,89716.0,DCU,18.0,1,Supplemental Slots 25-28,Homegrown,,dcunited
-boris enow,MF,CM,2024.0,585895.0,DCU,24.0,0,,,,dcunited
-garrison tubbs,DF,CB,2024.0,71401.0,DCU,22.0,1,,,,dcunited
-christopher mcvey,DF,CB,2024.0,252000.0,DCU,27.0,0,Senior,,,sandiego
-dominique badji,FW,ST,2024.0,89716.0,DCU,32.0,0,Senior,,,dcunited
-malachi jones,MF,W,2024.0,71401.0,NYC,21.0,0,,,,nyfc
-keaton parks,MF,DM,2024.0,900000.0,NYC,27.0,1,Senior,,,nyfc
-luis barraza,GK,GK,2024.0,165000.0,NYC,28.0,1,Supplemental Slots 21-24,,,nyfc
-christian mcfarlane,DF,FB,2024.0,89716.0,NYC,17.0,1,Signed,Homegrown,Unavailable,nyfc
-tayvon gray,DF,FB,2024.0,350000.0,NYC,22.0,1,Senior,Homegrown,,nyfc
-kevin o'toole,DF,FB,2024.0,175000.0,NYC,26.0,1,Signed,,,nyfc
-agustin ojeda,MF,W,2024.0,480000.0,NYC,20.0,0,,,,nyfc
-strahinja tanasijevic,DF,CB,2024.0,240000.0,NYC,27.0,0,,,,nyfc
-mitja ilenic,DF,FB,2024.0,240000.0,NYC,20.0,0,Senior,International,,nyfc
-julian fernandez,MF,W,2024.0,564000.0,NYC,20.0,0,Senior,"International, U22 Initiative",,nyfc
-julian fernandez,MF,W,2024.0,564000.0,NYC,20.0,0,,,,skc
-joaquin fernandez,DF,CB,2024.0,1000000.0,SKC,28.0,0,Senior,"International, U22 Initiative",,nyfc
-joaquin fernandez,DF,CB,2024.0,1000000.0,SKC,28.0,0,,,,skc
-monsef bakrar,FW,ST,2024.0,360000.0,NYC,23.0,0,Senior,"U22 Initiative, International",,nyfc
-alonso martinez,FW,ST,2024.0,300000.0,NYC,26.0,0,Senior,International,,nyfc
-justin haak,DF,CB,2024.0,150000.0,NYC,23.0,1,Supplemental Slots 25-28,Homegrown,Loaned Out,nyfc
-jovan mijatovic,FW,ST,2024.0,650000.0,NYC,19.0,0,,,,nyfc
-maxi moralez,MF,AM,2024.0,480000.0,NYC,37.0,0,Senior,International,,nyfc
-hannes wolf,MF,W,2024.0,1400000.0,NYC,25.0,0,,,,nyfc
-santiago rodriguez,MF,AM,2024.0,1200000.0,NYC,24.0,0,,Homegrown,,houston
-andres perea,MF,DM,2024.0,575000.0,NYC,24.0,0,Senior,,Loaned Out,nyfc
-matt freese,GK,GK,2024.0,250000.0,NYC,26.0,1,Supplemental Slots 25-28,Homegrown,,nyfc
-james sands,MF,DM,2024.0,1000000.0,NYC,24.0,1,Senior,Homegrown,,nyfc
-birk risa,DF,CB,2024.0,660000.0,NYC,26.0,0,Senior,International,,nyfc
-thiago martins,DF,CB,2024.0,2000000.0,NYC,29.0,0,Senior,"International, Designated Player",,nyfc
-eriq zavaleta,DF,CB,2024.0,89716.0,LAG,32.0,1,,,,lagalaxy
-riqui puig,MF,CM,2024.0,4000000.0,LAG,25.0,0,Senior,"International, Designated Player",,lagalaxy
-john mccarthy,GK,GK,2024.0,275000.0,LAG,32.0,1,Supplemental Slots 21-24,,,lagalaxy
-mark delgado,MF,CM,2024.0,800000.0,LAG,29.0,1,Senior,,,lagalaxy
-joseph paintsil,FW,W,2024.0,3136000.0,LAG,26.0,0,,,,lagalaxy
-novak micovic,GK,GK,2024.0,150000.0,LAG,23.0,0,,International,,lagalaxy
-julian aude,DF,FB,2024.0,325000.0,LAG,21.0,0,Senior,"U22 Initiative, International",,lagalaxy
-isaiah parente,MF,DM,2024.0,71401.0,LAG,24.0,1,Supplemental Slots 29-30,Homegrown,,lagalaxy
-emiro garces,DF,CB,2024.0,200000.0,LAG,23.0,0,,,,lagalaxy
-maya yoshida,DF,CB,2024.0,800000.0,LAG,36.0,0,Senior,International,,lagalaxy
-miguel berry,FW,ST,2024.0,175008.0,LAG,27.0,0,Senior,,,lagalaxy
-dejan joveljic,FW,ST,2024.0,683750.0,LAG,25.0,0,Senior,"International, U22 Initiative",,lagalaxy
-john nelson,DF,FB,2024.0,275000.0,LAG,26.0,1,Supplemental Slots 25-28,Generation adidas,,lagalaxy
-diego fagundez,MF,W,2024.0,1250000.0,LAG,29.0,0,Senior,,,lagalaxy
-edwin cerrillo,MF,DM,2024.0,400000.0,LAG,24.0,1,Senior,Homegrown,,lagalaxy
-mauricio cuevas,DF,FB,2024.0,125000.0,LAG,21.0,1,Supplemental Slots 21-24,Homegrown,,lagalaxy
-marco reus,MF,CM,2024.0,960000.0,LAG,35.0,0,,,,lagalaxy
-gaston brugman,MF,DM,2024.0,1200000.0,LAG,32.0,0,Senior,International,Season Ending Injury,lagalaxy
-miki yamane,DF,FB,2024.0,550000.0,LAG,31.0,0,,,,lagalaxy
-jalen neal,DF,CB,2024.0,165000.0,LAG,21.0,1,Supplemental Slots 29-30,Homegrown,,lagalaxy
-tucker lepley,MF,DM,2024.0,71401.0,LAG,22.0,1,,,,lagalaxy
-matt miazga,DF,CB,2024.0,1525000.0,CIN,29.0,1,Senior,,,cincinnati
-ian murphy,DF,CB,2024.0,89716.0,CIN,24.0,1,Supplemental Slots 25-28,,,colorado
-pavel bucha,MF,CM,2024.0,450000.0,CIN,26.0,0,,,,cincinnati
-alec kann,GK,GK,2024.0,250000.0,CIN,34.0,1,Senior,,,cincinnati
-deandre yedlin,DF,FB,2024.0,850000.0,CIN,31.0,1,Senior,,,cincinnati
-malik pinto,MF,CM,2024.0,71401.0,CIN,22.0,1,,,,cincinnati
-sergio santos,FW,ST,2024.0,800000.0,CIN,30.0,0,Senior,,,cincinnati
-nick hagglund,DF,CB,2024.0,89716.0,CIN,32.0,1,Senior,,,cincinnati
-corey baird,FW,ST,2024.0,644319.0,CIN,28.0,1,Senior,Homegrown,,cincinnati
-chidozie awaziem,DF,CB,2024.0,1080000.0,CIN,27.0,0,,,,colorado
-alvas powell,DF,FB,2024.0,250000.0,CIN,30.0,0,Senior,,,cincinnati
-kipp keller,DF,CB,2024.0,89716.0,CIN,24.0,1,Supplemental Slots 21-24,Generation adidas,,minnesota
-roman celentano,GK,GK,2024.0,400000.0,CIN,24.0,1,Supplemental Slots 21-24,Generation adidas,,cincinnati
-yamil asad,MF,W,2024.0,89716.0,CIN,30.0,0,Senior,,,cincinnati
-stiven jimenez,MF,AM,2024.0,89716.0,CIN,17.0,1,Supplemental Slots 29-30,Homegrown,Unavailable,cincinnati
-nicholas gioacchini,FW,ST,2024.0,2000004.0,CIN,24.0,1,Senior,,,cincinnati
-evan louro,GK,GK,2024.0,89716.0,CIN,28.0,1,Supplemental Slots 21-24,,,cincinnati
-london aghedo,DF,CB,2024.0,71401.0,CIN,24.0,1,Supplemental Slots 25-28,,,cincinnati
-luciano acosta,MF,AM,2024.0,2960000.0,CIN,30.0,0,Senior,Designated Player,,cincinnati
-gerardo valenzuela,FW,ST,2024.0,71401.0,CIN,20.0,1,Supplemental Slots 31,Homegrown,,cincinnati
-kevin kelsy,FW,ST,2024.0,480000.0,CIN,20.0,0,,,,cincinnati
-bret halsey,DF,FB,2024.0,89716.0,CIN,25.0,1,Supplemental Slots 21-24,Generation adidas,Loaned Out,cincinnati
-luca orellano,DF,FB,2024.0,89716.0,CIN,24.0,0,,,,cincinnati
-isaiah foster,DF,FB,2024.0,89716.0,CIN,21.0,1,Supplemental Slots 21-24,,,cincinnati
-teenage hadebe,DF,CB,2024.0,704952.0,CIN,29.0,0,Senior,"Designated Player, International",,cincinnati
-yuya kubo,MF,CM,2024.0,650000.0,CIN,31.0,0,Senior,International,,cincinnati
-obinna nwobodo,MF,CM,2024.0,1310000.0,CIN,28.0,0,Senior,"International, Designated Player",,cincinnati
-nicolas freire,DF,CB,2024.0,400000.0,MIA,30.0,0,,International,,maimi
-ian fray,DF,CB,2024.0,125000.0,MIA,22.0,1,Signed,Homegrown,Unavailable,maimi
-drake callender,GK,GK,2024.0,349992.0,MIA,27.0,1,Senior,Homegrown,,maimi
-david martinez,DF,CB,2024.0,150000.0,MIA,26.0,0,,,,lafc
-david martinez,DF,CB,2024.0,150000.0,MIA,26.0,0,,,,maimi
-david martinez,FW,W,2024.0,500000.0,LAFC,18.0,0,,,,lafc
-david martinez,FW,W,2024.0,500000.0,LAFC,18.0,0,,,,maimi
-tomas aviles,DF,CB,2024.0,384996.0,MIA,20.0,0,Senior,"International, U22 Initiative",,maimi
-benjamin cremaschi,MF,CM,2024.0,99716.0,MIA,19.0,1,Supplemental Slots 21-24,Homegrown,,maimi
-marcelo weigandt,DF,FB,2024.0,150000.0,MIA,24.0,0,,,,maimi
-julian gressel,DF,FB,2024.0,1092069.0,MIA,31.0,0,Senior,,,maimi
-leonardo campana,FW,ST,2024.0,600000.0,MIA,24.0,0,Senior,Designated Player,,maimi
-matias rojas,MF,CM,2024.0,150000.0,MIA,29.0,0,Senior,International,,maimi
-noah allen,DF,FB,2024.0,89716.0,MIA,20.0,1,Supplemental Slots 29-30,Homegrown,,maimi
-robert taylor,MF,W,2024.0,300000.0,MIA,30.0,0,Senior,,,maimi
-federico redondo,MF,CM,2024.0,150000.0,MIA,21.0,0,,"International, U22 Initiative",,maimi
-sergii kryvtsov,DF,CB,2024.0,750000.0,MIA,33.0,0,Senior,,,maimi
-sergio busquets,MF,DM,2024.0,8499996.0,MIA,36.0,0,Senior,"Designated Player, International",,maimi
-franco negri,DF,FB,2024.0,250000.0,MIA,29.0,0,Senior,,,maimi
-david ruiz,MF,CM,2024.0,71401.0,MIA,20.0,1,Supplemental Slots 25-28,,,maimi
-ryan sailor,DF,CB,2024.0,89716.0,MIA,26.0,1,Signed,,,maimi
-lawson sunderland,MF,CM,2024.0,71401.0,MIA,23.0,1,Supplemental Slots 25-28,,,maimi
-diego gomez,FW,W,2024.0,500000.0,MIA,21.0,0,Senior,"International, U22 Initiative",,maimi
-lionel messi,FW,W,2024.0,12000000.0,MIA,37.0,0,Senior,"Designated Player, International",,maimi
-jordi alba,DF,FB,2024.0,1250000.0,MIA,35.0,0,Senior,International,,maimi
-yannick bright,MF,CM,2024.0,71401.0,MIA,23.0,0,,,,maimi
-luis suarez,FW,ST,2024.0,1500000.0,MIA,37.0,0,Senior,International,,maimi
-remi walter,MF,CM,2024.0,900000.0,SKC,29.0,0,Senior,,,skc
-logan ndenbe,DF,FB,2024.0,400000.0,SKC,24.0,0,Senior,U22 Initiative,,skc
-nemanja radoja,MF,DM,2024.0,1440000.0,SKC,31.0,0,Senior,International,,skc
-tim leibold,DF,FB,2024.0,600000.0,SKC,31.0,0,Senior,International,,skc
-erik thommy,MF,CM,2024.0,1000000.0,SKC,30.0,0,Senior,Designated Player,,skc
-daniel salloi,FW,W,2024.0,1300000.0,SKC,28.0,0,Senior,Homegrown,,skc
-william agada,FW,ST,2024.0,475000.0,SKC,25.0,0,Senior,International,,skc
-andreu fontas,DF,CB,2024.0,450000.0,SKC,35.0,0,Senior,,,skc
-johnny russell,FW,W,2024.0,1000000.0,SKC,34.0,0,Senior,,,skc
-john pulskamp,GK,GK,2024.0,200000.0,SKC,23.0,1,Supplemental Slots 29-30,Homegrown,,skc
-dany rosero,DF,CB,2024.0,510000.0,SKC,31.0,0,Senior,International,,skc
-khiry shelton,FW,ST,2024.0,700000.0,SKC,31.0,1,Senior,,,skc
-robert castellanos,DF,CB,2024.0,115000.0,SKC,26.0,1,Senior,,,skc
-alenis vargas,FW,W,2024.0,71401.0,SKC,21.0,0,,,,skc
-zorhan bassong,DF,FB,2024.0,89716.0,SKC,25.0,0,Senior,,,skc
-robert voloder,DF,CB,2024.0,450000.0,SKC,23.0,0,Senior,"International, U22 Initiative",,skc
-stephen afrifa,MF,W,2024.0,71401.0,SKC,23.0,0,Supplemental Slots 25-28,International,,skc
-alan pulido,FW,ST,2024.0,3600000.0,SKC,33.0,0,Senior,Designated Player,,skc
-tim melia,GK,GK,2024.0,625000.0,SKC,38.0,1,Senior,,,skc
-brad guzan,GK,GK,2024.0,600000.0,ATL,40.0,1,Senior,,,atlanta
-daniel rios,FW,ST,2024.0,89716.0,ATL,29.0,0,Senior,,,atlanta
-stian gregersen,DF,CB,2024.0,1000000.0,ATL,29.0,0,Senior,,,atlanta
-luke brennan,MF,W,2024.0,71401.0,ATL,19.0,1,Supplemental Slots 25-28,,,atlanta
-aleksey miranchuk,MF,AM,2024.0,2400000.0,ATL,29.0,0,,,,atlanta
-jamal thiare,FW,ST,2024.0,500000.0,ATL,31.0,0,Senior,International,,atlanta
-noah cobb,DF,CB,2024.0,89716.0,ATL,19.0,1,Supplemental Slots 29-30,Homegrown,,atlanta
-ronald hernandez,DF,FB,2024.0,450000.0,ATL,27.0,0,Senior,International,,atlanta
-luis abram,DF,CB,2024.0,732275.0,ATL,28.0,0,Senior,,,atlanta
-bartosz slisz,MF,DM,2024.0,630000.0,ATL,25.0,0,Senior,,,atlanta
-derrick williams,DF,CB,2024.0,400000.0,ATL,31.0,0,Senior,,,atlanta
-efrain morales,DF,CB,2024.0,89716.0,ATL,20.0,1,Supplemental Slots 29-30,Homegrown,,atlanta
-edwin mosquera,MF,W,2024.0,400000.0,ATL,23.0,0,Senior,"International, U22 Initiative",,atlanta
-dax mccarty,MF,DM,2024.0,225000.0,ATL,37.0,1,Senior,,,atlanta
-josh cohen,GK,GK,2024.0,265000.0,ATL,32.0,1,,,,atlanta
-brooks lennon,DF,FB,2024.0,740000.0,ATL,27.0,1,Senior,,,atlanta
-ajani fortune,MF,DM,2024.0,71401.0,ATL,21.0,0,Supplemental Slots 29-30,Homegrown,,atlanta
-tyler wolff,MF,W,2024.0,150000.0,ATL,21.0,1,Supplemental Slots 29-30,Homegrown,,atlanta
-saba lobjanidze,MF,W,2024.0,900000.0,ATL,30.0,0,Senior,"Designated Player, International",,atlanta
-tristan muyumba,MF,DM,2024.0,525000.0,ATL,27.0,0,Senior,International,,atlanta
-ilie sanchez,MF,DM,2024.0,1267875.0,LAFC,34.0,0,Senior,,,lafc
-eduard atuesta,MF,DM,2024.0,689700.0,LAFC,27.0,0,Senior,,,lafc
-aaron long,DF,CB,2024.0,1259760.0,LAFC,32.0,1,Senior,,,lafc
-hugo lloris,GK,GK,2024.0,350000.0,LAFC,38.0,0,,,,lafc
-olivier giroud,FW,ST,2024.0,2800000.0,LAFC,38.0,0,,,,lafc
-cristian olivera,FW,W,2024.0,680000.0,LAFC,22.0,0,Senior,"International, U22 Initiative",,lafc
-thomas hasal,GK,GK,2024.0,89716.0,LAFC,25.0,0,Senior,Homegrown,Season Ending Injury,lafc
-nathan ordaz,FW,ST,2024.0,128500.0,LAFC,20.0,1,Supplemental Slots 29-30,Homegrown,,lafc
-omar campos,DF,FB,2024.0,675000.0,LAFC,22.0,0,,,,lafc
-carlos vela,FW,W,2024.0,325000.0,LAFC,35.0,0,Senior,,,lafc
-lewis o'brien,MF,CM,2024.0,1600000.0,LAFC,26.0,0,Senior,,,lafc
-denis bouanga,FW,W,2024.0,2920000.0,LAFC,30.0,0,Senior,Designated Player,,lafc
-eddie segura,DF,CB,2024.0,250000.0,LAFC,27.0,0,Senior,,Season Ending Injury,lafc
-mateusz bogusz,FW,ST,2024.0,675000.0,LAFC,23.0,0,Senior,International,,lafc
-tomas angel,FW,ST,2024.0,250000.0,LAFC,21.0,0,,,,sandiego
-sergi palencia,DF,FB,2024.0,350004.0,LAFC,28.0,0,Senior,International,,lafc
-ryan hollingshead,DF,FB,2024.0,645000.0,LAFC,33.0,1,Senior,,,lafc
-timothy tillman,MF,CM,2024.0,600000.0,LAFC,25.0,0,Senior,,,lafc
-jesus murillo,DF,CB,2024.0,500000.0,LAFC,30.0,0,Senior,,,lafc
-erik duenas,MF,CM,2024.0,185500.0,LAFC,20.0,1,Supplemental Slots 21-24,Homegrown,,lafc
-max arfsten,DF,FB,2024.0,89716.0,CLB,23.0,1,Supplemental Slots 25-28,,,columbus
-dylan chambost,MF,CM,2024.0,375000.0,CLB,27.0,0,,,,columbus
-aziel jackson,MF,AM,2024.0,98261.0,CLB,23.0,1,Supplemental Slots 25-28,,Unavailable,columbus
-yevhen cheberko,DF,CB,2024.0,505000.0,CLB,26.0,0,Senior,International,,columbus
-taha habroune,MF,AM,2024.0,71401.0,CLB,18.0,1,,Homegrown,,columbus
-cole mrowka,MF,AM,2024.0,71401.0,CLB,18.0,1,,Homegrown,,columbus
-sean zawadzki,MF,CM,2024.0,375000.0,CLB,24.0,1,Supplemental Slots 29-30,Homegrown,,columbus
-derrick jones,MF,DM,2024.0,324996.0,CLB,27.0,1,Senior,,,columbus
-derrick jones,MF,DM,2024.0,324996.0,CLB,27.0,1,Senior,,,columbus
-dejuan jones,DF,FB,2024.0,786996.0,CLB,27.0,1,Senior,,,columbus
-dejuan jones,DF,FB,2024.0,786996.0,CLB,27.0,1,Senior,,,columbus
-darlington nagbe,MF,CM,2024.0,1400000.0,CLB,34.0,0,Senior,Designated Player,,columbus
-christian ramirez,FW,ST,2024.0,450000.0,CLB,33.0,1,Senior,,,columbus
-yaw yeboah,DF,FB,2024.0,600000.0,CLB,27.0,0,Senior,International,,columbus
-mohamed farsi,DF,FB,2024.0,350000.0,CLB,25.0,0,Senior,International,,columbus
-nicholas hagen,GK,GK,2024.0,89716.0,CLB,28.0,0,,,,columbus
-alexandru matan,MF,AM,2024.0,450000.0,CLB,25.0,0,Senior,"International, U22 Initiative",,columbus
-malte amundsen,DF,FB,2024.0,360000.0,CLB,26.0,0,Senior,,,columbus
-evan bush,GK,GK,2024.0,89716.0,CLB,38.0,1,Supplemental Slots 21-24,,,columbus
-patrick schulte,GK,GK,2024.0,125000.0,CLB,23.0,1,Supplemental Slots 21-24,Generation adidas,,columbus
-jacen russell-rowe,FW,ST,2024.0,89716.0,CLB,22.0,0,Supplemental Slots 21-24,Homegrown,,columbus
-diego rossi,FW,W,2024.0,2675000.0,CLB,26.0,0,Senior,Designated Player,,columbus
-rudy camacho,DF,CB,2024.0,475000.0,CLB,33.0,0,Senior,International,,columbus
-marino hinestroza,MF,AM,2024.0,500000.0,CLB,22.0,0,Ineligible - On Loan,,Loaned Out,columbus
-bryant farkarlun,MF,W,2024.0,71401.0,ATX,23.0,0,,,,austin
-jader obrian,MF,W,2024.0,495000.0,ATX,29.0,0,Senior,International,,austin
-julio cascante,DF,CB,2024.0,700000.0,ATX,31.0,0,Senior,,,austin
-dani pereira,MF,DM,2024.0,125000.0,ATX,24.0,0,Supplemental Slots 21-24,"Generation adidas, International",,austin
-owen wolff,MF,W,2024.0,110000.0,ATX,19.0,1,Supplemental Slots 29-30,Homegrown,,austin
-mikkel desler,DF,FB,2024.0,500000.0,ATX,29.0,0,Senior,International,,austin
-diego rubio,FW,ST,2024.0,350000.0,ATX,31.0,0,Senior,,,austin
-sebastian driussi,MF,AM,2024.0,4500000.0,ATX,28.0,0,Senior,Designated Player,,austin
-zan kolmanic,DF,FB,2024.0,350000.0,ATX,24.0,0,Senior,U22 Initiative,Season Ending Injury,austin
-brendan hines-ike,DF,CB,2024.0,199992.0,ATX,30.0,1,Senior,,,austin
-brad stuver,GK,GK,2024.0,459000.0,ATX,33.0,1,Senior,,,austin
-oleksandr svatok,DF,CB,2024.0,300000.0,ATX,30.0,0,,,,austin
-jon gallagher,DF,FB,2024.0,375000.0,ATX,28.0,0,Senior,,,austin
-leo vaisanen,DF,CB,2024.0,600000.0,ATX,27.0,0,Senior,International,,austin
-osman bukari,FW,W,2024.0,1000000.0,ATX,26.0,0,Senior,"Designated Player, International",,austin
-guilherme biro,DF,FB,2024.0,200000.0,ATX,24.0,0,Senior,International,,austin
-kamal miller,DF,CB,2024.0,742500.0,POR,27.0,0,Senior,,,portland
-santiago moreno,MF,W,2024.0,550000.0,POR,24.0,0,Signed,"International, U22 Initiative",,portland
-david ayala,MF,DM,2024.0,400000.0,POR,22.0,0,Senior,"International, U22 Initiative",,portland
-marvin loria,MF,W,2024.0,250000.0,POR,27.0,0,Senior,,,portland
-diego chara,MF,DM,2024.0,500000.0,POR,38.0,0,Senior,,,portland
-felipe mora,FW,ST,2024.0,1275000.0,POR,31.0,0,Senior,,,portland
-juan mosquera,DF,FB,2024.0,225000.0,POR,22.0,0,Senior,,,portland
-eryk williamson,MF,DM,2024.0,675000.0,POR,27.0,1,Senior,Homegrown,,portland
-mason toye,FW,ST,2024.0,600000.0,POR,26.0,1,Senior,Generation adidas,,portland
-tega ikoba,FW,ST,2024.0,104000.0,POR,21.0,1,Supplemental Slots 25-28,Homegrown,,portland
-dario zuparic,DF,CB,2024.0,735000.0,POR,32.0,0,Senior,,,portland
-james pantemis,GK,GK,2024.0,125000.0,POR,27.0,0,Supplemental Slots 21-24,Homegrown,,portland
-antony,MF,W,2024.0,425000.0,POR,23.0,0,Senior,International,,portland
-maxime crepeau,GK,GK,2024.0,555000.0,POR,30.0,0,Senior,International,,portland
-evander,MF,AM,2024.0,1930000.0,POR,26.0,0,Senior,"International, Designated Player",,portland
-jonathan rodriguez,MF,W,2024.0,1775000.0,POR,31.0,0,,Designated Player,,portland
-miguel araujo,DF,CB,2024.0,550000.0,POR,30.0,0,,International,,portland
-cristhian paredes,MF,DM,2024.0,580000.0,POR,26.0,0,Senior,,,portland
-zac mcgraw,DF,CB,2024.0,150000.0,POR,27.0,1,Supplemental Slots 21-24,,,portland
-claudio bravo,DF,FB,2024.0,325000.0,POR,27.0,0,Senior,International,,portland
-finn surman,DF,CB,2024.0,175200.0,POR,21.0,0,,,,portland
-eric miller,DF,FB,2024.0,89716.0,POR,31.0,1,Supplemental Slots 21-24,,,portland
-kyle duncan,DF,FB,2024.0,500000.0,NYRB,27.0,1,Senior,,,nyrb
-lewis morgan,MF,W,2024.0,1250000.0,NYRB,28.0,0,Senior,International,,nyrb
-emil forsberg,MF,W,2024.0,5405000.0,NYRB,33.0,0,,"Designated Player, International",,nyrb
-mohammed sofo,MF,W,2024.0,120000.0,NYRB,20.0,0,,,,nyrb
-wikelman carmona,MF,W,2024.0,165000.0,NYRB,21.0,0,Supplemental Slots 21-24,,,nyrb
-dennis gjengaar,MF,W,2024.0,340000.0,NYRB,20.0,0,,"International, U22 Initiative",,nyrb
-ronald donkor,MF,CM,2024.0,130000.0,NYRB,20.0,0,Senior,International,,nyrb
-ryan meara,GK,GK,2024.0,294000.0,NYRB,34.0,1,Senior,,,nyrb
-daniel edelman,MF,CM,2024.0,385000.0,NYRB,21.0,1,Supplemental Slots 29-30,Homegrown,,nyrb
-noah eile,DF,CB,2024.0,420000.0,NYRB,22.0,0,,International,,nyrb
-cameron harper,DF,FB,2024.0,300000.0,NYRB,23.0,1,Senior,,,nyrb
-serge ngoma,MF,W,2024.0,89716.0,NYRB,19.0,1,Supplemental Slots 25-28,Homegrown,,nyrb
-felipe carballo,MF,CM,2024.0,1020000.0,NYRB,28.0,0,,,,nyrb
-dante vanzeir,FW,ST,2024.0,1350000.0,NYRB,26.0,0,Senior,"Designated Player, International",,nyrb
-julian hall,FW,ST,2024.0,100000.0,NYRB,16.0,1,Supplemental Slots 29-30,Homegrown,,nyrb
-peter stroud,MF,CM,2024.0,89716.0,NYRB,22.0,1,Supplemental Slots 29-30,Homegrown,,nyrb
-john tolkin,DF,FB,2024.0,640000.0,NYRB,22.0,1,Senior,Homegrown,,nyrb
-roald mitchell,FW,ST,2024.0,71401.0,NYRB,21.0,1,Supplemental Slots 25-28,Homegrown,,nyrb
-rafael santos,DF,FB,2024.0,324996.0,ORL,26.0,0,Senior,,,orlando
-luis muriel,FW,ST,2024.0,2832817.0,ORL,33.0,0,Senior,"Designated Player, International",,orlando
-yutaro tsukada,MF,W,2024.0,71401.0,ORL,23.0,0,,,,orlando
-michael halliday,DF,FB,2024.0,200000.0,ORL,21.0,1,Senior,Homegrown,,orlando
-cesar araujo,MF,DM,2024.0,675000.0,ORL,23.0,0,Senior,,,orlando
-wilder cartagena,MF,DM,2024.0,480000.0,ORL,30.0,0,Senior,International,,orlando
-luca petrasso,DF,FB,2024.0,95000.0,ORL,24.0,0,Supplemental Slots 25-28,Homegrown,,orlando
-ramiro enrique,FW,ST,2024.0,340909.0,ORL,23.0,0,Senior,U22 Initiative,,orlando
-alexander freeman,DF,FB,2024.0,89716.0,ORL,20.0,1,Supplemental Slots 21-24,Homegrown,,orlando
-jeorgio kocevski,MF,DM,2024.0,71401.0,ORL,22.0,1,Supplemental Slots 21-24,,,orlando
-shakur mohammed,MF,CM,2024.0,89716.0,ORL,21.0,0,Supplemental Slots 25-28,"Generation adidas, International",,orlando
-pedro gallese,GK,GK,2024.0,800000.0,ORL,34.0,0,Senior,International,,orlando
-kyle smith,DF,FB,2024.0,290000.0,ORL,32.0,1,Senior,,,orlando
-duncan mcguire,FW,ST,2024.0,825000.0,ORL,23.0,1,Senior,,,orlando
-rodrigo schlegel,DF,CB,2024.0,350000.0,ORL,27.0,0,Senior,,,orlando
-nicolas lodeiro,MF,AM,2024.0,800000.0,ORL,35.0,0,Senior,,,orlando
-martin ojeda,MF,AM,2024.0,900000.0,ORL,26.0,0,Senior,Designated Player,,orlando
-robin jansson,DF,CB,2024.0,850000.0,ORL,33.0,0,Senior,,,orlando
-javier otero,GK,GK,2024.0,71401.0,ORL,22.0,0,Supplemental Slots 21-24,Homegrown,,orlando
-david brekalo,DF,CB,2024.0,600000.0,ORL,26.0,0,Senior,International,,orlando
-mason stajduhar,GK,GK,2024.0,142000.0,ORL,27.0,1,Supplemental Slots 29-30,Homegrown,,orlando
-ivan angulo,MF,W,2024.0,500004.0,ORL,25.0,0,Senior,International,,orlando
-felipe,MF,DM,2024.0,150000.0,ORL,34.0,0,Senior,,,orlando
-facundo torres,MF,W,2024.0,1560000.0,ORL,24.0,0,Senior,"International, Designated Player",,orlando
-ranko veselinovic,DF,CB,2024.0,620000.0,VAN,25.0,0,Senior,International,,vancouver
-edier ocampo,DF,FB,2024.0,325000.0,VAN,21.0,0,,,,vancouver
-yohei takaoka,GK,GK,2024.0,672000.0,VAN,28.0,0,Senior,International,,vancouver
-belal halbouni,DF,CB,2024.0,110000.0,VAN,24.0,0,,,,vancouver
-giuseppe bovalina,DF,FB,2024.0,71401.0,VAN,20.0,0,,,,vancouver
-ryan gauld,MF,AM,2024.0,2880000.0,VAN,29.0,0,Senior,"International, Designated Player",,vancouver
-deiber caicedo,FW,W,2024.0,350000.0,VAN,24.0,0,Senior,"International, U22 Initiative",Loaned Out,vancouver
-sam adekugbe,DF,FB,2024.0,825000.0,VAN,29.0,0,,,,vancouver
-andres cubas,MF,DM,2024.0,1050000.0,VAN,28.0,0,Senior,"International, Designated Player",,vancouver
-sebastian berhalter,MF,CM,2024.0,330000.0,VAN,23.0,1,Supplemental Slots 29-30,Homegrown,,vancouver
-stuart armstrong,MF,CM,2024.0,2499996.0,VAN,32.0,0,,,,vancouver
-damir kreilach,FW,ST,2024.0,440000.0,VAN,35.0,0,Senior,International,,vancouver
-isaac boehmer,GK,GK,2024.0,89716.0,VAN,23.0,1,Supplemental Slots 25-28,Homegrown,Loaned Out,vancouver
-ralph priso,MF,DM,2024.0,125000.0,VAN,22.0,0,Supplemental Slots 25-28,Homegrown,Season Ending Injury,vancouver
-pedro vite,MF,CM,2024.0,621000.0,VAN,22.0,0,Signed,"International, U22 Initiative",,vancouver
-ali ahmed,DF,FB,2024.0,100000.0,VAN,24.0,0,Supplemental Slots 21-24,,,vancouver
-mathias laborda,DF,CB,2024.0,800000.0,VAN,25.0,0,Senior,International,,vancouver
-brian white,FW,ST,2024.0,754500.0,VAN,28.0,1,Senior,,,vancouver
-tristan blackmon,DF,CB,2024.0,750000.0,VAN,28.0,1,Senior,,,vancouver
-nicolas fleuriau chateau,DF,FB,2024.0,71401.0,VAN,22.0,0,,,,vancouver
-alessandro schopf,MF,CM,2024.0,900000.0,VAN,30.0,0,Senior,International,,vancouver
-ryan raposo,DF,FB,2024.0,150000.0,VAN,25.0,0,Senior,,,vancouver
-fafa picault,MF,W,2024.0,650000.0,VAN,33.0,1,Senior,,,vancouver
-chris donovan,FW,ST,2024.0,89716.0,PHI,24.0,1,Drafted,,,philly
-andre blake,GK,GK,2024.0,800000.0,PHI,34.0,0,Senior,,,philly
-tai baribo,FW,ST,2024.0,650000.0,PHI,26.0,0,Senior,International,,philly
-danley jean jacques,MF,DM,2024.0,550000.0,PHI,24.0,0,,,,philly
-mikael uhre,FW,ST,2024.0,1800000.0,PHI,30.0,0,Senior,"International, Designated Player",,philly
-jakob glesnes,DF,CB,2024.0,1000000.0,PHI,30.0,0,Senior,,,philly
-jack mcglynn,MF,CM,2024.0,200000.0,PHI,21.0,1,Supplemental Slots 29-30,Homegrown,,philly
-oliver semmle,GK,GK,2024.0,89716.0,PHI,26.0,0,,,,philly
-nathan harriel,DF,FB,2024.0,240000.0,PHI,23.0,1,Supplemental Slots 25-28,Homegrown,,philly
-jesus bueno,MF,CM,2024.0,280000.0,PHI,25.0,0,Senior,International,,philly
-andrew rick,GK,GK,2024.0,71401.0,PHI,18.0,1,,,,philly
-alejandro bedoya,MF,CM,2024.0,324996.0,PHI,37.0,1,Senior,,,philly
-jeremy rafanello,MF,AM,2024.0,100000.0,PHI,24.0,1,Supplemental Slots 25-28,Homegrown,,philly
-quinn sullivan,FW,ST,2024.0,150000.0,PHI,20.0,1,Supplemental Slots 21-24,Homegrown,,philly
-olivier mbaizo,DF,FB,2024.0,350000.0,PHI,27.0,0,Senior,,,philly
-markus anderson,MF,CM,2024.0,100000.0,PHI,21.0,1,,,,philly
-daniel gazdag,MF,AM,2024.0,1600000.0,PHI,28.0,0,Senior,"International, Designated Player",,philly
-kai wagner,DF,FB,2024.0,875000.0,PHI,27.0,0,Senior,,,philly
-christopher olney jr.,MF,CM,2024.0,71401.0,PHI,18.0,1,,,,philly
-nicksoen gomis,DF,CB,2024.0,71401.0,TOR,22.0,0,,,,toronto
-sigurd rosted,DF,CB,2024.0,750000.0,TOR,30.0,0,Senior,International,,toronto
-sean johnson,GK,GK,2024.0,426039.0,TOR,35.0,1,Senior,,,toronto
-kevin long,DF,CB,2024.0,250000.0,TOR,34.0,0,,,,toronto
-cassius mailula,FW,W,2024.0,300000.0,TOR,23.0,0,,,,toronto
-federico bernardeschi,FW,W,2024.0,3125000.0,TOR,30.0,0,Senior,"Designated Player, International",,toronto
-derrick etienne jr.,MF,W,2024.0,710062.0,TOR,28.0,0,Supplemental Slots 25-28,,,toronto
-tyrese spicer,DF,FB,2024.0,71401.0,TOR,24.0,0,,,,toronto
-richie laryea,DF,FB,2024.0,990000.0,TOR,29.0,0,Senior,,,toronto
-jonathan osorio,MF,CM,2024.0,788036.0,TOR,32.0,0,Senior,Designated Player,,toronto
-kosi thompson,DF,FB,2024.0,95000.0,TOR,21.0,0,Supplemental Slots 21-24,Homegrown,,toronto
-matty longstaff,MF,CM,2024.0,197000.0,TOR,24.0,0,,,,toronto
-kobe franklin,DF,FB,2024.0,89716.0,TOR,21.0,0,Signed,"Homegrown, International",,toronto
-lorenzo insigne,FW,W,2024.0,7500000.0,TOR,33.0,0,Senior,"International, Designated Player",,toronto
-deybi flores,MF,CM,2024.0,400000.0,TOR,28.0,0,,,,skc
-deybi flores,MF,CM,2024.0,400000.0,TOR,28.0,0,,,,toronto
-charles sharp,FW,ST,2024.0,71401.0,TOR,23.0,1,,,,toronto
-deandre kerr,FW,ST,2024.0,100000.0,TOR,22.0,0,Supplemental Slots 25-28,Homegrown,,toronto
-luka gavran,GK,GK,2024.0,71401.0,TOR,24.0,0,,,,toronto
-raoul petretta,DF,FB,2024.0,675000.0,TOR,27.0,0,Senior,International,,toronto
-henry wingo,MF,W,2024.0,450000.0,TOR,29.0,1,,,,toronto
-kevin cabral,MF,W,2024.0,1950000.0,COL,25.0,0,Senior,"International, Designated Player",,colorado
-rafael navarro,FW,ST,2024.0,1392000.0,COL,24.0,0,Senior,"Designated Player, International",,colorado
-danny leyva,MF,CM,2024.0,235000.0,SEA,21.0,1,Supplemental Slots 25-28,Homegrown,,seattle
-danny musovski,FW,ST,2024.0,359091.0,SEA,29.0,1,Supplemental Slots 21-24,,,seattle
-leo chu,MF,W,2024.0,550000.0,SEA,24.0,0,Senior,U22 Initiative,,seattle
-joao paulo,MF,DM,2024.0,1400000.0,SEA,33.0,0,Senior,,,seattle
-cristian roldan,MF,DM,2024.0,1420000.0,SEA,29.0,1,Senior,,,seattle
-federico navarro,MF,DM,2024.0,500000.0,CHI,24.0,0,Senior,"International, U22 Initiative",,chicago
-earl edwards jr.,GK,GK,2024.0,155000.0,NER,32.0,1,Supplemental Slots 21-24,,,newengland
-jonathan mensah,DF,CB,2024.0,450000.0,NER,34.0,0,Senior,,,newengland
-carles gil,MF,AM,2024.0,4000000.0,NER,32.0,0,Senior,Designated Player,,newengland
-joao pedro,DF,FB,2024.0,89716.0,CLT,21.0,0,,,,charlotte
-iuri tavares,MF,W,2024.0,89716.0,CLT,23.0,0,,,,charlotte
-jeong sang-bin,MF,W,2024.0,575750.0,MIN,22.0,0,Senior,"U22 Initiative, International",,minnesota
-tani oluwaseyi,FW,ST,2024.0,89716.0,MIN,24.0,0,Supplemental Slots 25-28,International,,minnesota
-dj taylor,DF,FB,2024.0,160000.0,MIN,27.0,1,Senior,,,minnesota
-carlos akapo,DF,FB,2024.0,550000.0,SJE,31.0,0,Senior,International,,sanjose
-celio pompeu,MF,W,2024.0,164095.0,STL,25.0,0,Supplemental Slots 25-28,,,stlouis
-joao klauss,FW,ST,2024.0,1230000.0,STL,27.0,0,Senior,"Designated Player, International",,stlouis
-gabriel pirani,MF,AM,2024.0,665000.0,DCU,22.0,0,Senior,U22 Initiative,,dcunited
-talles magno,MF,W,2024.0,950000.0,NYC,22.0,0,Senior,Young Designated Player,,nyfc
-jonathan perez,MF,W,2024.0,275000.0,LAG,21.0,1,Supplemental Slots 29-30,Homegrown,Loaned Out,nashville
-gabriel pec,FW,W,2024.0,1680000.0,LAG,23.0,0,,,,lagalaxy
-miles robinson,DF,CB,2024.0,1431820.0,CIN,27.0,1,Senior,,,cincinnati
-cj dos santos,GK,GK,2024.0,89716.0,MIA,24.0,1,Supplemental Slots 21-24,,Loaned Out,maimi
-xande silva,MF,W,2024.0,560000.0,ATL,27.0,0,Senior,International,,atlanta
-nick firmino,FW,W,2024.0,71401.0,ATL,23.0,0,Supplemental Slots 25-28,,,atlanta
-kei kamara,FW,ST,2024.0,89716.0,LAFC,40.0,0,Senior,,,lafc
-abraham romero,GK,GK,2024.0,89716.0,CLB,26.0,0,Supplemental Slots 25-28,,,columbus
-steven moreira,DF,CB,2024.0,800000.0,CLB,30.0,0,Senior,,,columbus
-cucho hernandez,FW,ST,2024.0,2600000.0,CLB,25.0,0,Senior,"Designated Player, International",,columbus
-cj fodrey,MF,W,2024.0,89716.0,ATX,20.0,1,Supplemental Slots 25-28,Generation adidas,,austin
-carlos coronel,GK,GK,2024.0,500000.0,NYRB,27.0,0,Senior,,,nyrb
-sean nealis,DF,CB,2024.0,450000.0,NYRB,27.0,1,Senior,,,nyrb
-elias manoel,FW,ST,2024.0,480000.0,NYRB,23.0,0,Senior,International,,nyrb
-dylan nealis,DF,FB,2024.0,247500.0,NYRB,26.0,1,Senior,,,nyrb
-jack lynn,FW,ST,2024.0,89716.0,ORL,24.0,1,Supplemental Slots 25-28,,,orlando
-dagur dan thorhallsson,DF,FB,2024.0,300000.0,ORL,24.0,0,Senior,,,orlando
-bjrn inge utvik,DF,CB,2024.0,450000.0,VAN,28.0,0,,,,vancouver
+base_salary,age,American,team_name,NAME,ROSTER DESIGNATION,CURRENT STATUS,CONTRACT THRU,OPTION YEARS,TYPE,INTERNATIONAL
+1950000.0,25.0,0,Colorado Rapids,kevin cabral,Designated Player,,2025,2026,Main,True
+71401.0,20.0,0,Colorado Rapids,wayne frederick,Squad Player,,2026,"2027, 2028",Supplemental,False
+410000.0,27.0,1,Colorado Rapids,jonathan lewis,Squad Player,,2024,,Main,False
+130000.0,24.0,1,Colorado Rapids,michael edwards,Homegrown Player,,2024,2025,Supplemental,False
+89716.0,20.0,1,Colorado Rapids,jackson travis,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+750000.0,26.0,1,Colorado Rapids,reggie cannon,TAM Player,,2027,2028,Main,False
+71401.0,19.0,0,Colorado Rapids,kimani stewart-baynes,Generation adidas,,2026,"2027, 2028",Supplemental,False
+1350000.0,26.0,1,Colorado Rapids,djordje mihailovic,Designated Player,,2027,2028,Main,False
+89716.0,20.0,1,Colorado Rapids,darren yapi,Squad Player,,2025,2026,Main,False
+400000.0,31.0,1,Colorado Rapids,keegan rosenberry,Squad Player,,2024,2025,Main,False
+850000.0,23.0,1,Colorado Rapids,cole bassett,U22 Initiative,,2027,,Main,False
+900000.0,29.0,1,Colorado Rapids,zack steffen,TAM Player,,2026,2027,Main,False
+470000.0,26.0,0,Colorado Rapids,connor ronan,Squad Player,,2026,2027,Main,True
+1150000.0,30.0,0,Colorado Rapids,andreas maxs,TAM Player,,2025,2026,Main,True
+125000.0,24.0,0,Colorado Rapids,calvin harris,Squad Player,,2024,2025,Main,False
+71401.0,18.0,1,Colorado Rapids,adam beaudry,Homegrown Player,,2027,"2028, 2029",Supplemental,False
+665000.0,30.0,0,Colorado Rapids,lalas abubakar,Squad Player,,2024,2025,Main,False
+850000.0,25.0,1,Colorado Rapids,sam vines,TAM Player,,2027,,Main,False
+1392000.0,24.0,0,Colorado Rapids,rafael navarro,Designated Player,,2027,2028,Main,True
+575000.0,25.0,1,Colorado Rapids,omir fernandez,Squad Player,,2026,2027,Main,False
+100000.0,23.0,1,Colorado Rapids,oliver larraz,Homegrown Player,,2024,2025,Supplemental,False
+150000.0,22.0,1,Colorado Rapids,sebastian anderson,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+235000.0,21.0,1,Seattle Sounders FC,danny leyva,Squad Player,,2026,2027,Main,False
+89716.0,20.0,1,Seattle Sounders FC,cody baker,Homegrown Player,,2026,"2027, 2028",Supplemental,False
+359091.0,29.0,1,Seattle Sounders FC,danny musovski,Squad Player,,2025,2026,Main,False
+89716.0,22.0,0,Seattle Sounders FC,georgi minoungou,Special Discovery Player,,2028,2029,Main,True
+89716.0,25.0,1,Seattle Sounders FC,paul rothrock,Squad Player,,2024,2025,Supplemental,False
+750000.0,32.0,0,Seattle Sounders FC,yeimar gomez andrade,| TAM Player,,2025,2026,Main,False
+2000000.0,34.0,0,Seattle Sounders FC,raul ruidiaz,Designated Player,,2024,,Main,False
+71401.0,21.0,1,Seattle Sounders FC,sota kitahara,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+785000.0,23.0,0,Seattle Sounders FC,pedro de la vega,Young Designated Player,,2027,2028,Main,True
+150000.0,26.0,1,Seattle Sounders FC,andrew thomas,Squad Player,,2027,"2028, 2029",Main,False
+2150000.0,30.0,0,Seattle Sounders FC,albert rusnak,Designated Player,,2024,,Main,False
+550000.0,24.0,0,Seattle Sounders FC,leo chu,U22 Initiative,,2024,2025,Main,False
+100444.0,27.0,1,Seattle Sounders FC,jon bell,Squad Player,,2024,2025,Supplemental,False
+89716.0,24.0,1,Seattle Sounders FC,dylan teves,Homegrown Player,,2024,2025,Supplemental,False
+1400000.0,33.0,0,Seattle Sounders FC,joao paulo,TAM Player,,2024,,Main,False
+550000.0,29.0,0,Seattle Sounders FC,nathan,Squad Player,,2024,2025,Main,False
+1683750.0,30.0,1,Seattle Sounders FC,jordan morris,TAM Player,,2027,,Main,False
+1420000.0,29.0,1,Seattle Sounders FC,cristian roldan,TAM Player,,2027,,Main,False
+465000.0,28.0,1,Seattle Sounders FC,alex roldan,Squad Player,,2026,2027,Main,False
+89716.0,19.0,1,Seattle Sounders FC,obed vargas,Homegrown Player,,2025,2026,Supplemental,False
+550000.0,27.0,0,Seattle Sounders FC,nouhou,Squad Player,,2025,2026,Main,False
+98261.0,26.0,1,Seattle Sounders FC,jackson ragen,Squad Player,,2024,,Main,False
+100000.0,19.0,1,Seattle Sounders FC,reed baker-whiting,Homegrown Player,,2024,2025,Supplemental,False
+350000.0,22.0,1,Seattle Sounders FC,josh atencio,U22 Initiative,,2027,2028,Main,False
+600000.0,38.0,1,Seattle Sounders FC,stefan frei,Squad Player,,2025,,Main,False
+200000.0,29.0,1,Chicago Fire FC,wyatt omsberg,Squad Player,,2024,,Main,False
+1600000.0,33.0,0,Chicago Fire FC,gaston gimenez,Designated Player,,2025,,Main,False
+600000.0,28.0,1,Chicago Fire FC,andrew gutman,Squad Player,,2026,2027,Main,False
+344000.0,25.0,0,Chicago Fire FC,maren haile-selassie,Squad Player,,2026,,Main,True
+1392188.0,29.0,1,Chicago Fire FC,kellyn acosta,TAM Player,,2026,2027,Main,False
+345000.0,27.0,1,Chicago Fire FC,mauricio pineda,Homegrown Player,,2026,2027,Main,False
+500000.0,24.0,0,Chicago Fire FC,federico navarro,U22 Initiative,,2027,2028,Main,False
+250000.0,29.0,1,Chicago Fire FC,tom barlow,Squad Player,,2025,2026,Main,False
+165000.0,32.0,1,Chicago Fire FC,spencer richey,Squad Player,,2024,,Supplemental,False
+225000.0,20.0,1,Chicago Fire FC,chris brady,Homegrown Player,,2026,2027,Main,False
+462000.0,26.0,0,Chicago Fire FC,allan arigoni,,Loan Player,2024,"PT: 2025; 2026, 2027",Main,True
+400000.0,31.0,0,Chicago Fire FC,fabian herbers,Squad Player,,2024,,Main,False
+620012.0,32.0,0,Chicago Fire FC,arnaud souquet,TAM Player,,2025,,Main,False
+803409.0,21.0,1,Chicago Fire FC,brian gutierrez,U22 Initiative,,2028,,Main,False
+470800.0,20.0,0,Chicago Fire FC,georgios koutsias,U22 Initiative,,2026,2027,Main,True
+89716.0,21.0,1,Chicago Fire FC,javier casas,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+1300000.0,34.0,0,Chicago Fire FC,rafael czichos,TAM Player,,2024,,Main,False
+650004.0,28.0,1,Chicago Fire FC,chris mueller,TAM Player,,2025,2026,Main,False
+115000.0,27.0,1,Chicago Fire FC,jonathan dean,Squad Player,,2024,2025,Supplemental,False
+400000.0,29.0,0,Chicago Fire FC,tobias salquist,TAM Player,,2025,2026,Main,True
+500000.0,28.0,1,Chicago Fire FC,chase gasper,Squad Player,,2025,,Supplemental,False
+529000.0,24.0,0,Chicago Fire FC,carlos teran,Squad Player,,2026,2027,Main,False
+71401.0,20.0,1,Chicago Fire FC,justin reynolds,Homegrown Player,,2026,2027,Supplemental,False
+3238000.0,27.0,0,Chicago Fire FC,hugo cuypers,Designated Player,,2026,2027,Main,True
+230000.0,30.0,0,Chicago Fire FC,ariel lassiter,Squad Player,,2024,,Main,False
+347750.0,27.0,1,FC Dallas,nkosi tafari,Squad Player,,2024,"2025, 2026",Main,False
+325000.0,26.0,0,FC Dallas,maarten paes,Squad Player,,2026,"2027, 2028",Main,False
+440000.0,29.0,0,FC Dallas,ruan,Squad Player,,2024,,Main,False
+1550000.0,29.0,1,FC Dallas,paul arriola,TAM Player,,2025,2026,Main,False
+1800000.0,26.0,0,FC Dallas,petar musa,Designated Player,,2027,2028,Main,True
+750000.0,32.0,1,FC Dallas,sebastian lletget,TAM Player,,2025,2026,Main,False
+89716.0,36.0,1,FC Dallas,jimmy maurer,Squad Player,,2024,,Supplemental,False
+71401.0,22.0,0,FC Dallas,carl sainte,Squad Player,,2025,"2026, 2027",Supplemental,True
+2000000.0,24.0,1,FC Dallas,jesus ferreira,Designated Player,,2025,2026,Main,False
+71401.0,23.0,1,FC Dallas,herbert endeley,Squad Player,,2024,"2025, 2026",Supplemental,False
+512000.0,26.0,1,FC Dallas,marco farfan,Squad Player,,2025,2026,Main,False
+89716.0,22.0,0,FC Dallas,bernard kamungo,Squad Player,,2025,"2026, 2027",Main,False
+1250000.0,22.0,0,FC Dallas,alan velasco,Young Designated Player,,2025,2026,Main,False
+200000.0,26.0,0,FC Dallas,liam fraser,,Unavailable - SEI,2024,2025,Main,False
+71401.0,23.0,1,FC Dallas,tomas pondeca,Squad Player,,2025,"2026, 2027",Supplemental,False
+370000.0,27.0,0,FC Dallas,ema twumasi,Squad Player,,2024,"2025, 2026",Main,False
+89716.0,26.0,0,FC Dallas,tsiki ntsabeleng,Squad Player,,2024,2025,Supplemental,False
+950000.0,25.0,1,FC Dallas,paxton pomykal,TAM Player,Unavailable - SEI,2026,2027,Main,False
+500000.0,34.0,0,FC Dallas,asier illarramendi,Squad Player,,2024,,Main,True
+200000.0,28.0,1,FC Dallas,sam junqua,Squad Player,,2024,2025,Main,False
+89716.0,19.0,1,FC Dallas,nolan norris,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+620000.0,32.0,1,FC Dallas,sebastien ibeagha,Squad Player,,2024,"2025, 2026",Main,False
+71401.0,23.0,1,FC Dallas,logan farrington,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+600000.0,30.0,0,FC Dallas,eugene ansah,Squad Player,,2024,2025,Main,True
+89716.0,36.0,1,FC Dallas,omar gonzalez,Squad Player,,2024,2025,Supplemental,False
+150000.0,21.0,0,FC Dallas,patrickson delgado,,Loan Player,2024,,Main,True
+275000.0,21.0,1,FC Dallas,dante sealy,Squad Player,,2024,"2025, 2026",Main,False
+89716.0,19.0,1,FC Dallas,tarik scott,Homegrown Player,,2025,"2026, 2027",Off,False
+89716.0,26.0,1,New England Revolution,ryan spaulding,Squad Player,,2024,,Supplemental,False
+155000.0,32.0,1,New England Revolution,earl edwards jr.,Squad Player,,2024,2025.0,Supplemental,False
+450000.0,34.0,0,New England Revolution,jonathan mensah,Squad Player,,2024,2025.0,Main,False
+155000.0,30.0,0,New England Revolution,emmanuel boateng,Squad Player,,2024,2025.0,Main,False
+1700000.0,26.0,0,New England Revolution,giacomo vrioni,Designated Player,,2025,2026.0,Main,False
+71401.0,17.0,1,New England Revolution,peyton miller,Homegrown Player,,2027,2028.0,Supplemental,False
+385000.0,31.0,0,New England Revolution,aljaz ivacic,Squad Player,,2025,2026.0,Supplemental,True
+71401.0,19.0,1,New England Revolution,malcolm fry,Homegrown Player,,2026,2027.0,Supplemental,False
+125000.0,24.0,1,New England Revolution,will sands,Squad Player,,2024,2025.0,Main,False
+550000.0,31.0,1,New England Revolution,matt polster,Squad Player,,2024,2025.0,Main,False
+675000.0,31.0,1,New England Revolution,dave romney,TAM Player,,2024,2025.0,Main,False
+435000.0,33.0,1,New England Revolution,tommy mcnamara,Squad Player,,2024,2025.0,Main,False
+610000.0,22.0,0,New England Revolution,luca langoni,U22 Initiative,,2027,2028.0,Main,True
+375000.0,30.0,1,New England Revolution,nick lima,Squad Player,,2024,,Main,False
+275000.0,29.0,1,New England Revolution,ian harkes,Squad Player,,2025,,Main,False
+750000.0,30.0,0,New England Revolution,mark-anthony kaye,TAM Player,,2025,2026.0,Main,False
+375000.0,29.0,1,New England Revolution,brandon bye,Squad Player,,2024,2025.0,Main,False
+950000.0,25.0,0,New England Revolution,tomas chancalay,Designated Player,Unavailable - SEI,2026,2027.0,Main,True
+600000.0,22.0,0,New England Revolution,dylan borrero,U22 Initiative,,2024,2025.0,Main,True
+775000.0,30.0,0,New England Revolution,xavier arreaga,TAM Player,,2024,2025.0,Main,False
+683750.0,32.0,1,New England Revolution,andrew farrell,TAM Player,,2024,2025.0,Main,False
+400000.0,29.0,0,New England Revolution,nacho gil,Squad Player,,2024,2025.0,Main,True
+89716.0,19.0,1,New England Revolution,noel buck,Homegrown Player,Unavailable - On Loan,2025,2026.0,Supplemental,False
+89716.0,20.0,1,New England Revolution,jack panayotou,Homegrown Player,Unavailable - On Loan,2026,2027.0,Supplemental,False
+115000.0,19.0,1,New England Revolution,esmir bajraktarevic,Homegrown Player,,2025,2026.0,Supplemental,False
+4000000.0,32.0,0,New England Revolution,carles gil,Designated Player,,2026,2027.0,Main,False
+800000.0,24.0,0,New England Revolution,alhassan yusuf,TAM Player,,2027,2028.0,Main,True
+1000000.0,31.0,1,New England Revolution,tim parker,TAM Player,,2024,,Main,False
+450000.0,32.0,1,New England Revolution,bobby wood,Squad Player,,2024,,Main,False
+750000.0,34.0,0,Charlotte FC,ashley westwood,TAM Player,,2026.0,2027,Main,True
+275000.0,24.0,1,Charlotte FC,jaylin lindsey,Squad Player,,2024.0,2025,Main,False
+550000.0,32.0,0,Charlotte FC,kristijan kahlina,TAM Player,,2024.0,2025,Main,False
+89716.0,16.0,1,Charlotte FC,nimfasha berchimas,Homegrown Player,,2026.0,2027,Supplemental,False
+500000.0,37.0,1,Charlotte FC,tim ream,TAM Player,,2026.0,2027,Main,False
+390000.0,20.0,0,Charlotte FC,idan toklomati,U22 Initiative,,2027.0,2028,Main,True
+115000.0,23.0,1,Charlotte FC,ben bender,,Unavailable - On Loan,2025.0,,Main,False
+1960000.0,28.0,0,Charlotte FC,pep biel,Designated Player,Loan Player,2024.0,PT: 2026; 2027,Main,True
+260000.0,26.0,0,Charlotte FC,djibril diani,Squad Player,,2025.0,2026,Main,True
+2300000.0,23.0,0,Charlotte FC,liel abada,Young Designated Player,,2026.0,2027,Main,True
+71401.0,23.0,1,Charlotte FC,nicholas scardina,Squad Player,,2024.0,"2025, 2026",Supplemental,False
+89716.0,21.0,0,Charlotte FC,joao pedro,Squad Player,,2026.0,2027,Main,True
+350000.0,29.0,1,Charlotte FC,brandt bronico,Squad Player,,2025.0,2026,Main,False
+2200000.0,27.0,0,Charlotte FC,karol swiderski,Designated Player,,2025.0,2026,Main,True
+460000.0,29.0,0,Charlotte FC,bill tuiloma,Squad Player,,2025.0,2026,Main,False
+71401.0,23.0,0,Charlotte FC,tyger smalls,Squad Player,,2024.0,"2025, 2026, 2027",Supplemental,False
+560000.0,32.0,0,Charlotte FC,nathan byrne,TAM Player,,2024.0,2025,Main,False
+89716.0,22.0,0,Charlotte FC,brandon cambridge,Homegrown Player,,2024.0,"2025, 2026",Supplemental,False
+71401.0,24.0,1,Charlotte FC,andrew privett,Squad Player,,2028.0,2029,Supplemental,False
+71401.0,24.0,0,Charlotte FC,patrick agyemang,Squad Player,,2024.0,"2025, 2026",Supplemental,False
+89716.0,23.0,0,Charlotte FC,iuri tavares,Squad Player,,2026.0,2027,Main,True
+500000.0,33.0,0,Charlotte FC,jamie paterson,Squad Player,,2024.0,2025,Main,True
+525000.0,30.0,0,Charlotte FC,jere uronen,TAM Player,,2025.0,2026,Main,True
+400000.0,22.0,0,Charlotte FC,kerwin vargas,U22 Initiative,,2027.0,2028,Main,False
+250000.0,35.0,0,Charlotte FC,junior urso,Squad Player,,2024.0,2025,Main,True
+325000.0,23.0,0,Charlotte FC,adilson malanda,Squad Player,,2026.0,2027,Main,True
+360000.0,21.0,0,Charlotte FC,nikola petkovic,U22 Initiative,,2026.0,2027,Main,True
+89716.0,25.0,1,Real Salt Lake,philip quinton,Squad Player,,2024,"2025, 2026",Supplemental,False
+400000.0,21.0,1,Real Salt Lake,diego luna,U22 Initiative,,2026,"2027, 2028",Main,False
+400000.0,35.0,0,Real Salt Lake,marcelo silva,Squad Player,,2024,,Main,False
+400000.0,26.0,0,Real Salt Lake,alexandros katranis,Squad Player,,2025,"2026, 2027",Main,True
+71401.0,22.0,1,Real Salt Lake,tommy silva,Homegrown Player,,2024,"2025, 2026, 2027",Supplemental,False
+275000.0,29.0,1,Real Salt Lake,andrew brody,Squad Player,,2024,2025,Main,False
+750000.0,28.0,0,Real Salt Lake,anderson julio,TAM Player,,2024,"2025, 2026",Main,True
+89716.0,24.0,0,Real Salt Lake,noel caliskan,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+330000.0,23.0,0,Real Salt Lake,nelson palacio,U22 Initiative,,2026,"2027, 2028",Main,True
+252000.0,23.0,0,Real Salt Lake,lachlan brook,Squad Player,,2025,"2026, 2027",Main,True
+475000.0,25.0,0,Real Salt Lake,brayan vera,TAM Player,,2025,"2026, 2027",Main,False
+195000.0,33.0,0,Real Salt Lake,maikel chang,Squad Player,,2024,,Main,False
+1150000.0,27.0,1,Real Salt Lake,justen glad,TAM Player,,2026,2027,Main,False
+71401.0,17.0,1,Real Salt Lake,zavier gozo,Homegrown Player,,2027,"2028, 2029",Supplemental,False
+71401.0,22.0,0,Real Salt Lake,matthew bell,,Unavailable - On Loan,2025,"2026, 2027",Supplemental,True
+600000.0,21.0,0,Real Salt Lake,dominik marczuk,U22 Initiative,,2027,2028,Main,True
+825000.0,26.0,0,Real Salt Lake,pablo ruiz,TAM Player,Unavailable - SEI,2026,"2027, 2028",Main,False
+120000.0,19.0,1,Real Salt Lake,gavin beavers,Homegrown Player,,2024,"2025, 2026, 2027",Supplemental,False
+125000.0,22.0,1,Real Salt Lake,bode hidalgo,Homegrown Player,,2027,"2028, 2029",Supplemental,False
+1899996.0,29.0,0,Real Salt Lake,cristian arango,Designated Player,,2025,2026,Main,False
+205000.0,25.0,0,Real Salt Lake,javain brown,Squad Player,,2024,2025,Supplemental,True
+185000.0,27.0,0,Real Salt Lake,benji michel,Squad Player,,2024,"2025, 2026",Main,False
+89716.0,25.0,1,Real Salt Lake,emeka eneli,Squad Player,,2028,2029,Main,False
+1000000.0,30.0,0,Real Salt Lake,matt crooks,TAM Player,,2026,,Main,True
+1650000.0,27.0,0,Real Salt Lake,diogo goncalves,Designated Player,,2026,"2027, 2028",Main,True
+350000.0,33.0,1,Real Salt Lake,zac macmath,Squad Player,,2025,,Main,False
+600000.0,24.0,0,Real Salt Lake,braian ojeda,U22 Initiative,,2025,"2026, 2027",Main,True
+400000.0,31.0,1,Minnesota United FC,wil trapp,Squad Player,,2024,2025,Main,False
+725000.0,27.0,0,Minnesota United FC,miguel tapias,TAM Player,,2025,2026,Main,False
+71401.0,23.0,0,Minnesota United FC,hugo bacharach,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+610000.0,26.0,0,Minnesota United FC,joaquin pereyra,Designated Player,,2027,2028,Main,True
+89716.0,21.0,1,Minnesota United FC,devin padelford,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+89716.0,25.0,0,Minnesota United FC,samuel shashoua,Squad Player,,2024,"2025, 2026",Supplemental,False
+500000.0,27.0,1,Minnesota United FC,hassani dotson,Squad Player,,2024,2025,Main,False
+71401.0,21.0,0,Minnesota United FC,loic mesanvi,Squad Player,,2025,"2026, 2027",Supplemental,False
+675000.0,36.0,0,Minnesota United FC,michael boxall,Squad Player,,2024,,Main,False
+71401.0,23.0,1,Minnesota United FC,jordan adebayo-smith,Squad Player,,2026,2027,Supplemental,False
+71401.0,24.0,0,Minnesota United FC,morris duggan,,Unavailable - On Loan,2024,"2025, 2026, 2027",Supplemental,True
+575750.0,22.0,0,Minnesota United FC,sang bin jeong,U22 Initiative,,2025,2026,Main,True
+93988.0,24.0,0,Minnesota United FC,joseph rosales,Squad Player,,2027,2028,Supplemental,False
+605000.0,24.0,0,Minnesota United FC,bongokuhle hlongwane,U22 Initiative,,2024,2025,Main,False
+1225000.0,24.0,0,Minnesota United FC,kelvin yeboah,Designated Player,,2027,2028,Main,True
+350000.0,24.0,0,Minnesota United FC,jefferson diaz,Squad Player,,2026,2027,Main,True
+460000.0,27.0,0,Minnesota United FC,dayne st. clair,Squad Player,,2024,2025,Main,False
+89716.0,24.0,0,Minnesota United FC,tanitoluwa oluwaseyi,Squad Player,,2024,2025,Supplemental,False
+310000.0,31.0,0,Minnesota United FC,franco fragapane,TAM Player,,2024,,Main,False
+89716.0,21.0,1,Minnesota United FC,patrick weah,Homegrown Player,Unavailable - On Loan,2024,2025,Main,False
+125000.0,23.0,0,Minnesota United FC,alejandro bran,,Unavailable - On Loan,2025,"2026, 2027",Main,True
+3200000.0,34.0,0,Minnesota United FC,teemu pukki,Designated Player,,June 2025,2025,Main,True
+160000.0,27.0,1,Minnesota United FC,dj taylor,Squad Player,,2025,2026,Main,False
+1500000.0,31.0,0,Minnesota United FC,robin lod,TAM Player,,2025,2026,Main,False
+71401.0,24.0,0,Minnesota United FC,carlos harvey,Squad Player,,2025,2026,Supplemental,False
+150000.0,21.0,1,Minnesota United FC,moses nyeman,Squad Player,,2024,"2025, 2026",Supplemental,False
+89716.0,25.0,1,Minnesota United FC,anthony markanich jr,Squad Player,,2024,2025,Main,False
+190000.0,35.0,1,Minnesota United FC,clint irwin,Squad Player,,2024,2025,Main,False
+93988.0,33.0,1,Minnesota United FC,zarek valentin,Squad Player,,2024,,Supplemental,False
+270000.0,23.0,1,St. Louis City SC,indiana vassilev,Squad Player,,2024,"2025, 2026",Main,False
+250000.0,30.0,1,St. Louis City SC,jake nerwinski,Squad Player,,2024,2025,Main,False
+71401.0,22.0,0,St. Louis City SC,hosei kijima,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+1200000.0,27.0,0,St. Louis City SC,eduard lowen,TAM Player,,2026,2027,Main,False
+164095.0,25.0,0,St. Louis City SC,celio pompeu,,Unavailable - SEI,2026,2027,Supplemental,False
+273000.0,25.0,0,St. Louis City SC,tomas totland,Squad Player,,2026,2027,Main,False
+180000.0,25.0,0,St. Louis City SC,nokkvi thorisson,Squad Player,,2025,2026,Main,True
+89716.0,17.0,1,St. Louis City SC,caden glover,Homegrown Player,,2027,,Supplemental,False
+1230000.0,27.0,0,St. Louis City SC,joao klauss,Designated Player,,2025,2026,Main,True
+159996.0,27.0,0,St. Louis City SC,kyle hiebert,Squad Player,,2026,2027,Main,False
+1525000.0,34.0,0,St. Louis City SC,roman burki,Designated Player,,2025,,Main,True
+1000000.0,26.0,1,St. Louis City SC,henry kessler,TAM Player,,2025,2026,Main,False
+89716.0,25.0,1,St. Louis City SC,john klein,Squad Player,,2024,"2025, 2026",Supplemental,False
+74096.0,24.0,1,St. Louis City SC,akil watts,Squad Player,,2024,"2025, 2026",Supplemental,False
+125000.0,29.0,0,St. Louis City SC,ben lundt,Squad Player,,2024,2025,Main,False
+1797600.0,28.0,0,St. Louis City SC,marcel hartel,Designated Player,,June 2028,2028,Main,True
+450000.0,24.0,1,St. Louis City SC,chris durkin,U22 Initiative,,2024,"2025, 2026",Main,False
+71401.0,22.0,0,St. Louis City SC,michael wentzel,Squad Player,,2024,"2025, 2026",Supplemental,False
+950000.0,27.0,0,St. Louis City SC,cedric teuchert,TAM Player,,June 2026,2026,Main,True
+265500.0,29.0,0,St. Louis City SC,rasmus alm,Squad Player,,2025,2026,Main,True
+700000.0,24.0,0,St. Louis City SC,tomas ostrak,TAM Player,Unavailable - SEI,2026,2027,Main,True
+89716.0,30.0,0,St. Louis City SC,josh yaro,Squad Player,,2024,,Supplemental,False
+1135000.0,30.0,0,St. Louis City SC,joakim nilsson,TAM Player,,2026,2027,Main,False
+266200.0,20.0,0,St. Louis City SC,jake girdwood-reich,U22 Initiative,,2027,2028,Main,True
+71401.0,23.0,1,St. Louis City SC,jayden reid,Squad Player,,2024,"2025, 2026",Supplemental,False
+300000.0,25.0,0,St. Louis City SC,njabulo blom,,Unavailable - On Loan,2025,2026,Main,True
+318000.0,27.0,0,St. Louis City SC,jannes horn,,Loan Player,June 2025,PT: June 2026; 2026,Main,True
+138000.0,25.0,1,St. Louis City SC,simon becher,,Loan Player,June 2025,PT: 2026; 2027,Main,False
+800000.0,28.0,1,Nashville SC,shaq moore,TAM Player,,2025,2026,Main,False
+89716.0,31.0,1,Nashville SC,taylor washington,Squad Player,,2025,,Supplemental,False
+1000000.0,27.0,0,Nashville SC,randall leal,TAM Player,,2025,2026,Main,False
+550000.0,24.0,0,Nashville SC,dru yearwood,U22 Initiative,,2024,,Main,False
+375000.0,22.0,0,Nashville SC,patrick yazbek,U22 Initiative,,2027,2028,Main,True
+89716.0,34.0,1,Nashville SC,brent kallman,Squad Player,,2024,,Supplemental,False
+556244.0,33.0,1,Nashville SC,daniel lovitz,Squad Player,,2025,2026,Main,False
+910000.0,31.0,1,Nashville SC,sean davis,TAM Player,,2025,2026,Main,False
+114000.0,28.0,1,Nashville SC,elliot panicco,Squad Player,,2025,"2026, 2027",Main,False
+94202.0,26.0,1,Nashville SC,josh bauer,Squad Player,,2024,,Supplemental,False
+650000.0,34.0,0,Nashville SC,anibal godoy,TAM Player,,2024,2025,Main,False
+600000.0,36.0,1,Nashville SC,joe willis,Squad Player,,2025,2026,Main,False
+71401.0,23.0,0,Nashville SC,forster ajago,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+525000.0,29.0,1,Nashville SC,alex muyl,Squad Player,,2025,2026,Main,False
+71401.0,22.0,1,Nashville SC,julian gaines,Squad Player,,2024,"2025, 2026",Supplemental,False
+275000.0,28.0,0,Nashville SC,brian anunga,Squad Player,,2024,2025,Main,False
+71401.0,18.0,1,Nashville SC,isaiah jones,Homegrown Player,,2027,2028,Off,False
+2500000.0,26.0,0,Nashville SC,sam surridge,Designated Player,,2026,2027,Main,True
+3200000.0,31.0,1,Nashville SC,walker zimmerman,Designated Player,,2025,,Main,False
+700000.0,25.0,1,Nashville SC,jack maher,TAM Player,,2027,,Main,False
+3800000.0,29.0,0,Nashville SC,hany mukhtar,Designated Player,,2026,2027,Main,False
+71401.0,21.0,1,Nashville SC,joey skinner,Generation adidas,,2024,"2025, 2026",Supplemental,False
+100000.0,29.0,0,Nashville SC,lukas macnaughton,Squad Player,,2024,2025,Main,True
+770000.0,30.0,1,Nashville SC,tyler boyd,TAM Player,Unavailable - SEI,2026,2027,Main,False
+250000.0,34.0,1,Nashville SC,teal bunbury,Squad Player,,2025,,Main,False
+89716.0,28.0,1,Nashville SC,amar sejdic,Squad Player,,2024,2025,Supplemental,False
+350000.0,25.0,0,Nashville SC,jacob shaffelburg,Squad Player,,2026,2027,Main,True
+335000.0,29.0,0,CF Montréal,raheem edwards,Squad Player,,2024,2025,Main,False
+240000.0,20.0,0,CF Montréal,dawid bugaj,Squad Player,,2026,"2027, 2028",Main,True
+350000.0,21.0,1,CF Montréal,caden clark,Squad Player,,2025,"2026, 2027",Supplemental,False
+71401.0,18.0,0,CF Montréal,alessandro biello,Homegrown Player,,2025,"2026, 2027, 2028",Supplemental,False
+175000.0,20.0,0,CF Montréal,jahkeele marshall-rutty,Squad Player,,2027,2028,Main,False
+135000.0,23.0,0,CF Montréal,jonathan sirois,Homegrown Player,,2026,2027,Supplemental,False
+130000.0,20.0,0,CF Montréal,nathan saliba,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+397375.0,30.0,0,CF Montréal,samuel piette,Squad Player,,2025,2026,Main,False
+720000.0,26.0,0,CF Montréal,lassi lappalainen,TAM Player,,2024,2025,Main,True
+225000.0,21.0,1,CF Montréal,fernando alvarez,Squad Player,,2025,"2026, 2027",Main,False
+216350.0,24.0,0,CF Montréal,gabriele corbo,Squad Player,,2024,2025,Main,True
+400000.0,23.0,1,CF Montréal,george campbell,U22 Initiative,,2025,2026,Main,False
+450000.0,26.0,0,CF Montréal,tom pearce,Squad Player,,2026,2027,Main,True
+89716.0,21.0,0,CF Montréal,jules-anthony vilsaint,Squad Player,,2024,"2025, 2026",Supplemental,False
+325000.0,23.0,1,CF Montréal,bryce duke,Squad Player,,2025,2026,Main,False
+336000.0,28.0,0,CF Montréal,joel waterman,Squad Player,,2024,2025,Main,False
+1309091.0,31.0,0,CF Montréal,josef martinez,TAM Player,,2024,2025,Main,False
+350000.0,24.0,0,CF Montréal,dominic iankov,TAM Player,,2026,"2027, 2028",Main,False
+251500.0,22.0,0,CF Montréal,joaquin sosa,U22 Initiative,Loan Player,2024,,Main,True
+344828.0,23.0,0,CF Montréal,kwadwo opoku,TAM Player,,2026,2027,Main,True
+89716.0,26.0,0,CF Montréal,sebastian breza,Squad Player,,2025,"2026, 2027",Supplemental,False
+800000.0,27.0,0,CF Montréal,matias coccaro,TAM Player,,2026,"2027, 2028",Main,True
+89716.0,21.0,0,CF Montréal,rida zouhir,Homegrown Player,Unavailable - On Loan,2024,2025,Supplemental,False
+71401.0,23.0,1,CF Montréal,ousman jabang,,Unavailable - On Loan,2024,"2025, 2026",Supplemental,False
+350000.0,22.0,0,CF Montréal,sunusi ibrahim,U22 Initiative,,2026,2027,Main,True
+1440000.0,33.0,0,CF Montréal,victor wanyama,Designated Player,,2024,,Main,True
+71401.0,20.0,1,D.C. United,jacob murrell,Squad Player,,2026,"2027, 2028",Supplemental,False
+89716.0,20.0,1,D.C. United,jackson hopkins,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+650000.0,29.0,1,D.C. United,russell canouse,Squad Player,,2024,,Main,False
+900000.0,30.0,0,D.C. United,cristian dajome,Squad Player,,2024,2025,Main,True
+89716.0,22.0,1,D.C. United,hayden sargis,Squad Player,,2024,"2025, 2026",Supplemental,False
+230000.0,28.0,1,D.C. United,jared stroud,Squad Player,,2026,2027,Main,False
+750000.0,27.0,1,D.C. United,aaron herrera,Squad Player,,2024,"2025, 2026",Main,False
+1900000.0,34.0,0,D.C. United,mateusz klich,Designated Player,,2024,2025,Main,True
+89716.0,21.0,1,D.C. United,jeremy garay,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+1100000.0,30.0,0,D.C. United,martin rodriguez,TAM Player,,2024,2025,Main,True
+300000.0,22.0,1,D.C. United,theodore ku-dipietro,U22 Initiative,,2027,2028,Main,False
+450000.0,36.0,0,D.C. United,pedro santos,TAM Player,,2024,,Main,False
+89716.0,27.0,1,D.C. United,lucas bartlett,Squad Player,,2027,2028,Supplemental,False
+425000.0,31.0,1,D.C. United,tyler miller,Squad Player,,2024,2025,Main,False
+4250000.0,34.0,0,D.C. United,christian benteke,Designated Player,,2025,2026,Main,True
+681818.0,22.0,0,D.C. United,matti peltola,Young Designated Player,,2027,2028,Main,True
+120000.0,19.0,1,D.C. United,kristian fletcher,Homegrown Player,Unavailable - On Loan,2025,2026,Supplemental,False
+400000.0,26.0,0,D.C. United,david schnegg,Squad Player,,2026,2027,Main,True
+200000.0,30.0,1,D.C. United,alex bono,Squad Player,,2024,2025,Main,False
+89716.0,29.0,1,D.C. United,conner antley,Squad Player,,2025,2026,Main,False
+89716.0,18.0,1,D.C. United,matai akinmboni,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+585895.0,24.0,0,D.C. United,boris enow,TAM Player,,2027,2028,Main,True
+71401.0,22.0,1,D.C. United,garrison tubbs,Homegrown Player,,2024,"2025, 2026, 2027",Supplemental,False
+665000.0,22.0,0,D.C. United,gabriel pirani,U22 Initiative,,2025,"2026, 2027",Main,False
+252000.0,27.0,0,D.C. United,christopher mcvey,Squad Player,,2024,2025,Main,False
+89716.0,32.0,0,D.C. United,dominique badji,Squad Player,,2026,2027,Main,False
+71401.0,21.0,0,New York City FC,malachi jones,Squad Player,,2025,"2026, 2027",Supplemental,False
+900000.0,27.0,1,New York City FC,keaton parks,TAM Player,,2026,"2027, 2028",Main,False
+165000.0,28.0,1,New York City FC,luis barraza,Squad Player,,2024,2025,Main,False
+89716.0,17.0,1,New York City FC,christian mcfarlane,Homegrown Player,,2026,2027,Supplemental,False
+350000.0,22.0,1,New York City FC,tayvon gray,Squad Player,,2025,2026,Main,False
+175000.0,26.0,1,New York City FC,kevin o'toole,Squad Player,,2025,2026,Main,False
+480000.0,20.0,0,New York City FC,agustin ojeda,U22 Initiative,,2028,2029,Main,True
+240000.0,27.0,0,New York City FC,strahinja tanasijevic,Squad Player,,2025,"2026, 2027",Main,True
+240000.0,20.0,0,New York City FC,mitja ilenic,Squad Player,,2026,2027,Main,True
+564000.0,20.0,0,New York City FC,julian fernandez,U22 Initiative,,2027,2028,Main,True
+360000.0,23.0,0,New York City FC,mounsef bakrar,TAM Player,,2026,2027,Main,True
+300000.0,26.0,0,New York City FC,alonso martinez,Squad Player,,2025,"2026, 2027",Main,True
+150000.0,23.0,1,New York City FC,justin haak,Homegrown Player,,2025,,Supplemental,False
+650000.0,19.0,0,New York City FC,jovan mijatovic,U22 Initiative,,2028,2029,Main,True
+480000.0,37.0,0,New York City FC,maximiliano moralez,Squad Player,,2024,,Main,True
+1400000.0,25.0,0,New York City FC,hannes wolf,TAM Player,,2027,2028,Main,True
+1200000.0,24.0,0,New York City FC,santiago rodriguez,Designated Player,,2027,,Main,False
+575000.0,24.0,0,New York City FC,andres perea,Squad Player,,2025,2026,Main,False
+950000.0,22.0,0,New York City FC,talles magno,Young Designated Player,Unavailable - On Loan,2027,,Main,False
+250000.0,26.0,1,New York City FC,matt freese,Squad Player,,2026,2027,Main,False
+1000000.0,24.0,1,New York City FC,james sands,TAM Player,,2027,,Main,False
+660000.0,26.0,0,New York City FC,birk risa,Squad Player,,2025,2026,Main,True
+2000000.0,29.0,0,New York City FC,thiago martins,Designated Player,,2025,2026,Main,False
+600000.0,37.0,0,LA Galaxy,martin caceres,Squad Player,,2024,2025,Main,True
+89716.0,32.0,1,LA Galaxy,eriq zavaleta,Squad Player,,2024,,Supplemental,False
+4000000.0,25.0,0,LA Galaxy,riqui puig,Designated Player,,2027,,Main,True
+275000.0,32.0,1,LA Galaxy,john mccarthy,Squad Player,,2025,,Main,False
+275000.0,21.0,1,LA Galaxy,jonathan perez,,Loan Player,2025,PT: 2026; 2027,Main,False
+800000.0,29.0,1,LA Galaxy,mark delgado,TAM Player,,2024,2025,Main,False
+3136000.0,26.0,0,LA Galaxy,joseph paintsil,Designated Player,,2027,,Main,True
+150000.0,23.0,0,LA Galaxy,novak micovic,Squad Player,,2026,2027,Main,True
+325000.0,21.0,0,LA Galaxy,julian aude,U22 Initiative,,2027,,Main,True
+71401.0,24.0,1,LA Galaxy,isaiah parente,Squad Player,,2024,"2025, 2026",Supplemental,False
+200000.0,23.0,0,LA Galaxy,emiro garces,TAM Player,,2028,,Main,True
+800000.0,36.0,0,LA Galaxy,maya yoshida,TAM Player,,2024,,Main,True
+175008.0,27.0,0,LA Galaxy,miguel berry,Squad Player,,2025,2026,Main,False
+1680000.0,23.0,0,LA Galaxy,gabriel pec,Young Designated Player,,2028,,Main,True
+683750.0,25.0,0,LA Galaxy,dejan joveljic,U22 Initiative,,2025,,Main,True
+275000.0,26.0,1,LA Galaxy,john nelson,Squad Player,,2025,2026,Main,False
+1250000.0,29.0,0,LA Galaxy,diego fagundez,TAM Player,,2025,2026,Main,False
+400000.0,24.0,1,LA Galaxy,edwin cerrillo,Squad Player,,2026,2027,Main,False
+125000.0,21.0,1,LA Galaxy,mauricio cuevas,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+960000.0,35.0,0,LA Galaxy,marco reus,TAM Player,,2026,,Main,True
+1200000.0,32.0,0,LA Galaxy,gaston brugman,TAM Player,,2025,2026,Main,False
+550000.0,31.0,0,LA Galaxy,miki yamane,TAM Player,,2026,,Main,True
+165000.0,21.0,1,LA Galaxy,jalen neal,Homegrown Player,,2024,2025,Supplemental,False
+71401.0,22.0,1,LA Galaxy,tucker lepley,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+1525000.0,29.0,1,FC Cincinnati,matt miazga,TAM Player,Unavailable - SEI,2025,2026,Main,False
+89716.0,24.0,1,FC Cincinnati,ian murphy,Squad Player,,2026,2027,Supplemental,False
+450000.0,26.0,0,FC Cincinnati,pavel bucha,TAM Player,,2026,2027,Main,True
+250000.0,34.0,1,FC Cincinnati,alec kann,Squad Player,,2025,,Main,False
+850000.0,31.0,1,FC Cincinnati,deandre yedlin,TAM Player,,2025,2026,Main,False
+71401.0,22.0,1,FC Cincinnati,malik pinto,Squad Player,,2024,"2025, 2026",Supplemental,False
+800000.0,30.0,0,FC Cincinnati,sergio santos,TAM Player,,2024,"2025, 2026",Main,False
+89716.0,32.0,1,FC Cincinnati,nick hagglund,Squad Player,,2024,,Main,False
+644319.0,28.0,1,FC Cincinnati,corey baird,TAM Player,,2025,2026,Main,False
+1080000.0,27.0,0,FC Cincinnati,chidozie awaziem,TAM Player,,2025,"2026, 2027",Main,True
+250000.0,30.0,0,FC Cincinnati,alvas powell,Squad Player,,2025,2026,Main,False
+89716.0,24.0,1,FC Cincinnati,kipp keller,Squad Player,,2024,"2025, 2026",Supplemental,False
+400000.0,24.0,1,FC Cincinnati,roman celentano,Squad Player,,2027,,Main,False
+89716.0,30.0,0,FC Cincinnati,yamil asad,Squad Player,,2024,2025,Supplemental,False
+89716.0,17.0,1,FC Cincinnati,stiven jimenez,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+2000004.0,24.0,1,FC Cincinnati,nicholas gioacchini,Designated Player,Loan Player,2024,,Main,False
+1431820.0,27.0,1,FC Cincinnati,miles robinson,TAM Player,,2024,2025,Main,False
+89716.0,28.0,1,FC Cincinnati,evan louro,Squad Player,,2025,2026,Main,False
+71401.0,24.0,1,FC Cincinnati,london aghedo,Squad Player,,2024,"2025, 2026",Supplemental,False
+2960000.0,30.0,0,FC Cincinnati,luciano acosta,Designated Player,,2026,2027,Main,False
+71401.0,20.0,1,FC Cincinnati,gerardo valenzuela,Homegrown Player,,2026,"2027, 2028",Supplemental,False
+480000.0,20.0,0,FC Cincinnati,kevin kelsy,U22 Initiative,Loan Player,2024,"PT: 2027; 2028, 2029",Main,True
+89716.0,25.0,1,FC Cincinnati,bret halsey,Squad Player,,2024,"2025, 2026",Supplemental,False
+89716.0,24.0,0,FC Cincinnati,luca orellano,TAM Player,Loan Player,2024,PT: 2026; 2027,Main,True
+89716.0,21.0,1,FC Cincinnati,isaiah foster,Squad Player,,2024,"2025, 2026",Main,False
+704952.0,29.0,0,FC Cincinnati,teenage hadebe,TAM Player,,2025,2026,Main,True
+650000.0,31.0,0,FC Cincinnati,yuya kubo,TAM Player,,2025,2026,Main,False
+1310000.0,28.0,0,FC Cincinnati,obinna nwobodo,Designated Player,,2024,2025,Main,True
+400000.0,30.0,0,Inter Miami CF,nicolas freire,TAM Player,"Loan Player, Unavailable – SEI",2024,,Main,True
+125000.0,22.0,1,Inter Miami CF,ian fray,Homegrown Player,,2024,2025,Supplemental,False
+349992.0,27.0,1,Inter Miami CF,drake callender,Squad Player,,2025,2026,Main,False
+150000.0,26.0,0,Inter Miami CF,david martinez,TAM Player,Loan Player,July 2025,PT: 2027; 2028,Main,True
+150000.0,26.0,0,Inter Miami CF,david martinez,U22 Initiative,,2027,2028,Main,True
+500000.0,18.0,0,Los Angeles FC,david martinez,TAM Player,Loan Player,July 2025,PT: 2027; 2028,Main,True
+500000.0,18.0,0,Los Angeles FC,david martinez,U22 Initiative,,2027,2028,Main,True
+384996.0,20.0,0,Inter Miami CF,tomas aviles,U22 Initiative,,2026,"2027, 2028",Main,True
+99716.0,19.0,1,Inter Miami CF,benjamin cremaschi,U22 Initiative/ Homegrown Player,,2027,2028,Main,False
+150000.0,24.0,0,Inter Miami CF,marcelo weigandt,,Loan Player,2024,PT: 2025,Main,True
+1092069.0,31.0,0,Inter Miami CF,julian gressel,TAM Player,,2026,2027,Main,False
+89716.0,38.0,0,Inter Miami CF,oscar ustari,Squad Player,,2024,,Main,True
+71401.0,23.0,0,Inter Miami CF,leo afonso,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+89716.0,24.0,1,Inter Miami CF,cj dos santos,Squad Player,,2024,"2025, 2026",Supplemental,False
+600000.0,24.0,0,Inter Miami CF,leonardo campana,TAM Player,,2027,2028,Main,False
+150000.0,29.0,0,Inter Miami CF,matias rojas,Squad Player,,2024,"2025, 2026",Main,True
+89716.0,20.0,1,Inter Miami CF,noah allen,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+300000.0,30.0,0,Inter Miami CF,robert taylor,Squad Player,,2026,2027,Main,False
+150000.0,21.0,0,Inter Miami CF,federico redondo,U22 Initiative,,2027,2028,Main,True
+750000.0,33.0,0,Inter Miami CF,sergii kryvtsov,TAM Player,,2024,2025,Main,False
+8499996.0,36.0,0,Inter Miami CF,sergio busquets,Designated Player,,2025,,Main,True
+250000.0,29.0,0,Inter Miami CF,franco negri,Squad Player,,2024,2025,Main,False
+71401.0,20.0,1,Inter Miami CF,david ruiz,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+89716.0,26.0,1,Inter Miami CF,ryan sailor,Squad Player,,2024,2025,Supplemental,False
+71401.0,23.0,1,Inter Miami CF,lawson sunderland,Squad Player,,2024,"2025, 2026",Supplemental,False
+500000.0,21.0,0,Inter Miami CF,diego gomez,TAM Player,,2026,2027,Main,True
+12000000.0,37.0,0,Inter Miami CF,lionel messi,Designated Player,,2025,,Main,True
+1250000.0,35.0,0,Inter Miami CF,jordi alba,TAM Player,,2024,2025,Main,True
+71401.0,23.0,0,Inter Miami CF,yannick bright,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+1500000.0,37.0,0,Inter Miami CF,luis suarez,TAM Player,,2024,,Main,True
+900000.0,29.0,0,Sporting Kansas City,remi walter,TAM Player,,2024,,Main,False
+400000.0,24.0,0,Sporting Kansas City,logan ndenbe,U22 Initiative,,2024,2025,Main,False
+1440000.0,31.0,0,Sporting Kansas City,nemanja radoja,Designated Player,,2025,2026,Main,False
+600000.0,31.0,0,Sporting Kansas City,tim leibold,Squad Player,,2025,2026,Main,True
+1000000.0,30.0,0,Sporting Kansas City,erik thommy,TAM Player,,2024,2025,Main,False
+1300000.0,28.0,0,Sporting Kansas City,daniel salloi,Designated Player,,2026,,Main,False
+1000000.0,28.0,0,Sporting Kansas City,joaquin fernandez,Squad Player,,2025,,Main,True
+475000.0,25.0,0,Sporting Kansas City,william agada,Squad Player,,2024,2025,Main,True
+450000.0,35.0,0,Sporting Kansas City,andreu fontas,Squad Player,,2024,,Main,False
+1000000.0,34.0,0,Sporting Kansas City,johnny russell,TAM Player,,2024,,Main,False
+200000.0,23.0,1,Sporting Kansas City,john pulskamp,Squad Player,,2025,2026,Main,False
+89716.0,29.0,1,Sporting Kansas City,memo rodriguez,Squad Player,,2024,2025,Supplemental,False
+510000.0,31.0,0,Sporting Kansas City,dany rosero,TAM Player,,2025,2026,Main,False
+700000.0,31.0,1,Sporting Kansas City,khiry shelton,Squad Player,,2025,2026,Main,False
+115000.0,26.0,1,Sporting Kansas City,robert castellanos,Squad Player,,2024,2025,Supplemental,False
+71401.0,21.0,0,Sporting Kansas City,alenis vargas,Squad Player,,2026,2027,Supplemental,True
+89716.0,25.0,0,Sporting Kansas City,zorhan bassong,Squad Player,,2024,"2025, 2026",Main,True
+450000.0,23.0,0,Sporting Kansas City,robert voloder,U22 Initiative,,2024,2025,Main,False
+71401.0,23.0,0,Sporting Kansas City,stephen afrifa,Squad Player,,2024,"2025, 2026",Supplemental,False
+3600000.0,33.0,0,Sporting Kansas City,alan pulido,Designated Player,,2026,,Main,False
+625000.0,38.0,1,Sporting Kansas City,tim melia,Squad Player,,2024,,Main,False
+600000.0,40.0,1,Atlanta United FC,brad guzan,Squad Player,,2024,2025,Main,False
+89716.0,29.0,0,Atlanta United FC,daniel rios,Squad Player,,2024,,Main,False
+1000000.0,29.0,0,Atlanta United FC,stian gregersen,TAM Player,,2027,2028,Main,True
+71401.0,21.0,1,Atlanta United FC,matthew edwards,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+560000.0,27.0,0,Atlanta United FC,xande silva,TAM Player,,2025,2026,Main,True
+71401.0,19.0,1,Atlanta United FC,luke brennan,Homegrown Player,,2027,2028,Supplemental,False
+2400000.0,29.0,0,Atlanta United FC,alexey miranchuk,Designated Player,,2027,2028,Main,True
+500000.0,31.0,0,Atlanta United FC,jamal thiare,TAM Player,,2024,2025,Main,True
+89716.0,19.0,1,Atlanta United FC,noah cobb,Homegrown Player,,2026,2027,Supplemental,False
+450000.0,27.0,0,Atlanta United FC,ronald hernandez,Squad Player,,2024,2025,Main,False
+71401.0,23.0,0,Atlanta United FC,nick firmino,Squad Player,,2024,"2025, 2026",Supplemental,False
+732275.0,28.0,0,Atlanta United FC,luis abram,TAM Player,,2025,2026,Main,True
+630000.0,25.0,0,Atlanta United FC,bartosz slisz,Designated Player,,2028,,Main,True
+400000.0,31.0,0,Atlanta United FC,derrick williams,Squad Player,,2025,2026,Main,False
+89716.0,20.0,1,Atlanta United FC,efrain morales,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+207000.0,26.0,0,Atlanta United FC,pedro amador,Squad Player,,2026,2027,Main,True
+400000.0,23.0,0,Atlanta United FC,edwin mosquera,U22 Initiative,,2025,2026,Main,False
+225000.0,37.0,1,Atlanta United FC,dax mccarty,Squad Player,,2024,2025,Main,False
+265000.0,32.0,1,Atlanta United FC,josh cohen,Squad Player,,2025,2026,Main,False
+740000.0,27.0,1,Atlanta United FC,brooks lennon,TAM Player,,2025,2026,Main,False
+71401.0,22.0,0,Atlanta United FC,ajani fortune,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+150000.0,21.0,1,Atlanta United FC,tyler wolff,Homegrown Player,,2024,2025,Supplemental,False
+900000.0,30.0,0,Atlanta United FC,saba lobjanidze,TAM Player,,2026,,Main,True
+525000.0,27.0,0,Atlanta United FC,tristan muyumba,TAM Player,,2026,2027,Main,True
+89716.0,40.0,0,Los Angeles FC,kei kamara,Squad Player,,2024,2025,Supplemental,False
+1350000.0,29.0,0,Los Angeles FC,marlon,TAM Player,,2024,Jun-25,Main,True
+1267875.0,34.0,0,Los Angeles FC,ilie sanchez,TAM Player,,2024,,Main,False
+689700.0,27.0,0,Los Angeles FC,eduard atuesta,TAM Player,Loan Player,2024,PT: 2027,Main,True
+1259760.0,32.0,1,Los Angeles FC,aaron long,TAM Player,,2024,,Main,False
+350000.0,38.0,0,Los Angeles FC,hugo lloris,Squad Player,,2024,"2025, 2026",Main,True
+2800000.0,38.0,0,Los Angeles FC,olivier giroud,Designated Player,,2025,2026,Main,True
+680000.0,22.0,0,Los Angeles FC,cristian olivera,U22 Initiative,,2026,2027,Main,True
+89716.0,25.0,0,Los Angeles FC,thomas hasal,Squad Player,,2025,2026,Main,False
+71401.0,23.0,0,Los Angeles FC,luis muller,Squad Player,,2024,"2025, 2026",Supplemental,True
+128500.0,20.0,1,Los Angeles FC,nathan ordaz,Homegrown Player,,2025,2026,Supplemental,False
+675000.0,22.0,0,Los Angeles FC,omar campos,U22 Initiative,,2027,2028,Main,True
+325000.0,35.0,0,Los Angeles FC,carlos vela,Squad Player,,2024,2025,Main,False
+1600000.0,26.0,0,Los Angeles FC,lewis o'brien,TAM Player,Loan Player,2024,PT: 2027; 2028,Main,True
+2920000.0,30.0,0,Los Angeles FC,denis bouanga,Designated Player,,2027,2028,Main,True
+250000.0,27.0,0,Los Angeles FC,eddie segura,Squad Player,,2024,2026,Main,False
+675000.0,23.0,0,Los Angeles FC,mateusz bogusz,TAM Player,,2026,2027,Main,True
+250000.0,21.0,0,Los Angeles FC,tomas angel,,Unavailable - On Loan,2026,2027,Main,True
+350004.0,28.0,0,Los Angeles FC,sergi palencia,Squad Player,,2024,2025,Main,True
+645000.0,33.0,1,Los Angeles FC,ryan hollingshead,Squad Player,,2025,,Main,False
+600000.0,25.0,0,Los Angeles FC,timothy tillman,TAM Player,,2025,2026,Main,False
+220000.0,35.0,0,Los Angeles FC,maxime chanot,Squad Player,,2025,,Main,False
+500000.0,30.0,0,Los Angeles FC,jesus murillo,TAM Player,,2024,,Main,False
+185500.0,20.0,1,Los Angeles FC,erik duenas,Homegrown Player,,2024,,Supplemental,False
+89716.0,23.0,1,Columbus Crew,max arfsten,Squad Player,,2024,"2025, 2026",Main,False
+375000.0,27.0,0,Columbus Crew,dylan chambost,Squad Player,,2026,2027,Main,True
+98261.0,23.0,1,Columbus Crew,aziel jackson,Squad Player,,2024,2025,Supplement,False
+505000.0,26.0,0,Columbus Crew,yevhen cheberko,TAM Player,,June 2026,2026,Main,True
+89716.0,26.0,0,Columbus Crew,abraham romero,Squad Player,,2024,2025,Supplement,False
+71401.0,18.0,1,Columbus Crew,taha habroune,Homegrown Player,,2027,2028,Supplement,False
+71401.0,18.0,1,Columbus Crew,cole mrowka,Homegrown Player,Unavailable - On Loan,2026,"2027, 2028",Supplement,False
+650000.0,26.0,0,Columbus Crew,andres herrera,TAM Player,Loan Player,June 2025,PT: 2027; 2028,Main,True
+375000.0,24.0,1,Columbus Crew,sean zawadzki,Homegrown Player,,2027,,Main,False
+324996.0,27.0,1,Columbus Crew,derrick jones,Squad Player,,2025,2026,Main,False
+1400000.0,34.0,0,Columbus Crew,darlington nagbe,Designated Player,,2025,2026,Main,False
+800000.0,30.0,0,Columbus Crew,steven moreira,TAM Player,,2025,2026,Main,True
+450000.0,33.0,1,Columbus Crew,christian ramirez,Squad Player,,2024,2025,Main,False
+600000.0,27.0,0,Columbus Crew,yaw yeboah,TAM Player,,2024,2025,Main,True
+350000.0,25.0,0,Columbus Crew,mohamed farsi,Squad Player,,2027,2028,Main,True
+89716.0,28.0,0,Columbus Crew,nicholas hagen,Squad Player,,2024,"2025, 2026",Supplement,False
+450000.0,25.0,0,Columbus Crew,alexandru matan,U22 Initiative,,2024,,Main,True
+360000.0,26.0,0,Columbus Crew,malte amundsen,Squad Player,,2027,,Main,False
+786996.0,27.0,1,Columbus Crew,dejuan jones,TAM Player,,2027,,Main,False
+89716.0,38.0,1,Columbus Crew,evan bush,Squad Player,,2024,,Supplement,False
+125000.0,23.0,1,Columbus Crew,patrick schulte,Generation adidas,,2024,2025,Supplement,False
+2600000.0,25.0,0,Columbus Crew,cucho hernandez,Designated Player,,2025,2026,Main,True
+89716.0,22.0,0,Columbus Crew,jacen russell-rowe,Homegrown Player,,2024,"2025, 2026",Supplement,False
+2675000.0,26.0,0,Columbus Crew,diego rossi,Designated Player,,2026,2027,Main,False
+475000.0,33.0,0,Columbus Crew,rudy camacho,Squad Player,,2025,,Main,True
+500000.0,22.0,0,Columbus Crew,marino hinestroza,U22 Initiative,Unavailable - On Loan,2026,2027,Main,True
+495000.0,29.0,0,Austin FC,jader obrian,Squad Player,,2026,2027,Main,True
+700000.0,31.0,0,Austin FC,julio cascante,TAM Player,,2025,2026,Main,False
+89716.0,36.0,1,Austin FC,hector jimenez,Squad Player,,2024,,Supplemental,False
+125000.0,24.0,0,Austin FC,dani pereira,Squad Player,,2024,2025,Main,True
+110000.0,20.0,1,Austin FC,owen wolff,Homegrown Player,,2027,2028,Supplemental,False
+1000000.0,33.0,1,Austin FC,gyasi zardes,TAM Player,,2025,2026,Main,False
+89716.0,20.0,1,Austin FC,cj fodrey,Generation adidas,,2025,"2026, 2027",Supplemental,False
+500000.0,29.0,0,Austin FC,mikkel desler,Squad Player,,2027,2028,Main,True
+1525000.0,33.0,0,Austin FC,alex ring,TAM Player,,2024,2025,Main,False
+350000.0,31.0,0,Austin FC,diego rubio,Squad Player,,2024,2025,Main,False
+4500000.0,28.0,0,Austin FC,sebastian driussi,Designated Player,,2025,2026,Main,False
+350000.0,24.0,0,Austin FC,zan kolmanic,U22 Initiative,,2025,2026,Main,False
+450000.0,28.0,0,Austin FC,jhojan valencia,TAM Player,,2024,2025,Main,False
+199992.0,30.0,1,Austin FC,brendan hines-ike,Squad Player,,2025,2026,Main,False
+428313.0,34.0,1,Austin FC,matt hedges,TAM Player,,2024,"2025, 2026",Main,False
+459000.0,33.0,1,Austin FC,brad stuver,Squad Player,,2025,2026,Main,False
+262500.0,34.0,1,Austin FC,ethan finlay,Squad Player,,2024,2025,Main,False
+300000.0,30.0,0,Austin FC,oleksandr svatok,Squad Player,,2027,2028,Main,True
+375000.0,28.0,0,Austin FC,jon gallagher,Squad Player,,2026,2027,Main,False
+600000.0,27.0,0,Austin FC,leo vaisanen,TAM Player,,2026,2027,Main,True
+1000000.0,26.0,0,Austin FC,osman bukari,Designated Player,,2027,2028,Main,True
+200000.0,24.0,0,Austin FC,guilherme biro,Squad Player,,2026,2027,Main,True
+742500.0,27.0,0,Portland Timbers,kamal miller,TAM Player,,2026,2027,Main,False
+550000.0,24.0,0,Portland Timbers,santiago moreno,U22 Initiative,,2026,2027,Main,False
+400000.0,22.0,0,Portland Timbers,david ayala,U22 Initiative,,2025,2026,Main,False
+250000.0,27.0,0,Portland Timbers,marvin loria,Squad Player,,2024,2025,Main,False
+500000.0,38.0,0,Portland Timbers,diego chara,TAM Player,,2024,,Main,False
+1275000.0,31.0,0,Portland Timbers,felipe mora,TAM Player,,2025,2026,Main,False
+225000.0,22.0,0,Portland Timbers,juan mosquera,TAM Player,,2027,2028,Main,False
+675000.0,27.0,1,Portland Timbers,eryk williamson,Homegrown Player,,2025,,Main,False
+600000.0,26.0,1,Portland Timbers,mason toye,Squad Player,,2024,2025,Main,False
+104000.0,21.0,1,Portland Timbers,tega ikoba,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+735000.0,32.0,0,Portland Timbers,dario zuparic,TAM Player,,2025,,Main,False
+125000.0,27.0,0,Portland Timbers,james pantemis,Squad Player,,2025,2026,Supplemental,True
+425000.0,23.0,0,Portland Timbers,antony,U22 Initiative,,2026,2027,Main,True
+555000.0,30.0,0,Portland Timbers,maxime crepeau,Squad Player,,2025,2026,Main,False
+1930000.0,26.0,0,Portland Timbers,evander,Designated Player,,2026,2027,Main,True
+1775000.0,31.0,0,Portland Timbers,jonathan rodriguez,Designated Player,,2026,2027,Main,True
+550000.0,30.0,0,Portland Timbers,miguel araujo,TAM Player,,2025,2026,Main,True
+580000.0,26.0,0,Portland Timbers,cristhian paredes,Squad Player,,2025,2026,Main,False
+150000.0,27.0,1,Portland Timbers,zac mcgraw,Squad Player,,2025,2026,Main,False
+325000.0,27.0,0,Portland Timbers,claudio bravo,TAM Player,,2026,2027,Main,False
+175200.0,21.0,0,Portland Timbers,finn surman,Squad Player,,2026,2027,Main,True
+89716.0,31.0,1,Portland Timbers,eric miller,Squad Player,,2025,,Supplemental,False
+500000.0,27.0,1,New York Red Bulls,kyle duncan,TAM Player,,2025,2026,Main,False
+1250000.0,28.0,0,New York Red Bulls,lewis morgan,TAM Player,,2025,2026,Main,True
+500000.0,28.0,0,New York Red Bulls,carlos coronel,Squad Player,,2024,2025,Main,False
+5405000.0,33.0,0,New York Red Bulls,emil forsberg,Designated Player,,2026,2027,Main,True
+450000.0,27.0,1,New York Red Bulls,sean nealis,Squad Player,,2025,2026,Main,False
+120000.0,20.0,0,New York Red Bulls,mohammed sofo,Squad Player,,2026,"2027, 2028",Supplemental,True
+165000.0,21.0,0,New York Red Bulls,wikelman carmona,Squad Player,,2027,2028,Supplemental,False
+642000.0,25.0,0,New York Red Bulls,andres reyes,TAM Player,,2026,2027,Main,False
+340000.0,20.0,0,New York Red Bulls,dennis gjengaar,U22 Initiative,,2027,2028,Main,True
+130000.0,20.0,0,New York Red Bulls,ronald donkor,Squad Player,,2026,2027,Main,True
+294000.0,34.0,1,New York Red Bulls,ryan meara,Squad Player,,2024,2025,Main,False
+385000.0,21.0,1,New York Red Bulls,daniel edelman,Squad Player,,2027,2028,Main,False
+420000.0,22.0,0,New York Red Bulls,noah eile,U22 Initiative,,2027,2028,Main,True
+300000.0,23.0,1,New York Red Bulls,cameron harper,Squad Player,,2027,2028,Main,False
+89716.0,19.0,1,New York Red Bulls,serge ngoma jr.,Homegrown Player,,2025,2026,Supplemental,False
+1020000.0,28.0,0,New York Red Bulls,felipe carballo,Designated Player,Loan Player,June 2025,PT: 2027; 2028,Main,True
+480000.0,23.0,0,New York Red Bulls,elias manoel,TAM Player,,2025,2026,Main,True
+1350000.0,26.0,0,New York Red Bulls,dante vanzeir,Designated Player,,2026,2027,Main,True
+500000.0,33.0,0,New York Red Bulls,cory burke,Squad Player,,2024,2025,Main,False
+71401.0,23.0,1,New York Red Bulls,aidan o'connor,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+100000.0,16.0,1,New York Red Bulls,julian hall,Homegrown Player,,2026,2027,Supplemental,False
+89716.0,22.0,1,New York Red Bulls,peter stroud,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+247500.0,26.0,1,New York Red Bulls,dylan nealis,Squad Player,,2027,2028,Main,False
+640000.0,22.0,1,New York Red Bulls,john tolkin,Squad Player,,2027,2028,Main,False
+71401.0,21.0,1,New York Red Bulls,roald mitchell,Homegrown Player,,2026,"2027, 2028",Supplemental,False
+324996.0,26.0,0,Orlando City SC,rafael santos,Squad Player,,2024,"2025, 2026",Main,False
+300000.0,24.0,0,Orlando City SC,dagur dan thorhallsson,Squad Player,,2026,2027,Main,False
+2832817.0,33.0,0,Orlando City SC,luis muriel,Designated Player,,2026,,Main,True
+71401.0,23.0,0,Orlando City SC,yutaro tsukada,Squad Player,,2025,"2026, 2027",Supplemental,False
+200000.0,21.0,1,Orlando City SC,michael halliday,Squad Player,,2025,"2026, 2027",Main,False
+675000.0,23.0,0,Orlando City SC,cesar araujo,TAM Player,,2024,2025,Main,False
+480000.0,30.0,0,Orlando City SC,wilder cartagena,Squad Player,,2025,,Main,True
+95000.0,24.0,0,Orlando City SC,luca petrasso,Homegrown Player,,2024,2025,Supplemental,False
+340909.0,23.0,0,Orlando City SC,ramiro enrique,U22 Initiative,,2025,"2026, 2027",Main,True
+89716.0,20.0,1,Orlando City SC,alexander freeman,Homegrown Player,,2025,2026,Supplemental,False
+71401.0,22.0,1,Orlando City SC,jeorgio kocevski,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+89716.0,21.0,0,Orlando City SC,shakur mohammed,Generation adidas,,2025,"2026, 2027",Supplemental,True
+800000.0,34.0,0,Orlando City SC,pedro gallese,TAM Player,,2024,2025,Main,True
+290000.0,32.0,1,Orlando City SC,kyle smith,Squad Player,,2023,2024,Main,False
+89716.0,24.0,1,Orlando City SC,jack lynn,Squad Player,,2024,2025,Supplemental,False
+825000.0,23.0,1,Orlando City SC,duncan mcguire,Squad Player,,2027,2028,Main,False
+350000.0,27.0,0,Orlando City SC,rodrigo schlegel,Squad Player,,2024,"2025, 2026",Main,False
+800000.0,35.0,0,Orlando City SC,nicolas lodeiro,TAM Player,,2024,2025,Main,False
+900000.0,26.0,0,Orlando City SC,martin ojeda,Designated Player,,2025,"2026, 2027",Main,False
+850000.0,33.0,0,Orlando City SC,robin jansson,Squad Player,,2025,2026,Main,False
+71401.0,22.0,0,Orlando City SC,javier otero,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+600000.0,26.0,0,Orlando City SC,david brekalo,TAM Player,,2027,2028,Main,True
+142000.0,27.0,1,Orlando City SC,mason stajduhar,Homegrown Player,Unavailable - SEI,2025,2026,Supplemental,False
+500004.0,25.0,0,Orlando City SC,ivan angulo,Squad Player,,2025,2026,Main,True
+150000.0,34.0,0,Orlando City SC,felipe,Squad Player,,2024,,Main,False
+1560000.0,24.0,0,Orlando City SC,facundo torres,Designated Player,,2026,"2027, 2028",Main,False
+450000.0,28.0,0,Vancouver Whitecaps FC,bjrn inge utvik,Squad Player,,2025.0,2026,Main,True
+620000.0,25.0,0,Vancouver Whitecaps FC,ranko veselinovic,Squad Player,,2026.0,2027,Main,False
+89716.0,25.0,0,Vancouver Whitecaps FC,levonte johnson,Squad Player,,2024.0,2025,Supplemental,False
+325000.0,21.0,0,Vancouver Whitecaps FC,edier ocampo,U22 Initiative,,2027.0,2028,Main,True
+672000.0,28.0,0,Vancouver Whitecaps FC,yohei takaoka,TAM Player,,2024.0,2025,Main,True
+110000.0,25.0,0,Vancouver Whitecaps FC,belal halbouni,Squad Player,,2025.0,2026,Supplemental,False
+71401.0,20.0,0,Vancouver Whitecaps FC,giuseppe bovalina,Special Discovery Player,,2026.0,"2027, 2028",Supplemental,True
+2880000.0,29.0,0,Vancouver Whitecaps FC,ryan gauld,Designated Player,,2027.0,,Main,False
+350000.0,24.0,0,Vancouver Whitecaps FC,deiber caicedo,U22 Initiative,,2024.0,2025,Main,True
+825000.0,29.0,0,Vancouver Whitecaps FC,sam adekugbe,TAM Player,,2026.0,2027,Main,False
+1050000.0,28.0,0,Vancouver Whitecaps FC,andres cubas,Designated Player,,2026.0,2027,Main,False
+330000.0,23.0,1,Vancouver Whitecaps FC,sebastian berhalter,Squad Player,,2025.0,2026,Main,False
+2499996.0,32.0,0,Vancouver Whitecaps FC,stuart armstrong,Designated Player,,2026.0,,Main,True
+440000.0,35.0,0,Vancouver Whitecaps FC,damir kreilach,Squad Player,,2025.0,,Main,False
+89716.0,23.0,1,Vancouver Whitecaps FC,isaac boehmer,Homegrown Player,,2024.0,2025,Supplemental,False
+125000.0,22.0,0,Vancouver Whitecaps FC,ralph priso,Homegrown Player,,2024.0,2025,Supplemental,False
+621000.0,22.0,0,Vancouver Whitecaps FC,pedro vite,U22 Initiative,,2025.0,,Main,True
+100000.0,24.0,0,Vancouver Whitecaps FC,ali ahmed,Squad Player,,2025.0,2026,Supplemental,False
+800000.0,25.0,0,Vancouver Whitecaps FC,mathias laborda,TAM Player,,2025.0,2026,Main,True
+754500.0,28.0,1,Vancouver Whitecaps FC,brian white,Squad Player,,2025.0,2026,Main,False
+750000.0,28.0,1,Vancouver Whitecaps FC,tristan blackmon,TAM Player,,2027.0,,Main,False
+71401.0,22.0,0,Vancouver Whitecaps FC,nicolas fleuriau chateau,Squad Player,,2025.0,"2026, 2027",Supplemental,False
+900000.0,30.0,0,Vancouver Whitecaps FC,alessandro schopf,TAM Player,,2024.0,2025,Main,True
+150000.0,25.0,0,Vancouver Whitecaps FC,ryan raposo,Squad Player,,2024.0,,Main,False
+650000.0,33.0,1,Vancouver Whitecaps FC,fafa picault,Squad Player,,2024.0,2025,Main,False
+89716.0,24.0,1,Philadelphia Union,chris donovan,Squad Player,,2025,"2026, 2027",Main,False
+800000.0,34.0,0,Philadelphia Union,andre blake,TAM Player,,2026,2027,Main,False
+93988.0,26.0,1,Philadelphia Union,sam adeniran,Squad Player,,2024,,Supplemental,False
+650000.0,26.0,0,Philadelphia Union,tai baribo,TAM Player,,2025,2026,Main,True
+550000.0,24.0,0,Philadelphia Union,danley jean jacques,TAM Player,,2026,"2027, 2028",Main,True
+1800000.0,30.0,0,Philadelphia Union,mikael uhre,Designated Player,,2024,2025,Main,False
+1000000.0,30.0,0,Philadelphia Union,jakob glesnes,TAM Player,,2025,2026,Main,False
+200000.0,21.0,1,Philadelphia Union,jack mcglynn,Squad Player,,2025,"2026, 2027",Main,False
+200000.0,15.0,1,Philadelphia Union,cavan sullivan,Homegrown Player,,2028,,Supplemental,False
+89716.0,26.0,0,Philadelphia Union,oliver semmle,Squad Player,,2025,2026,Main,True
+240000.0,23.0,1,Philadelphia Union,nathan harriel,Homegrown Player,,2025,"2026, 2027",Main,False
+280000.0,25.0,0,Philadelphia Union,jesus bueno,Squad Player,,2026,2027,Main,True
+71401.0,18.0,1,Philadelphia Union,andrew rick,Homegrown Player,,2028,2029,Supplemental,False
+324996.0,37.0,1,Philadelphia Union,alejandro bedoya,Player Professional Development Role,,2024,,Main,False
+100000.0,24.0,1,Philadelphia Union,jeremy rafanello,Homegrown Player,,2024,2025,Supplemental,False
+300000.0,23.0,1,Philadelphia Union,leon flach,Squad Player,,2024,,Main,False
+150000.0,20.0,1,Philadelphia Union,quinn sullivan,Homegrown Player,,2024,2025,Main,False
+350000.0,27.0,0,Philadelphia Union,olivier mbaizo,Squad Player,,2024,2025,Main,False
+800000.0,29.0,0,Philadelphia Union,jack elliott,TAM Player,,2024,2025,Main,False
+100000.0,21.0,1,Philadelphia Union,markus anderson,Squad Player,,2026,"2027, 2028",Main,False
+1600000.0,28.0,0,Philadelphia Union,daniel gazdag,Designated Player,,2025,2026,Main,False
+875000.0,27.0,0,Philadelphia Union,kai wagner,TAM Player,,2026,2027,Main,False
+71401.0,18.0,1,Philadelphia Union,cj olney,Homegrown Player,,2028,2029,Supplemental,False
+71401.0,22.0,0,Toronto FC,nicksoen gomis,Squad Player,,2025,"2026, 2027",Supplemental,True
+750000.0,30.0,0,Toronto FC,sigurd rosted,TAM Player,,2025,2026,Main,True
+426039.0,35.0,1,Toronto FC,sean johnson,TAM Player,,2025,2026,Main,False
+250000.0,34.0,0,Toronto FC,kevin long,Squad Player,,2024,2025,Main,True
+375000.0,31.0,1,Toronto FC,shane o'neill,Squad Player,,2024,2025,Main,False
+300000.0,23.0,0,Toronto FC,cassius mailula,U22 Initiative,Unavailable - On Loan,2026,2027,Main,True
+3125000.0,30.0,0,Toronto FC,federico bernardeschi,Designated Player,,2026,2028,Main,False
+710062.0,28.0,0,Toronto FC,derrick etienne jr,Squad Player,,2025,"2026, 2027",Main,False
+71401.0,24.0,0,Toronto FC,tyrese spicer,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
+700000.0,27.0,0,Toronto FC,prince owusu,TAM Player,,2024,2025,Main,True
+990000.0,29.0,0,Toronto FC,richie laryea,Designated Player,,2026,2027,Main,False
+788036.0,32.0,0,Toronto FC,jonathan osorio,TAM Player,,2026,,Main,False
+95000.0,21.0,0,Toronto FC,kosi thompson,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+197000.0,24.0,0,Toronto FC,matty longstaff,Squad Player,,2025,2026,Main,True
+89716.0,25.0,0,Toronto FC,alonso coello,Squad Player,,2024,2025,Main,True
+89716.0,21.0,0,Toronto FC,kobe franklin,Homegrown Player,,2024,"2025, 2026",Main,False
+7500000.0,33.0,0,Toronto FC,lorenzo insigne,Designated Player,,June 2026,2026,Main,False
+400000.0,28.0,0,Toronto FC,deybi flores,TAM Player,,2025,2026,Main,True
+71401.0,23.0,1,Toronto FC,charlie sharp,Squad Player,,2025,"2026, 2027",Supplemental,False
+100000.0,22.0,0,Toronto FC,deandre kerr,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+71401.0,24.0,0,Toronto FC,luka gavran,Squad Player,,2024,2025,Supplemental,False
+125000.0,26.0,0,Toronto FC,aime mabika,Squad Player,,2024,2025,Supplemental,False
+550000.0,25.0,1,Toronto FC,brandon servania,Squad Player,,2024,2025,Main,False
+675000.0,27.0,0,Toronto FC,raoul petretta,TAM Player,,2025,2026,Main,False
+450000.0,29.0,1,Toronto FC,henry wingo,Squad Player,,2026,2027,Main,False
