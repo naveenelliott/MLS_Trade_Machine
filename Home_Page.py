@@ -182,14 +182,14 @@ team2_shortfall_players = []
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
-for _, player in first_team_players.iterrows():
-    NAME = player['NAME']
+for player in selected_players_team1:
+    player_name = player['NAME']
     player_salary = player['base_salary']
 
     # Check if the player can be acquired with the temporary GAM
     if team2_remaining_gam_temp >= player_salary:
         team2_gam_spent += player_salary
-        team2_players_acquired.append(NAME)
+        team2_players_acquired.append(player_name)
         team2_remaining_gam_temp -= player_salary  # Deduct temporarily
     else:
         team2_shortfall_players.append(player)
@@ -203,14 +203,14 @@ team1_shortfall_players = []
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
 
-for _, player in second_team_players.iterrows():
-    NAME = player['NAME']
+for player in selected_players_team2:
+    player_name = player['NAME']
     player_salary = player['base_salary']
 
     # Check if the player can be acquired with the temporary GAM
     if team1_remaining_gam_temp >= player_salary:
         team1_gam_spent += player_salary
-        team1_players_acquired.append(NAME)
+        team1_players_acquired.append(player_name)
         team1_remaining_gam_temp -= player_salary  # Deduct temporarily
     else:
         team1_shortfall_players.append(player)
@@ -280,8 +280,7 @@ for player in selected_players_team1+selected_players_team2:
 
 transfer_team = selected_team2
 
-dp_flag = 0
-u22_flag = 0
+
 
 if isinstance(selected_players_team1, list):
     selected_players_team1 = pd.DataFrame(selected_players_team1)
@@ -294,23 +293,35 @@ if isinstance(selected_players_team1, list):
             new_player = pd.DataFrame([new_player])
             new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
             if new_player['Designated Player'].iloc[0] < new_player['Max Designated Players'].iloc[0]:
-                dp_flag = 0
+                difference = new_player['Max Designated Players'].iloc[0] - new_player['Designated Player'].iloc[0]
+                #st.success(f"You have used one of {selected_team}'s available DP spots. They have {difference} spots remaining.")
                 continue
             else:
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players.")
-                dp_flag = 1
+                team1_dps = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'Designated Player']
+                team1_dps = team1_dps['NAME']
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players. You need to move on from one of these players: {', '.join(team1_dps)}.")
+
+                if new_player['NAME'][0] in team2_players_acquired:
+                    team2_players_acquired.remove(new_player['NAME'][0])
+                if new_player['NAME'][0] in team2_shortfall_players:
+                    team2_shortfall_players.remove(new_player['NAME'][0])
+
         elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
             new_player = pd.DataFrame([new_player])
             new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
             if new_player['U22 Initiative'].iloc[0] < new_player['Max U22 Initiative Players'].iloc[0]:
-                u22_flag = 0
+                difference = new_player['Max U22 Initiative Players'].iloc[0] - new_player['U22 Initiative'].iloc[0]
+                #st.success(f"You have used one of {selected_team}'s available U22 Initative spots. They have {difference} spots remaining.")
                 continue
             else:
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players.")
-                u22_flag = 1
+                team1_u22 = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
+                team1_u22 = team1_u22['NAME']
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players. You need to move on from one of these players: {', '.join(team1_u22)}.")
 
-dp_flag_1 = 0
-u22_flag_1 = 0
+                if new_player['NAME'][0] in team2_players_acquired:
+                    team2_players_acquired.remove(new_player['NAME'][0])
+                if new_player['NAME'][0] in team2_shortfall_players:
+                    team2_shortfall_players.remove(new_player['NAME'][0])
 
 transfer_team2 = selected_team
 
@@ -324,21 +335,34 @@ if isinstance(selected_players_team2, list):
             new_player = pd.DataFrame([new_player])
             new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
             if new_player['Designated Player'].iloc[0] < new_player['Max Designated Players'].iloc[0]:
-                dp_flag_1 = 0
+                difference = new_player['Max Designated Players'].iloc[0] - new_player['Designated Player'].iloc[0]
+                #st.success(f"You have used one of {selected_team2}'s available DP spots. They have {difference} spots remaining.")
                 continue
             else:
-                st.error(f"{selected_team} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players.")
-                dp_flag_1 = 1
+                team2_dps = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'Designated Player']
+                team2_dps = team2_dps['NAME']
+                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]}. Too many Designated Players. You need to move on from one of these players: {', '.join(team2_dps)}.")
+        
+                if new_player['NAME'][0] in team1_players_acquired:
+                    team1_players_acquired.remove(new_player['NAME'][0])
+                if new_player['NAME'][0] in team1_shortfall_players:
+                    team1_shortfall_players.remove(new_player['NAME'][0])
         elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
             new_player = pd.DataFrame([new_player])
             new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
             if new_player['U22 Initiative'].iloc[0] < new_player['Max U22 Initiative Players'].iloc[0]:
-                u22_flag_1 = 0
+                difference = new_player['Max U22 Initiative Players'].iloc[0] - new_player['U22 Initiative'].iloc[0]
+                #st.success(f"You have used one of {selected_team2}'s available U22 Initative spots. They have {difference} spots remaining.")
                 continue
             else:
-                st.error(f"{selected_team} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players.")
-                u22_flag_1 = 1
+                team2_u22 = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
+                team2_u22 = team2_u22['NAME']
+                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]}. Too many U22 Initiative Players. You need to move on from one of these players: {', '.join(team2_u22)}.")
 
+                if new_player['NAME'][0] in team1_players_acquired:
+                    team1_players_acquired.remove(new_player['NAME'][0])
+                if new_player['NAME'][0] in team1_shortfall_players:
+                    team1_shortfall_players.remove(new_player['NAME'][0])
 #first_team_dp = 
 
 # Display results for Team 2
