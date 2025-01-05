@@ -6,7 +6,7 @@ filtered = end[end['ROSTER DESIGNATION'].isin(['Designated Player', 'U22 Initiat
 
 # Count the occurrences of each designation for each team
 designation_counts = (
-    filtered.groupby(['team_abbreviation', 'ROSTER DESIGNATION'])
+    filtered.groupby(['team_name', 'team_abbreviation', 'ROSTER DESIGNATION'])
     .size()
     .unstack(fill_value=0)  # Create columns for each designation, filling missing values with 0
 ).reset_index()

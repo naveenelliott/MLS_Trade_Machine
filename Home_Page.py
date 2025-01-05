@@ -163,31 +163,15 @@ second_team_players = asi_data.loc[asi_data['team_name'] == selected_team2].sort
 selected_players_team1 = []
 selected_players_team2 = []
 
-if "team1_selected_players" not in st.session_state:
-    st.session_state["team1_selected_players"] = []
-
-if "team2_selected_players" not in st.session_state:
-    st.session_state["team2_selected_players"] = []
-
-st.write(first_team_players)
-
 with col1:
     for _, player in first_team_players.iterrows():
         if st.checkbox(player['NAME'], key=f"team1_{player['NAME']}"):
             selected_players_team1.append(player)
-        elif player['NAME'] in [p['NAME'] for p in st.session_state["team1_selected_players"]]:
-            st.session_state["team1_selected_players"].remove(player)
-
-st.session_state["team1_selected_players"] = selected_players_team1
 
 with col3:
     for _, player in second_team_players.iterrows():
         if st.checkbox(player['NAME'], key=f"team2_{player['NAME']}"):
             selected_players_team2.append(player)
-        elif player['NAME'] in [p['NAME'] for p in st.session_state["team2_selected_players"]]:
-            st.session_state["team1_selected_players"].remove(player)
-
-st.session_state["team2_selected_players"] = selected_players_team2
 
 # Accumulate information for Team 2 acquiring players from Team 1
 team2_gam_spent = 0
@@ -281,8 +265,79 @@ team1_shortfall_players = [
 team2_players_acquired.extend(team2_resolved_acquisitions)
 team1_players_acquired.extend(team1_resolved_acquisitions)
 
-team_1_players_df = asi_data.loc[asi_data['NAME'].isin(st.session_state["team1_selected_players"])]
-st.write(team_1_players_df)
+for player in selected_players_team1+selected_players_team2:
+    if player['ROSTER DESIGNATION'] == 'Designated Player':
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'Designated Player'
+        ] -= 1
+    elif player['ROSTER DESIGNATION'] == 'U22 Initiative':
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'U22 Initiative'
+        ] -= 1
+
+
+transfer_team = selected_team2
+
+dp_flag = 0
+u22_flag = 0
+
+if isinstance(selected_players_team1, list):
+    selected_players_team1 = pd.DataFrame(selected_players_team1)
+
+    # Assign the transfer team column
+    selected_players_team1['Transfer Team'] = transfer_team
+
+    for _, new_player in selected_players_team1.iterrows():
+        if new_player['ROSTER DESIGNATION'] == 'Designated Player':
+            new_player = pd.DataFrame([new_player])
+            new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+            if new_player['Designated Player'].iloc[0] < new_player['Max Designated Players'].iloc[0]:
+                dp_flag = 0
+                continue
+            else:
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players.")
+                dp_flag = 1
+        elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
+            new_player = pd.DataFrame([new_player])
+            new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+            if new_player['U22 Initiative'].iloc[0] < new_player['Max U22 Initiative Players'].iloc[0]:
+                u22_flag = 0
+                continue
+            else:
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players.")
+                u22_flag = 1
+
+dp_flag_1 = 0
+u22_flag_1 = 0
+
+transfer_team2 = selected_team
+
+if isinstance(selected_players_team2, list):
+    selected_players_team2 = pd.DataFrame(selected_players_team2)
+
+    selected_players_team2['Transfer Team'] = transfer_team2
+
+    for _, new_player in selected_players_team2.iterrows():
+        if new_player['ROSTER DESIGNATION'] == 'Designated Player':
+            new_player = pd.DataFrame([new_player])
+            new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+            if new_player['Designated Player'].iloc[0] < new_player['Max Designated Players'].iloc[0]:
+                dp_flag_1 = 0
+                continue
+            else:
+                st.error(f"{selected_team} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players.")
+                dp_flag_1 = 1
+        elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
+            new_player = pd.DataFrame([new_player])
+            new_player = pd.merge(new_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+            if new_player['U22 Initiative'].iloc[0] < new_player['Max U22 Initiative Players'].iloc[0]:
+                u22_flag_1 = 0
+                continue
+            else:
+                st.error(f"{selected_team} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players.")
+                u22_flag_1 = 1
 
 #first_team_dp = 
 
