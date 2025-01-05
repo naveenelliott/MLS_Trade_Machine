@@ -93,9 +93,13 @@ selected_team = st.session_state.get('selected_team', teams[0])
 if selected_team not in teams:
     selected_team = teams[0]  # Default to the first team if the session state value is invalid
 
+roster_options = team_data['Model'].unique()
+
 with col1:
     selected_team = st.selectbox('Choose the First Team:', teams, index=teams.index(selected_team))
     st.session_state['selected_team'] = selected_team
+    team_1_data = team_data.loc[team_data['team_name'] == selected_team].reset_index(drop=True)
+
 
 # Filter out the selected team from the second dropdown options
 teams_for_second_selection = [team for team in teams if team != selected_team]
@@ -108,6 +112,28 @@ if selected_team2 not in teams_for_second_selection:
 with col3:
     selected_team2 = st.selectbox('Choose the Second Team:', teams_for_second_selection, index=teams_for_second_selection.index(selected_team2))
     st.session_state['selected_team2'] = selected_team2
+    team_2_data = team_data.loc[team_data['team_name'] == selected_team2].reset_index(drop=True)
+
+with col2:    
+    if (team_1_data['Total Designated Players'][0] != 3) & (team_1_data['U22 Initiative'][0] != 4):
+        st.write(f'{selected_team} has roster flexibility. Choose a model to build a roster around. More info here.')
+        # Checkbox to select roster options
+        selected_roster_option_team1 = st.radio(
+            f"Choose a roster model for {selected_team}:",
+            roster_options
+        )
+
+        team_data.loc[team_data['team_name'] == selected_team, 'Model'] = selected_roster_option_team1
+
+    if (team_2_data['Total Designated Players'][0] != 3) & (team_2_data['U22 Initiative'][0] != 4):
+        st.write(f'{selected_team2} has roster flexibility. Choose a model to build a roster around. More info here.')
+        # Checkbox to select roster options
+        selected_roster_option = st.radio(
+            f"Choose a roster model for {selected_team2}:",
+            roster_options
+        )
+
+        team_data.loc[team_data['team_name'] == selected_team2, 'Model'] = selected_roster_option
 
 
 # 2025 DP charge - 743750
@@ -131,6 +157,10 @@ asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['a
 
 
 st.write(team_data)
+
+# need to eventually go through and for each TAM Player in the range of 683750 to 1683750, need to buy them down to 683750 until we use it all up
+# the remaining gets converted into GAM amount
+
 
 # getting the amount spent by each team
 raw_salaries = asi_data.groupby(['team_name', 'team_abbreviation'])['base_salary'].sum().reset_index()
@@ -228,36 +258,6 @@ team1_gam_shortfall = 0
 team1_players_acquired = []
 team1_shortfall_players = []
 
-transfer_team = selected_team2
-
-
-for player in selected_players_team1:
-    if player['INTERNATIONAL'] == True:
-        temp_player = pd.DataFrame([player])
-        temp_player['Transfer Team'] = transfer_team
-        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-        if temp_player['Unfilled Slots'].iloc[0] <= 0:
-            st.write(f"{selected_team2} need to acquire an international slot for {temp_player['NAME'][0]}. They typically run $175,000 in GAM, so they will be charged that much.")
-        else:
-            team_abbr = temp_player['Transfer Team'].iloc[0]
-            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
-            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
-
-transfer_team = selected_team
-
-
-for player in selected_players_team2:
-    if player['INTERNATIONAL'] == True:
-        temp_player = pd.DataFrame([player])
-        temp_player['Transfer Team'] = transfer_team
-        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-        if temp_player['Unfilled Slots'].iloc[0] <= 0:
-            st.write(f"{selected_team2} need to acquire an international slot for {temp_player['NAME'][0]}. They typically run $175,000 in GAM, so they will be charged that much.")
-        else:
-            team_abbr = temp_player['Transfer Team'].iloc[0]
-            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
-            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
-
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
@@ -302,6 +302,44 @@ team2_remaining_gam = (
     + team1_gam_spent
 )
 
+# Temporary GAM tracker for international slot charges
+team2_international_gam_spent = 0
+team1_international_gam_spent = 0
+
+# Process Team 1 to Team 2 transactions
+for player in selected_players_team1:
+    if player['INTERNATIONAL']:
+        temp_player = pd.DataFrame([player])
+        temp_player['Transfer Team'] = selected_team2
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+
+        if temp_player['Unfilled Slots'].iloc[0] <= 0:
+            st.write(f"{selected_team2} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM.")
+            team2_international_gam_spent += 175000
+        else:
+            team_abbr = temp_player['Transfer Team'].iloc[0]
+            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
+            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
+
+# Process Team 2 to Team 1 transactions
+for player in selected_players_team2:
+    if player['INTERNATIONAL']:
+        temp_player = pd.DataFrame([player])
+        temp_player['Transfer Team'] = selected_team
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+
+        if temp_player['Unfilled Slots'].iloc[0] <= 0:
+            st.write(f"{selected_team} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM.")
+            team1_international_gam_spent += 175000
+        else:
+            team_abbr = temp_player['Transfer Team'].iloc[0]
+            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
+            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
+
+# Adjust remaining GAM after international slot charges
+team2_remaining_gam -= team2_international_gam_spent
+team1_remaining_gam -= team1_international_gam_spent
+
 # Determine which shortfall players can now be acquired
 team2_resolved_acquisitions = []
 for player in team2_shortfall_players:
@@ -339,6 +377,7 @@ team1_shortfall_players = [
 team2_players_acquired.extend(team2_resolved_acquisitions)
 team1_players_acquired.extend(team1_resolved_acquisitions)
 
+transfer_team = selected_team2
 
 if isinstance(selected_players_team1, list):
     selected_players_team1 = pd.DataFrame(selected_players_team1)
