@@ -231,12 +231,12 @@ team2_remaining_gam = (
 # Determine which shortfall players can now be acquired
 team2_resolved_acquisitions = []
 for player in team2_shortfall_players:
-    NAME = player['NAME']
+    player_name = player['NAME']
     player_salary = player['base_salary']
 
     if team2_remaining_gam >= player_salary:
         team2_gam_spent += player_salary
-        team2_resolved_acquisitions.append(NAME)
+        team2_resolved_acquisitions.append(player_name)
         team2_remaining_gam -= player_salary
 
 team2_shortfall_players = [
@@ -247,12 +247,12 @@ team2_shortfall_players = [
 
 team1_resolved_acquisitions = []
 for player in team1_shortfall_players:
-    NAME = player['NAME']
+    player_name = player['NAME']
     player_salary = player['base_salary']
 
     if team1_remaining_gam >= player_salary:
         team1_gam_spent += player_salary
-        team1_resolved_acquisitions.append(NAME)
+        team1_resolved_acquisitions.append(player_name)
         team1_remaining_gam -= player_salary
 
 team1_shortfall_players = [
