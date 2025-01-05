@@ -109,9 +109,28 @@ with col3:
     selected_team2 = st.selectbox('Choose the Second Team:', teams_for_second_selection, index=teams_for_second_selection.index(selected_team2))
     st.session_state['selected_team2'] = selected_team2
 
-# removing DP players for the team being
-# HERE CHANGE FOR YOUNG DP AND U22 INITIATIVE
-asi_data.loc[asi_data['base_salary'] >= 743750, 'base_salary'] = 743750
+
+# 2025 DP charge - 743750
+# 2024 DP charge - 683750
+
+
+asi_data.loc[asi_data['ROSTER DESIGNATION'] == 'Designated Player', 'base_salary'] = 743750
+
+# have to use 2024 records
+asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'Young Designated Player') & (asi_data['age'] <= 20), 'base_salary'] = 150000
+
+# have to use 2024 records
+asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'Young Designated Player') & (asi_data['age'] <= 23) & (asi_data['age'] >= 21), 'base_salary'] = 200000
+
+# have to use 2024 records
+asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['age'] <= 20), 'base_salary'] = 150000
+
+# have to use 2024 records
+asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['age'] <= 25) & (asi_data['age'] >= 21), 'base_salary'] = 200000
+
+
+
+st.write(team_data)
 
 # getting the amount spent by each team
 raw_salaries = asi_data.groupby(['team_name', 'team_abbreviation'])['base_salary'].sum().reset_index()

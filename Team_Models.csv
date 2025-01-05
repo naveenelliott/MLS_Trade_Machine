@@ -1,28 +1,28 @@
-team_name,team_abbreviation,Designated Player,U22 Initiative,Model,Max Designated Players,Max U22 Initiative Players,Slot Numbers,Unfilled Slots
-Atlanta United FC,ATL,2,1,U22 Initiative Player Model,2,4,10,1
-Austin FC,ATX,2,1,U22 Initiative Player Model,2,4,7,0
-CF Montréal,MTL,1,3,U22 Initiative Player Model,2,4,10,0
-Charlotte FC,CLT,2,3,U22 Initiative Player Model,2,4,14,0
-Chicago Fire FC,CHI,2,3,U22 Initiative Player Model,2,4,7,1
-Colorado Rapids,COL,3,1,Three Designated Player Model,3,3,6,0
-Columbus Crew,CLB,3,2,Three Designated Player Model,3,3,10,0
-D.C. United,DCU,2,2,U22 Initiative Player Model,2,4,7,0
-FC Cincinnati,CIN,3,1,Three Designated Player Model,3,3,7,0
-FC Dallas,FCD,2,0,U22 Initiative Player Model,2,4,8,0
-Inter Miami CF,MIA,2,3,U22 Initiative Player Model,2,4,14,0
-LA Galaxy,LAG,2,2,U22 Initiative Player Model,2,4,13,0
-Los Angeles FC,LAFC,2,3,U22 Initiative Player Model,2,4,14,0
-Minnesota United FC,MIN,3,2,Three Designated Player Model,3,3,11,0
-Nashville SC,NSH,3,2,Three Designated Player Model,3,3,6,0
-New England Revolution,NER,3,2,Three Designated Player Model,3,3,7,0
-New York City FC,NYC,2,3,U22 Initiative Player Model,2,4,10,0
-New York Red Bulls,NYRB,3,2,Three Designated Player Model,3,3,10,0
-Orlando City SC,ORL,3,1,Three Designated Player Model,3,3,8,0
-Philadelphia Union,PHI,2,0,U22 Initiative Player Model,2,4,6,0
-Portland Timbers,POR,2,3,U22 Initiative Player Model,2,4,6,0
-Real Salt Lake,RSL,2,4,U22 Initiative Player Model,2,4,13,0
-Seattle Sounders FC,SEA,2,2,U22 Initiative Player Model,2,4,3,0
-Sporting Kansas City,SKC,3,2,Three Designated Player Model,3,3,5,0
-St. Louis City SC,STL,3,2,Three Designated Player Model,3,3,12,0
-Toronto FC,TOR,3,1,Three Designated Player Model,3,3,12,0
-Vancouver Whitecaps FC,VAN,3,3,Three Designated Player Model,3,3,13,0
+team_name,team_abbreviation,Designated Player,U22 Initiative,Young Designated Player,Total Designated Players,Model,Max Designated Players,Max U22 Initiative Players,Slot Numbers,Unfilled Slots
+Atlanta United FC,ATL,2,1,0,2,U22 Initiative Player Model,2,4,10,1
+Austin FC,ATX,2,1,0,2,U22 Initiative Player Model,2,4,7,0
+CF Montréal,MTL,1,3,0,1,U22 Initiative Player Model,2,4,10,0
+Charlotte FC,CLT,2,3,1,3,Three Designated Player Model,3,3,14,0
+Chicago Fire FC,CHI,2,3,0,2,U22 Initiative Player Model,2,4,7,1
+Colorado Rapids,COL,3,1,0,3,Three Designated Player Model,3,3,6,0
+Columbus Crew,CLB,3,2,0,3,Three Designated Player Model,3,3,10,0
+D.C. United,DCU,2,2,1,3,Three Designated Player Model,3,3,7,0
+FC Cincinnati,CIN,3,1,0,3,Three Designated Player Model,3,3,7,0
+FC Dallas,FCD,2,0,1,3,Three Designated Player Model,3,3,8,0
+Inter Miami CF,MIA,2,3,0,2,U22 Initiative Player Model,2,4,14,0
+LA Galaxy,LAG,2,2,1,3,Three Designated Player Model,3,3,13,0
+Los Angeles FC,LAFC,2,3,0,2,U22 Initiative Player Model,2,4,14,0
+Minnesota United FC,MIN,3,2,0,3,Three Designated Player Model,3,3,11,0
+Nashville SC,NSH,3,2,0,3,Three Designated Player Model,3,3,6,0
+New England Revolution,NER,3,2,0,3,Three Designated Player Model,3,3,7,0
+New York City FC,NYC,2,3,1,3,Three Designated Player Model,3,3,10,0
+New York Red Bulls,NYRB,3,2,0,3,Three Designated Player Model,3,3,10,0
+Orlando City SC,ORL,3,1,0,3,Three Designated Player Model,3,3,8,0
+Philadelphia Union,PHI,2,0,0,2,U22 Initiative Player Model,2,4,6,0
+Portland Timbers,POR,2,3,0,2,U22 Initiative Player Model,2,4,6,0
+Real Salt Lake,RSL,2,4,0,2,U22 Initiative Player Model,2,4,13,0
+Seattle Sounders FC,SEA,2,2,1,3,Three Designated Player Model,3,3,3,0
+Sporting Kansas City,SKC,3,2,0,3,Three Designated Player Model,3,3,5,0
+St. Louis City SC,STL,3,2,0,3,Three Designated Player Model,3,3,12,0
+Toronto FC,TOR,3,1,0,3,Three Designated Player Model,3,3,12,0
+Vancouver Whitecaps FC,VAN,3,3,0,3,Three Designated Player Model,3,3,13,0
