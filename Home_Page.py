@@ -110,6 +110,7 @@ with col3:
     st.session_state['selected_team2'] = selected_team2
 
 # removing DP players for the team being
+# HERE CHANGE FOR YOUNG DP AND U22 INITIATIVE
 asi_data.loc[asi_data['base_salary'] >= 743750, 'base_salary'] = 743750
 
 # getting the amount spent by each team
