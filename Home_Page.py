@@ -182,7 +182,7 @@ team2_shortfall_players = []
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
-for player in st.session_state["team1_selected_players"]:
+for _, player in first_team_players.iterrows():
     NAME = player['NAME']
     player_salary = player['base_salary']
 
@@ -203,7 +203,7 @@ team1_shortfall_players = []
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
 
-for player in st.session_state["team2_selected_players"]:
+for _, player in second_team_players.iterrows():
     NAME = player['NAME']
     player_salary = player['base_salary']
 
