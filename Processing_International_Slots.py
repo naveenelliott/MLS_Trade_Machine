@@ -41,4 +41,11 @@ combined_df.to_csv('INTERNATIONAL_SLOTS.csv', index=False)
 
 slot_numbers = combined_df.groupby("Team").size().reset_index(name="Slot Numbers")
 
+unfilled_slots = combined_df[combined_df["NAME"].isna()].groupby("Team").size().reset_index(name="Unfilled Slots")
+
+slot_numbers = slot_numbers.merge(unfilled_slots, on="Team", how="left")
+
+# Fill missing values in "Unfilled Slots" with 0
+slot_numbers["Unfilled Slots"] = slot_numbers["Unfilled Slots"].fillna(0).astype(int)
+
 slot_numbers.to_csv('INT_SLOT_NUMBERS.csv', index=False)

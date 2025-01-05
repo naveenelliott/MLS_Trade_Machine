@@ -45,7 +45,7 @@ pre_houston_sje = unmatched_df.loc[~unmatched_df['team_abbreviation'].isin(['SJE
 
 unmatched_df_roster = roster[~roster['NAME'].isin(end['NAME'])]
 
-removed_columns = ['primary_broad_position', 'primary_general_position', 'season_name', 'team_abbreviation',
+removed_columns = ['primary_broad_position', 'primary_general_position', 'season_name',
                    'player_name', 'Team']
 
 end.drop(columns=removed_columns, inplace=True)

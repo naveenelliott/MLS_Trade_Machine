@@ -2,11 +2,16 @@ import pandas as pd
 import streamlit as st
 
 # Load the data
-asi_data = pd.read_csv('Processed_ASI_Data.csv')
+asi_data = pd.read_csv('FinalCombinedDataset.csv')
+
+rule_checking = asi_data.copy()
+
+team_data = pd.read_csv('Team_Models.csv')
 
 # Page configuration
 st.set_page_config(page_title='MLS Trade Machine', page_icon='Handshake.png')
 
+st.write(team_data)
 
 # App title
 st.markdown(
@@ -151,22 +156,38 @@ del raw_salaries['GAM_used']
 
 
 # Filter players for the selected teams
-first_team_players = asi_data.loc[asi_data['team_name'] == selected_team].sort_values('player_name')
-second_team_players = asi_data.loc[asi_data['team_name'] == selected_team2].sort_values('player_name')
+first_team_players = asi_data.loc[asi_data['team_name'] == selected_team].sort_values('NAME')
+second_team_players = asi_data.loc[asi_data['team_name'] == selected_team2].sort_values('NAME')
 
 # Selected players and GAM checks
 selected_players_team1 = []
 selected_players_team2 = []
 
+if "team1_selected_players" not in st.session_state:
+    st.session_state["team1_selected_players"] = []
+
+if "team2_selected_players" not in st.session_state:
+    st.session_state["team2_selected_players"] = []
+
+st.write(first_team_players)
+
 with col1:
     for _, player in first_team_players.iterrows():
-        if st.checkbox(player['player_name'], key=f"team1_{player['player_name']}"):
+        if st.checkbox(player['NAME'], key=f"team1_{player['NAME']}"):
             selected_players_team1.append(player)
+        elif player['NAME'] in [p['NAME'] for p in st.session_state["team1_selected_players"]]:
+            st.session_state["team1_selected_players"].remove(player)
+
+st.session_state["team1_selected_players"] = selected_players_team1
 
 with col3:
     for _, player in second_team_players.iterrows():
-        if st.checkbox(player['player_name'], key=f"team2_{player['player_name']}"):
+        if st.checkbox(player['NAME'], key=f"team2_{player['NAME']}"):
             selected_players_team2.append(player)
+        elif player['NAME'] in [p['NAME'] for p in st.session_state["team2_selected_players"]]:
+            st.session_state["team1_selected_players"].remove(player)
+
+st.session_state["team2_selected_players"] = selected_players_team2
 
 # Accumulate information for Team 2 acquiring players from Team 1
 team2_gam_spent = 0
@@ -177,14 +198,14 @@ team2_shortfall_players = []
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
-for player in selected_players_team1:
-    player_name = player['player_name']
+for player in st.session_state["team1_selected_players"]:
+    NAME = player['NAME']
     player_salary = player['base_salary']
 
     # Check if the player can be acquired with the temporary GAM
     if team2_remaining_gam_temp >= player_salary:
         team2_gam_spent += player_salary
-        team2_players_acquired.append(player_name)
+        team2_players_acquired.append(NAME)
         team2_remaining_gam_temp -= player_salary  # Deduct temporarily
     else:
         team2_shortfall_players.append(player)
@@ -198,14 +219,14 @@ team1_shortfall_players = []
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
 
-for player in selected_players_team2:
-    player_name = player['player_name']
+for player in st.session_state["team2_selected_players"]:
+    NAME = player['NAME']
     player_salary = player['base_salary']
 
     # Check if the player can be acquired with the temporary GAM
     if team1_remaining_gam_temp >= player_salary:
         team1_gam_spent += player_salary
-        team1_players_acquired.append(player_name)
+        team1_players_acquired.append(NAME)
         team1_remaining_gam_temp -= player_salary  # Deduct temporarily
     else:
         team1_shortfall_players.append(player)
@@ -226,50 +247,55 @@ team2_remaining_gam = (
 # Determine which shortfall players can now be acquired
 team2_resolved_acquisitions = []
 for player in team2_shortfall_players:
-    player_name = player['player_name']
+    NAME = player['NAME']
     player_salary = player['base_salary']
 
     if team2_remaining_gam >= player_salary:
         team2_gam_spent += player_salary
-        team2_resolved_acquisitions.append(player_name)
+        team2_resolved_acquisitions.append(NAME)
         team2_remaining_gam -= player_salary
 
 team2_shortfall_players = [
-    player['player_name']
+    player['NAME']
     for player in team2_shortfall_players
-    if player['player_name'] not in team2_resolved_acquisitions
+    if player['NAME'] not in team2_resolved_acquisitions
 ]
 
 team1_resolved_acquisitions = []
 for player in team1_shortfall_players:
-    player_name = player['player_name']
+    NAME = player['NAME']
     player_salary = player['base_salary']
 
     if team1_remaining_gam >= player_salary:
         team1_gam_spent += player_salary
-        team1_resolved_acquisitions.append(player_name)
+        team1_resolved_acquisitions.append(NAME)
         team1_remaining_gam -= player_salary
 
 team1_shortfall_players = [
-    player['player_name']
+    player['NAME']
     for player in team1_shortfall_players
-    if player['player_name'] not in team1_resolved_acquisitions
+    if player['NAME'] not in team1_resolved_acquisitions
 ]
 
 # Add resolved acquisitions to the acquired lists
 team2_players_acquired.extend(team2_resolved_acquisitions)
 team1_players_acquired.extend(team1_resolved_acquisitions)
 
+team_1_players_df = asi_data.loc[asi_data['NAME'].isin(st.session_state["team1_selected_players"])]
+st.write(team_1_players_df)
+
+#first_team_dp = 
+
 # Display results for Team 2
 if team2_players_acquired:
     st.success(f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining.")
 if team2_shortfall_players:
-    total_team2_shortfall = sum(player['base_salary'] for player in selected_players_team1 if player['player_name'] in team2_shortfall_players)
+    total_team2_shortfall = sum(player['base_salary'] for player in selected_players_team1 if player['NAME'] in team2_shortfall_players)
     st.error(f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team2_shortfall):,}.")
 
 # Display results for Team 1
 if team1_players_acquired:
     st.success(f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM remaining.")
 if team1_shortfall_players:
-    total_team1_shortfall = sum(player['base_salary'] for player in selected_players_team2 if player['player_name'] in team1_shortfall_players)
+    total_team1_shortfall = sum(player['base_salary'] for player in selected_players_team2 if player['NAME'] in team1_shortfall_players)
     st.error(f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team1_shortfall):,}.")
