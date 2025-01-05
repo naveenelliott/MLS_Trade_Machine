@@ -4,6 +4,8 @@ import streamlit as st
 # Load the data
 asi_data = pd.read_csv('FinalCombinedDataset.csv')
 
+asi_data['NAME'] = asi_data['NAME'].str.title()
+
 rule_checking = asi_data.copy()
 
 team_data = pd.read_csv('Team_Models.csv')
@@ -11,7 +13,7 @@ team_data = pd.read_csv('Team_Models.csv')
 # Page configuration
 st.set_page_config(page_title='MLS Trade Machine', page_icon='Handshake.png')
 
-st.write(team_data)
+#st.write(team_data)
 
 # App title
 st.markdown(
@@ -173,11 +175,68 @@ with col3:
         if st.checkbox(player['NAME'], key=f"team2_{player['NAME']}"):
             selected_players_team2.append(player)
 
+for player in selected_players_team1+selected_players_team2:
+    if player['ROSTER DESIGNATION'] == 'Designated Player':
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'Designated Player'
+        ] -= 1
+    elif player['ROSTER DESIGNATION'] == 'U22 Initiative':
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'U22 Initiative'
+        ] -= 1
+    if player['INTERNATIONAL'] == True:
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'Slot Numbers'
+        ] -= 1
+        team_data.loc[
+            team_data['team_abbreviation'] == player['team_abbreviation'], 
+            'Unfilled Slots'
+        ] += 1
+
 # Accumulate information for Team 2 acquiring players from Team 1
 team2_gam_spent = 0
 team2_gam_shortfall = 0
 team2_players_acquired = []
 team2_shortfall_players = []
+
+# Accumulate information for Team 1 acquiring players from Team 2
+team1_gam_spent = 0
+team1_gam_shortfall = 0
+team1_players_acquired = []
+team1_shortfall_players = []
+
+transfer_team = selected_team2
+
+
+for player in selected_players_team1:
+    if player['INTERNATIONAL'] == True:
+        temp_player = pd.DataFrame([player])
+        temp_player['Transfer Team'] = transfer_team
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['Unfilled Slots'].iloc[0] <= 0:
+            st.write(f"{selected_team2} need to acquire an international slot for {temp_player['NAME'][0]}. They typically run $175,000 in GAM, so they will be charged that much.")
+        else:
+            team_abbr = temp_player['Transfer Team'].iloc[0]
+            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
+            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
+
+transfer_team = selected_team
+
+
+for player in selected_players_team2:
+    if player['INTERNATIONAL'] == True:
+        temp_player = pd.DataFrame([player])
+        temp_player['Transfer Team'] = transfer_team
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['Unfilled Slots'].iloc[0] <= 0:
+            st.write(f"{selected_team2} need to acquire an international slot for {temp_player['NAME'][0]}. They typically run $175,000 in GAM, so they will be charged that much.")
+        else:
+            team_abbr = temp_player['Transfer Team'].iloc[0]
+            team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
+            team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
 
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
@@ -194,11 +253,6 @@ for player in selected_players_team1:
     else:
         team2_shortfall_players.append(player)
 
-# Accumulate information for Team 1 acquiring players from Team 2
-team1_gam_spent = 0
-team1_gam_shortfall = 0
-team1_players_acquired = []
-team1_shortfall_players = []
 
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
@@ -265,22 +319,6 @@ team1_shortfall_players = [
 team2_players_acquired.extend(team2_resolved_acquisitions)
 team1_players_acquired.extend(team1_resolved_acquisitions)
 
-for player in selected_players_team1+selected_players_team2:
-    if player['ROSTER DESIGNATION'] == 'Designated Player':
-        team_data.loc[
-            team_data['team_abbreviation'] == player['team_abbreviation'], 
-            'Designated Player'
-        ] -= 1
-    elif player['ROSTER DESIGNATION'] == 'U22 Initiative':
-        team_data.loc[
-            team_data['team_abbreviation'] == player['team_abbreviation'], 
-            'U22 Initiative'
-        ] -= 1
-
-
-transfer_team = selected_team2
-
-
 
 if isinstance(selected_players_team1, list):
     selected_players_team1 = pd.DataFrame(selected_players_team1)
@@ -299,7 +337,7 @@ if isinstance(selected_players_team1, list):
             else:
                 team1_dps = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'Designated Player']
                 team1_dps = team1_dps['NAME']
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many Designated Players. You need to move on from one of these players: {', '.join(team1_dps)}.")
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]} because there are too many DPs. They need to move on from one of these players: {', '.join(team1_dps)}.")
 
                 if new_player['NAME'][0] in team2_players_acquired:
                     team2_players_acquired.remove(new_player['NAME'][0])
@@ -316,7 +354,7 @@ if isinstance(selected_players_team1, list):
             else:
                 team1_u22 = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
                 team1_u22 = team1_u22['NAME']
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]}. Too many U22 Initiative Players. You need to move on from one of these players: {', '.join(team1_u22)}.")
+                st.error(f"{selected_team2} could not acquire players: {new_player['NAME'][0]} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team1_u22)}.")
 
                 if new_player['NAME'][0] in team2_players_acquired:
                     team2_players_acquired.remove(new_player['NAME'][0])
@@ -341,7 +379,7 @@ if isinstance(selected_players_team2, list):
             else:
                 team2_dps = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'Designated Player']
                 team2_dps = team2_dps['NAME']
-                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]}. Too many Designated Players. You need to move on from one of these players: {', '.join(team2_dps)}.")
+                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]} because there are too many DPs. They need to move on from one of these players: {', '.join(team2_dps)}.")
         
                 if new_player['NAME'][0] in team1_players_acquired:
                     team1_players_acquired.remove(new_player['NAME'][0])
@@ -357,24 +395,34 @@ if isinstance(selected_players_team2, list):
             else:
                 team2_u22 = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
                 team2_u22 = team2_u22['NAME']
-                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]}. Too many U22 Initiative Players. You need to move on from one of these players: {', '.join(team2_u22)}.")
+                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME'][0]} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team2_u22)}.")
 
                 if new_player['NAME'][0] in team1_players_acquired:
                     team1_players_acquired.remove(new_player['NAME'][0])
                 if new_player['NAME'][0] in team1_shortfall_players:
                     team1_shortfall_players.remove(new_player['NAME'][0])
-#first_team_dp = 
+
+
+
 
 # Display results for Team 2
 if team2_players_acquired:
     st.success(f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining.")
 if team2_shortfall_players:
-    total_team2_shortfall = sum(player['base_salary'] for player in selected_players_team1 if player['NAME'] in team2_shortfall_players)
+    total_team2_shortfall = (
+        selected_players_team1.loc[
+            selected_players_team1['NAME'].isin(team2_shortfall_players), 'base_salary'
+        ].sum()
+    )
     st.error(f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team2_shortfall):,}.")
 
 # Display results for Team 1
 if team1_players_acquired:
     st.success(f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM remaining.")
 if team1_shortfall_players:
-    total_team1_shortfall = sum(player['base_salary'] for player in selected_players_team2 if player['NAME'] in team1_shortfall_players)
+    total_team1_shortfall = (
+        selected_players_team2.loc[
+            selected_players_team2['NAME'].isin(team1_shortfall_players), 'base_salary'
+        ].sum()
+    )
     st.error(f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team1_shortfall):,}.")
