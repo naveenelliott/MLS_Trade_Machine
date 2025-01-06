@@ -25,6 +25,7 @@ asi_data['player_name'] = asi_data['player_name'].replace('monsef bakrar', 'moun
 asi_data['player_name'] = asi_data['player_name'].replace('jeong sang-bin', 'sang bin jeong')
 asi_data['player_name'] = asi_data['player_name'].replace('serge ngoma', 'serge ngoma jr.')
 asi_data['player_name'] = asi_data['player_name'].replace('tani oluwaseyi', 'tanitoluwa oluwaseyi')
+asi_data['player_name'] = asi_data['player_name'].replace('coco carrasquilla', 'adalberto carrasquilla')
 
 
 roster['NAME'] = roster['NAME'].replace('dominic lankov', 'dominic iankov')
@@ -39,8 +40,6 @@ roster['NAME'] = roster['NAME'].replace('luri tavares', 'iuri tavares')
 end = pd.merge(asi_data, roster, left_on='player_name', right_on='NAME', how='inner')
 
 unmatched_df = asi_data[~asi_data['player_name'].isin(end['player_name'])]
-
-pre_houston_sje = unmatched_df.loc[~unmatched_df['team_abbreviation'].isin(['SJE', 'HOU'])]
 
 
 unmatched_df_roster = roster[~roster['NAME'].isin(end['NAME'])]
