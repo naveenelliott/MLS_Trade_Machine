@@ -150,7 +150,6 @@ with col2:
             team_data.loc[team_data['team_name'] == selected_team2, 'Max Designated Players'] = 3
             team_data.loc[team_data['team_name'] == selected_team2, 'Max U22 Initiative Players'] = 3
 
-st.write(team_data)
 
 # 2025 DP charge - 743750
 # 2024 DP charge - 683750
