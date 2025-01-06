@@ -154,10 +154,6 @@ asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['a
 # have to use 2024 records
 asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['age'] <= 25) & (asi_data['age'] >= 21), 'base_salary'] = 200000
 
-
-
-st.write(team_data)
-
 # need to eventually go through and for each TAM Player in the range of 683750 to 1683750, need to buy them down to 683750 until we use it all up
 # the remaining gets converted into GAM amount
 
@@ -339,6 +335,9 @@ for player in selected_players_team2:
 # Adjust remaining GAM after international slot charges
 team2_remaining_gam -= team2_international_gam_spent
 team1_remaining_gam -= team1_international_gam_spent
+
+team2_gam_spent += team2_international_gam_spent
+team1_gam_spent += team1_international_gam_spent
 
 # Determine which shortfall players can now be acquired
 team2_resolved_acquisitions = []
