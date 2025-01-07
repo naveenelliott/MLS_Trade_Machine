@@ -2,17 +2,12 @@ import pandas as pd
 import streamlit as st
 
 # Load the data
-asi_data = pd.read_csv('FinalCombinedDataset.csv')
-
+asi_data = pd.read_csv('./Data/FinalCombinedDataset.csv')
 asi_data['NAME'] = asi_data['NAME'].str.title()
-
 rule_checking = asi_data.copy()
+team_data = pd.read_csv('./Data/Team_Models.csv')
 
-team_data = pd.read_csv('Team_Models.csv')
-
-# Page configuration
-st.set_page_config(page_title='MLS Trade Machine', page_icon='Handshake.png')
-
+st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
 #st.write(team_data)
 
 # App title
@@ -21,7 +16,7 @@ st.markdown(
     <style>
     @font-face {
         font-family: 'AccidentalPresidency';
-        src: url('AccidentalPresidency.ttf');
+        src: url('./Fonts/AccidentalPresidency.ttf');
     }
     .center-title {
         text-align: center;
@@ -41,11 +36,12 @@ st.markdown(
     <style>
     @font-face {
         font-family: 'Belanosima';
-        src: url('Belanosima-SemiBold.ttf'); /* Ensure the file is accessible */
+        src: url('./Fonts/Belanosima-SemiBold.ttf'); /* Ensure the file is accessible */
     }
     .subheader-text {
         font-family: 'Belanosima', sans-serif;
         font-size: 1.5em;
+        text-align: center;
         font-weight: 500;
         color: black; /* Optional: Customize the color */
         margin-bottom: 0.5em; /* Add space below the subheader */
@@ -58,30 +54,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Description
-st.markdown(
-    """
-    <style>
-    @font-face {
-        font-family: 'CookbookNormalRegular';
-        src: url('CookbookNormalRegular-6YmjD.ttf');
-    }
-    .description-text {
-        font-family: 'CookbookNormalRegular', sans-serif;
-        font-size: 0.95em;
-        line-height: 1.6; /* Adjust spacing for readability */
-        margin-bottom: 0.7em; /* Add space below the subheader */
-    }
-    </style>
-    <div class="description-text">
-        1) Select the two teams you would like to make a transaction between OR select a first team and toggle the free agents button.<br>
-        2) If two teams are selected, then toggle the player(s) you would like to trade between teams. If Free Agents are toggled, type the desired free agent into the search box and select their name.<br>
-        3) Scroll down to see whether a team can make that transaction.
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
+# Description
+with st.expander("Instructions", expanded=True):
+    st.write(
+        """
+        1) Select the two teams you would like to make a transaction between OR select a first team and toggle the free agents button.
+        2) If two teams are selected, then toggle the player(s) you would like to trade between teams. If Free Agents are toggled, type the desired free agent into the search box and select their name.
+        3) Scroll down to see whether a team can make that transaction.
+        """
+    )
+st.divider()
 # Create two columns for team selection
 col1, col2, col3 = st.columns(3)
 
@@ -150,7 +133,7 @@ with col2:
             team_data.loc[team_data['team_name'] == selected_team2, 'Max Designated Players'] = 3
             team_data.loc[team_data['team_name'] == selected_team2, 'Max U22 Initiative Players'] = 3
 
-
+st.divider()
 # 2025 DP charge - 743750
 # 2024 DP charge - 683750
 
@@ -186,7 +169,7 @@ tam = 2225000
 raw_salaries['base_salary'] = raw_salaries['base_salary'] - tam
 
 # getting the gam for 2025
-gam = pd.read_csv('2025 GAM.csv')
+gam = pd.read_csv('./Data/2025 GAM.csv')
 raw_salaries = pd.merge(raw_salaries, gam, left_on='team_abbreviation', right_on='Team')
 
 # Calculate total salary for each team
@@ -226,17 +209,37 @@ second_team_players = asi_data.loc[asi_data['team_name'] == selected_team2].sort
 selected_players_team1 = []
 selected_players_team2 = []
 
+# Prepare lists of player names
+first_team_player_names = first_team_players['NAME'].tolist()
+second_team_player_names = second_team_players['NAME'].tolist()
+
+# Multi-select dropdown for the first team
 with col1:
-    for _, player in first_team_players.iterrows():
-        if st.checkbox(player['NAME'], key=f"team1_{player['NAME']}"):
-            selected_players_team1.append(player)
+    selected_players_team1_names = st.multiselect(
+        "Select First Team Players",
+        options=first_team_player_names,
+        key="team1_multiselect"
+    )
+    # Retrieve full player details for selected players
+    selected_players_team1 = first_team_players[
+        first_team_players['NAME'].isin(selected_players_team1_names)
+    ]
 
+# Multi-select dropdown for the second team
 with col3:
-    for _, player in second_team_players.iterrows():
-        if st.checkbox(player['NAME'], key=f"team2_{player['NAME']}"):
-            selected_players_team2.append(player)
+    selected_players_team2_names = st.multiselect(
+        "Select Second Team Players",
+        options=second_team_player_names,
+        key="team2_multiselect"
+    )
+    # Retrieve full player details for selected players
+    selected_players_team2 = second_team_players[
+        second_team_players['NAME'].isin(selected_players_team2_names)
+    ]
 
-for player in selected_players_team1+selected_players_team2:
+combined_players = pd.concat([selected_players_team1, selected_players_team2])
+
+for _, player in combined_players.iterrows():
     if player['ROSTER DESIGNATION'] == 'Designated Player':
         team_data.loc[
             team_data['team_abbreviation'] == player['team_abbreviation'], 
@@ -356,7 +359,7 @@ team1_shortfall_players = []
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
 
-for player in selected_players_team1:
+for _, player in selected_players_team1.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
 
@@ -373,7 +376,7 @@ for player in selected_players_team1:
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
 
 
-for player in selected_players_team2:
+for _, player in selected_players_team2.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
 
@@ -402,11 +405,11 @@ team2_remaining_gam = (
 team2_international_gam_spent = 0
 team1_international_gam_spent = 0
 
-selected_players_team1 = list(selected_players_team1)
-selected_players_team2 = list(selected_players_team2)
+# selected_players_team1 = list(selected_players_team1)
+#selected_players_team2 = list(selected_players_team2)
 
 # Process Team 1 to Team 2 transactions
-for player in selected_players_team1:
+for _, player in selected_players_team1.iterrows():
     if player['INTERNATIONAL']:
         temp_player = pd.DataFrame([player])
         temp_player['Transfer Team'] = selected_team2
@@ -422,7 +425,7 @@ for player in selected_players_team1:
 
 # Process Team 2 to Team 1 transactions
 
-for player in selected_players_team2:
+for _, player in selected_players_team2.iterrows():
     if player['INTERNATIONAL']:
         temp_player = pd.DataFrame([player])
         temp_player['Transfer Team'] = selected_team
