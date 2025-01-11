@@ -61,7 +61,7 @@ with st.expander("Instructions", expanded=True):
         """
         1) Select the two teams you would like to make a transaction between OR select a first team and toggle the free agents button.
         2) If two teams are selected, then toggle the player(s) you would like to trade between teams. If Free Agents are toggled, type the desired free agent into the search box and select their name.
-        3) Scroll down to see whether a team can make that transaction.
+        3) Look at trade notifications to see whether a team can make that transaction.
         """
     )
 st.divider()
@@ -260,87 +260,92 @@ for _, player in combined_players.iterrows():
             'Unfilled Slots'
         ] += 1
 
-
+team1_notifications = []
+team2_notifications = []
 
 transfer_team = selected_team2
 
 # Process selected players for Team 1
-if isinstance(selected_players_team1, list):
-    selected_players_team1 = pd.DataFrame(selected_players_team1)
-    selected_players_team1['Transfer Team'] = transfer_team
+selected_players_team1 = pd.DataFrame(selected_players_team1)
+selected_players_team1['Transfer Team'] = transfer_team
+players_to_remove_team1 = []
+for _, new_player in selected_players_team1.iterrows():
+    if new_player['ROSTER DESIGNATION'] == 'Designated Player':
+        temp_player = pd.DataFrame([new_player])
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0]:
+            team1_dps = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'Designated Player']
+            team1_dps = team1_dps['NAME']
+            message = {
+                "type": "error",
+                "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team1_dps)}."
+            }
+            team2_notifications.append(message)
+            players_to_remove_team1.append(new_player['NAME'])
+        else:
+            team_data.loc[team_data['team_name'] == selected_team2, 'Total Designated Players'] += 1
 
-    players_to_remove_team1 = []
-
-    for _, new_player in selected_players_team1.iterrows():
-        if new_player['ROSTER DESIGNATION'] == 'Designated Player':
-            temp_player = pd.DataFrame([new_player])
-            temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-            if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0]:
-                team1_dps = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'Designated Player']
-                team1_dps = team1_dps['NAME']
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team1_dps)}.")
-                players_to_remove_team1.append(new_player['NAME'])
-            else:
-                team_data.loc[team_data['team_name'] == selected_team2, 'Total Designated Players'] += 1
-
-        elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
-            temp_player = pd.DataFrame([new_player])
-            temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-            if temp_player['U22 Initiative'].iloc[0] >= temp_player['Max U22 Initiative Players'].iloc[0]:
-                team1_u22 = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
-                team1_u22 = team1_u22['NAME']
-                st.error(f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team1_u22)}.")
-                players_to_remove_team1.append(new_player['NAME'])
-            else:
-                team_data.loc[team_data['team_name'] == selected_team2, 'U22 Initiative'] += 1
-
-       
+    elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
+        temp_player = pd.DataFrame([new_player])
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['U22 Initiative'].iloc[0] >= temp_player['Max U22 Initiative Players'].iloc[0]:
+            team1_u22 = second_team_players.loc[second_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
+            team1_u22 = team1_u22['NAME']
+            message = {
+                "type": "error",
+                "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team1_u22)}."
+            }
+            team2_notifications.append(message)
+            players_to_remove_team1.append(new_player['NAME'])
+        else:
+            team_data.loc[team_data['team_name'] == selected_team2, 'U22 Initiative'] += 1
 
     # Remove players after the loop
-    if not selected_players_team1.empty:
-        selected_players_team1 = selected_players_team1[~selected_players_team1['NAME'].isin(players_to_remove_team1)]
+if not len(selected_players_team1):
+    selected_players_team1 = selected_players_team1[~selected_players_team1['NAME'].isin(players_to_remove_team1)]
 
-    selected_players_team1 = selected_players_team1.to_dict(orient="records")
 
 transfer_team2 = selected_team
-
 # Process selected players for Team 2
-if isinstance(selected_players_team2, list):
-    selected_players_team2 = pd.DataFrame(selected_players_team2)
-    selected_players_team2['Transfer Team'] = transfer_team2
+selected_players_team2 = pd.DataFrame(selected_players_team2)
+selected_players_team2['Transfer Team'] = transfer_team2
 
-    players_to_remove_team2 = []
+players_to_remove_team2 = []
 
-    for _, new_player in selected_players_team2.iterrows():
-        if new_player['ROSTER DESIGNATION'] == 'Designated Player':
-            temp_player = pd.DataFrame([new_player])
-            temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-            if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0]:
-                team2_dps = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'Designated Player']
-                team2_dps = team2_dps['NAME']
-                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team2_dps)}.")
-                players_to_remove_team2.append(new_player['NAME'])
-            else:
-                team_data.loc[team_data['team_name'] == selected_team, 'Total Designated Players'] += 1
+for _, new_player in selected_players_team2.iterrows():
+    if new_player['ROSTER DESIGNATION'] == 'Designated Player':
+        temp_player = pd.DataFrame([new_player])
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0]:
+            team2_dps = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'Designated Player']
+            team2_dps = team2_dps['NAME']
+            message = {
+                "type": "error",
+                "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team2_dps)}."
+            }
+            team1_notifications.append(message)
+            players_to_remove_team2.append(new_player['NAME'])
+        else:
+            team_data.loc[team_data['team_name'] == selected_team, 'Total Designated Players'] += 1
 
-        elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
-            temp_player = pd.DataFrame([new_player])
-            temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-            if temp_player['U22 Initiative'].iloc[0] >= temp_player['Max U22 Initiative Players'].iloc[0]:
-                team2_u22 = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
-                team2_u22 = team2_u22['NAME']
-                st.error(f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team2_u22)}.")
-                players_to_remove_team2.append(new_player['NAME'])
-            else:
-                team_data.loc[team_data['team_name'] == selected_team, 'U22 Initiative'] += 1
+    elif new_player['ROSTER DESIGNATION'] == 'U22 Initiative':
+        temp_player = pd.DataFrame([new_player])
+        temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
+        if temp_player['U22 Initiative'].iloc[0] >= temp_player['Max U22 Initiative Players'].iloc[0]:
+            team2_u22 = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'U22 Initiative']
+            team2_u22 = team2_u22['NAME']
+            message = {
+                "type": "error",
+                "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team2_u22)}."
+            }
+            team1_notifications.append(message)
+            players_to_remove_team2.append(new_player['NAME'])
+        else:
+            team_data.loc[team_data['team_name'] == selected_team, 'U22 Initiative'] += 1
 
-    # Remove players after the loop
-    if not selected_players_team2.empty:
-        selected_players_team2 = selected_players_team2[~selected_players_team2['NAME'].isin(players_to_remove_team2)]
-
-    selected_players_team2 = selected_players_team2.to_dict(orient="records")
-
-
+# Remove players after the loop
+if not len(selected_players_team2):
+    selected_players_team2 = selected_players_team2[~selected_players_team2['NAME'].isin(players_to_remove_team2)]
 
 
 # Accumulate information for Team 2 acquiring players from Team 1
@@ -358,7 +363,6 @@ team1_shortfall_players = []
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
 
-
 for _, player in selected_players_team1.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
@@ -374,8 +378,6 @@ for _, player in selected_players_team1.iterrows():
 
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
-
-
 for _, player in selected_players_team2.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
@@ -405,9 +407,6 @@ team2_remaining_gam = (
 team2_international_gam_spent = 0
 team1_international_gam_spent = 0
 
-# selected_players_team1 = list(selected_players_team1)
-#selected_players_team2 = list(selected_players_team2)
-
 # Process Team 1 to Team 2 transactions
 for _, player in selected_players_team1.iterrows():
     if player['INTERNATIONAL']:
@@ -416,7 +415,11 @@ for _, player in selected_players_team1.iterrows():
         temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
 
         if temp_player['Unfilled Slots'].iloc[0] <= 0:
-            st.write(f"{selected_team2} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM.")
+            message = {
+                "type": "info",
+                "message": f"{selected_team2} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM."
+            }
+            team2_notifications.append(message)
             team2_international_gam_spent += 175000
         else:
             team_abbr = temp_player['Transfer Team'].iloc[0]
@@ -424,7 +427,6 @@ for _, player in selected_players_team1.iterrows():
             team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
 
 # Process Team 2 to Team 1 transactions
-
 for _, player in selected_players_team2.iterrows():
     if player['INTERNATIONAL']:
         temp_player = pd.DataFrame([player])
@@ -432,7 +434,11 @@ for _, player in selected_players_team2.iterrows():
         temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
 
         if temp_player['Unfilled Slots'].iloc[0] <= 0:
-            st.write(f"{selected_team} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM.")
+            message = {
+                "type": "info",
+                "message": f"{selected_team} needs to acquire an international slot for {temp_player['NAME'][0]}. This will cost $175,000 in GAM."
+            }
+            team1_notifications.append(message)
             team1_international_gam_spent += 175000
         else:
             team_abbr = temp_player['Transfer Team'].iloc[0]
@@ -485,22 +491,57 @@ team1_players_acquired.extend(team1_resolved_acquisitions)
 
 # Display results for Team 2
 if team2_players_acquired:
-    st.success(f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining.")
+    message = {
+                "type": "success",
+                "message": f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining."
+            }
+    team2_notifications.append(message)
 if team2_shortfall_players:
     total_team2_shortfall = (
         selected_players_team1.loc[
             selected_players_team1['NAME'].isin(team2_shortfall_players), 'base_salary'
         ].sum()
     )
-    st.error(f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team2_shortfall):,}.")
+    message = {
+                "type": "error",
+                "message": f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team2_shortfall):,}."
+            }
+    team2_notifications.append(message)
 
-# Display results for Team 1
 if team1_players_acquired:
-    st.success(f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM remaining.")
+    message = {
+                "type": "success",
+                "message": f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM remaining."
+            }
+    team1_notifications.append(message)
 if team1_shortfall_players:
     total_team1_shortfall = (
         selected_players_team2.loc[
             selected_players_team2['NAME'].isin(team1_shortfall_players), 'base_salary'
         ].sum()
     )
-    st.error(f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team1_shortfall):,}.")
+    message = {
+                "type": "error",
+                "message": f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team1_shortfall):,}."
+            }
+    team1_notifications.append(message)
+
+with st.expander(f"{selected_team2} to {selected_team} Trade notifications", expanded=True):
+    for notification in team1_notifications:
+        # Display each notification with an icon based on the type
+        if notification['type'] == 'success':
+            st.success(notification['message'])
+        elif notification['type'] == 'error':
+            st.error(notification['message'])
+        elif notification['type'] == 'info':
+            st.info(notification['message'])
+
+with st.expander(f"{selected_team} to {selected_team2} Trade notifications", expanded=True):
+    for notification in team2_notifications:
+        # Display each notification with an icon based on the type
+        if notification['type'] == 'success':
+            st.success(notification['message'])
+        elif notification['type'] == 'error':
+            st.error(notification['message'])
+        elif notification['type'] == 'info':
+            st.info(notification['message'])
