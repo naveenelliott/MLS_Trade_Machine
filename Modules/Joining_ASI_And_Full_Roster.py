@@ -5,9 +5,9 @@ def normalize_name(name):
     return unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
 
 # Load ASI data
-asi_data = pd.read_csv('Processed_ASI_Data.csv')
+asi_data = pd.read_csv('Data/Processed_ASI_Data.csv')
 
-roster = pd.read_csv('Final_Roster_Before_ASI.csv')
+roster = pd.read_csv('Data/Final_Roster_Before_ASI.csv')
 
 #roster = roster.loc[roster['CURRENT STATUS'].isna()]
 
@@ -54,5 +54,5 @@ end.loc[
     'ROSTER DESIGNATION'
 ] = 'Squad Player'
 
-end.to_csv('FinalCombinedDataset.csv', index=False)
+end.to_csv('Data/FinalCombinedDataset.csv', index=False)
 

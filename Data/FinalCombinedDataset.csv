@@ -128,33 +128,33 @@ base_salary,team_abbreviation,age,American,team_name,NAME,ROSTER DESIGNATION,CUR
 800000.0,NER,24.0,0,New England Revolution,alhassan yusuf,TAM Player,,2027,2028.0,Main,True
 1000000.0,NER,31.0,1,New England Revolution,tim parker,TAM Player,,2024,,Main,False
 450000.0,NER,32.0,1,New England Revolution,bobby wood,Squad Player,,2024,,Main,False
-750000.0,CLT,34.0,0,Charlotte FC,ashley westwood,TAM Player,,2026.0,2027,Main,True
-275000.0,CLT,24.0,1,Charlotte FC,jaylin lindsey,Squad Player,,2024.0,2025,Main,False
-550000.0,CLT,32.0,0,Charlotte FC,kristijan kahlina,TAM Player,,2024.0,2025,Main,False
-89716.0,CLT,16.0,1,Charlotte FC,nimfasha berchimas,Homegrown Player,,2026.0,2027,Supplemental,False
-500000.0,CLT,37.0,1,Charlotte FC,tim ream,TAM Player,,2026.0,2027,Main,False
-390000.0,CLT,20.0,0,Charlotte FC,idan toklomati,U22 Initiative,,2027.0,2028,Main,True
-115000.0,CLT,23.0,1,Charlotte FC,ben bender,,Unavailable - On Loan,2025.0,,Main,False
-1960000.0,CLT,28.0,0,Charlotte FC,pep biel,Designated Player,Loan Player,2024.0,PT: 2026; 2027,Main,True
-260000.0,CLT,26.0,0,Charlotte FC,djibril diani,Squad Player,,2025.0,2026,Main,True
-2300000.0,CLT,23.0,0,Charlotte FC,liel abada,Young Designated Player,,2026.0,2027,Main,True
-71401.0,CLT,23.0,1,Charlotte FC,nicholas scardina,Squad Player,,2024.0,"2025, 2026",Supplemental,False
-89716.0,CLT,21.0,0,Charlotte FC,joao pedro,Squad Player,,2026.0,2027,Main,True
-350000.0,CLT,29.0,1,Charlotte FC,brandt bronico,Squad Player,,2025.0,2026,Main,False
-2200000.0,CLT,27.0,0,Charlotte FC,karol swiderski,Designated Player,,2025.0,2026,Main,True
-460000.0,CLT,29.0,0,Charlotte FC,bill tuiloma,Squad Player,,2025.0,2026,Main,False
-71401.0,CLT,23.0,0,Charlotte FC,tyger smalls,Squad Player,,2024.0,"2025, 2026, 2027",Supplemental,False
-560000.0,CLT,32.0,0,Charlotte FC,nathan byrne,TAM Player,,2024.0,2025,Main,False
-89716.0,CLT,22.0,0,Charlotte FC,brandon cambridge,Homegrown Player,,2024.0,"2025, 2026",Supplemental,False
-71401.0,CLT,24.0,1,Charlotte FC,andrew privett,Squad Player,,2028.0,2029,Supplemental,False
-71401.0,CLT,24.0,0,Charlotte FC,patrick agyemang,Squad Player,,2024.0,"2025, 2026",Supplemental,False
-89716.0,CLT,23.0,0,Charlotte FC,iuri tavares,Squad Player,,2026.0,2027,Main,True
-500000.0,CLT,33.0,0,Charlotte FC,jamie paterson,Squad Player,,2024.0,2025,Main,True
-525000.0,CLT,30.0,0,Charlotte FC,jere uronen,TAM Player,,2025.0,2026,Main,True
-400000.0,CLT,22.0,0,Charlotte FC,kerwin vargas,U22 Initiative,,2027.0,2028,Main,False
-250000.0,CLT,35.0,0,Charlotte FC,junior urso,Squad Player,,2024.0,2025,Main,True
-325000.0,CLT,23.0,0,Charlotte FC,adilson malanda,Squad Player,,2026.0,2027,Main,True
-360000.0,CLT,21.0,0,Charlotte FC,nikola petkovic,U22 Initiative,,2026.0,2027,Main,True
+750000.0,CLT,34.0,0,Charlotte FC,ashley westwood,TAM Player,,2026,2027,Main,True
+275000.0,CLT,24.0,1,Charlotte FC,jaylin lindsey,Squad Player,,2024,2025,Main,False
+550000.0,CLT,32.0,0,Charlotte FC,kristijan kahlina,TAM Player,,2024,2025,Main,False
+89716.0,CLT,16.0,1,Charlotte FC,nimfasha berchimas,Homegrown Player,,2026,2027,Supplemental,False
+500000.0,CLT,37.0,1,Charlotte FC,tim ream,TAM Player,,2026,2027,Main,False
+390000.0,CLT,20.0,0,Charlotte FC,idan toklomati,U22 Initiative,,2027,2028,Main,True
+115000.0,CLT,23.0,1,Charlotte FC,ben bender,,Unavailable - On Loan,2025,,Main,False
+1960000.0,CLT,28.0,0,Charlotte FC,pep biel,Designated Player,Loan Player,2024,PT: 2026; 2027,Main,True
+260000.0,CLT,26.0,0,Charlotte FC,djibril diani,Squad Player,,2025,2026,Main,True
+2300000.0,CLT,23.0,0,Charlotte FC,liel abada,Young Designated Player,,2026,2027,Main,True
+71401.0,CLT,23.0,1,Charlotte FC,nicholas scardina,Squad Player,,2024,"2025, 2026",Supplemental,False
+89716.0,CLT,21.0,0,Charlotte FC,joao pedro,Squad Player,,2026,2027,Main,True
+350000.0,CLT,29.0,1,Charlotte FC,brandt bronico,Squad Player,,2025,2026,Main,False
+2200000.0,CLT,27.0,0,Charlotte FC,karol swiderski,Designated Player,,2025,2026,Main,True
+460000.0,CLT,29.0,0,Charlotte FC,bill tuiloma,Squad Player,,2025,2026,Main,False
+71401.0,CLT,23.0,0,Charlotte FC,tyger smalls,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+560000.0,CLT,32.0,0,Charlotte FC,nathan byrne,TAM Player,,2024,2025,Main,False
+89716.0,CLT,22.0,0,Charlotte FC,brandon cambridge,Homegrown Player,,2024,"2025, 2026",Supplemental,False
+71401.0,CLT,24.0,1,Charlotte FC,andrew privett,Squad Player,,2028,2029,Supplemental,False
+71401.0,CLT,24.0,0,Charlotte FC,patrick agyemang,Squad Player,,2024,"2025, 2026",Supplemental,False
+89716.0,CLT,23.0,0,Charlotte FC,iuri tavares,Squad Player,,2026,2027,Main,True
+500000.0,CLT,33.0,0,Charlotte FC,jamie paterson,Squad Player,,2024,2025,Main,True
+525000.0,CLT,30.0,0,Charlotte FC,jere uronen,TAM Player,,2025,2026,Main,True
+400000.0,CLT,22.0,0,Charlotte FC,kerwin vargas,U22 Initiative,,2027,2028,Main,False
+250000.0,CLT,35.0,0,Charlotte FC,junior urso,Squad Player,,2024,2025,Main,True
+325000.0,CLT,23.0,0,Charlotte FC,adilson malanda,Squad Player,,2026,2027,Main,True
+360000.0,CLT,21.0,0,Charlotte FC,nikola petkovic,U22 Initiative,,2026,2027,Main,True
 89716.0,RSL,25.0,1,Real Salt Lake,philip quinton,Squad Player,,2024,"2025, 2026",Supplemental,False
 400000.0,RSL,21.0,1,Real Salt Lake,diego luna,U22 Initiative,,2026,"2027, 2028",Main,False
 400000.0,RSL,35.0,0,Real Salt Lake,marcelo silva,Squad Player,,2024,,Main,False
@@ -211,6 +211,59 @@ base_salary,team_abbreviation,age,American,team_name,NAME,ROSTER DESIGNATION,CUR
 89716.0,MIN,25.0,1,Minnesota United FC,anthony markanich jr,Squad Player,,2024,2025,Main,False
 190000.0,MIN,35.0,1,Minnesota United FC,clint irwin,Squad Player,,2024,2025,Main,False
 93988.0,MIN,33.0,1,Minnesota United FC,zarek valentin,Squad Player,,2024,,Supplemental,False
+71401.0,HOU,23.0,1,Houston Dynamo FC,gabe segal,Squad Player,,2024,2025,Supplemental,False
+450000.0,HOU,22.0,0,Houston Dynamo FC,ibrahim aliyu,U22 Initiative,,2025,"2026, 2027",Main,True
+4750000.0,HOU,34.0,0,Houston Dynamo FC,hector herrera,Designated Player,,2024,2025,Main,False
+550000.0,HOU,26.0,0,Houston Dynamo FC,adalberto carrasquilla,TAM Player,,2025,"2026, 2027",Main,False
+625000.0,HOU,38.0,1,Houston Dynamo FC,steve clark,TAM Player,,2024,2025,Main,False
+475000.0,HOU,25.0,1,Houston Dynamo FC,griffin dorsey,Squad Player,,2025,2026,Main,False
+605000.0,HOU,27.0,0,Houston Dynamo FC,amine bassi,TAM Player,,2024,"2025, 2026",Main,False
+1920000.0,HOU,26.0,0,Houston Dynamo FC,sebastian ferreira,Designated Player,,2025,2026,Main,False
+150000.0,HOU,33.0,0,Houston Dynamo FC,jan gregus,Squad Player,,2024,2025,Supplemental,False
+150000.0,HOU,27.0,1,Houston Dynamo FC,tate schmitt,Homegrown Player,,2024,2025,Supplemental,False
+650000.0,HOU,28.0,0,Houston Dynamo FC,latif blessing,TAM Player,,2024,2025,Main,True
+250000.0,HOU,31.0,1,Houston Dynamo FC,andrew tarbell,Squad Player,,2024,2025,Main,False
+475000.0,HOU,29.0,0,Houston Dynamo FC,franco escobar,Squad Player,,2024,2025,Main,False
+424999.0,HOU,30.0,0,Houston Dynamo FC,brad smith,Squad Player,,2024," 2025, 2026",Main,False
+89716.0,HOU,31.0,0,Houston Dynamo FC,junior moreno,Squad Player,,2024,2025,Main,False
+100000.0,HOU,19.0,1,Houston Dynamo FC,brooklyn raines,Homegrown Player,,2025,2026,Supplemental,False
+159996.0,HOU,25.0,0,Houston Dynamo FC,jefferson valverde,Squad Player,,2025,"2026, 2027",Supplemental,True
+461000.0,HOU,26.0,0,Houston Dynamo FC,sebastian kowalczyk,TAM Player,,2024,"2025, 2026",Main,True
+450000.0,HOU,34.0,1,Houston Dynamo FC,daniel steres,Squad Player,,2024,2025,Main,False
+2560000.0,HOU,27.0,0,Houston Dynamo FC,ezequiel ponce,Designated Player,,June 2027,"2027, 2028",Main,True
+774996.0,HOU,33.0,0,Houston Dynamo FC,erik sviatchenko,Designated Player,,2024,2025,Main,True
+135000.0,HOU,24.0,0,Houston Dynamo FC,micael,Squad Player,,2024,"2025, 2026",Main,True
+250000.0,HOU,24.0,1,Houston Dynamo FC,ethan bartlow,Squad Player,,2025,2026,Main,False
+120000.0,HOU,26.0,1,Houston Dynamo FC,mckinze gaines,Squad Player,,2024,,Supplemental,False
+700000.0,HOU,28.0,0,Houston Dynamo FC,artur,TAM Player,,2025,"2026, 2027",Main,False
+450000.0,HOU,22.0,0,Houston Dynamo FC,lawrence ennali,U22 Initiative,Unavailable - SEI,2026,2027,Main,True
+105000.0,SJE,24.0,0,San Jose Earthquakes,michael baldisimo,Homegrown Player,,2024,,Supplemental,False
+150000.0,SJE,26.0,1,San Jose Earthquakes,jack skahan,Squad Player,,2025,2026,Main,False
+350000.0,SJE,30.0,0,San Jose Earthquakes,vitor costa,Squad Player,,2025,2026,Main,True
+89716.0,SJE,24.0,1,San Jose Earthquakes,jacob jackson,Squad Player,,2024,2025,Supplemental,False
+89716.0,SJE,29.0,1,San Jose Earthquakes,tommy thompson,Homegrown Player,,2024,2025,Supplemental,False
+1820000.0,SJE,29.0,0,San Jose Earthquakes,cristian espinoza,Designated Player,,2025,2026,Main,False
+300000.0,SJE,34.0,1,San Jose Earthquakes,alfredo morales,Squad Player,,2024,2025,Main,False
+89716.0,SJE,25.0,1,San Jose Earthquakes,preston judd,Squad Player,,2024,,Supplemental,False
+71401.0,SJE,24.0,1,San Jose Earthquakes,daniel munie,Squad Player,,2024,"2025, 2026",Supplemental,False
+89716.0,SJE,18.0,1,San Jose Earthquakes,oscar verhoeven,Homegrown Player,,2025,"2026, 2027",Supplemental,False
+1000000.0,SJE,28.0,0,San Jose Earthquakes,bruno wilson,TAM Player,,2025,2026,Main,True
+900000.0,SJE,27.0,1,San Jose Earthquakes,jackson yueill,TAM Player,,2024,,Main,False
+300000.0,SJE,27.0,1,San Jose Earthquakes,tanner beason,Squad Player,,2024,2025,Main,False
+110000.0,SJE,19.0,1,San Jose Earthquakes,niko tsakiris,Homegrown Player,,2025,2026,Supplemental,False
+89716.0,SJE,24.0,1,San Jose Earthquakes,will richmond,Homegrown Player,,2024,2025,Supplemental,False
+385000.0,SJE,35.0,1,San Jose Earthquakes,william yarbrough,Squad Player,,2024,2025,Main,False
+859478.0,SJE,27.0,1,San Jose Earthquakes,jeremy ebobisse,TAM Player,,2024,2025,Main,False
+850000.0,SJE,24.0,0,San Jose Earthquakes,hernan lopez,Designated Player,,2026,"2027, 2028",Main,True
+1460000.0,SJE,29.0,0,San Jose Earthquakes,carlos gruezo,Designated Player,,2025,2026,Main,False
+125000.0,SJE,24.0,0,San Jose Earthquakes,ousseni bouda,Squad Player,,2024,2025,Main,False
+850000.0,SJE,34.0,0,San Jose Earthquakes,amahl pellegrino,TAM Player,,2025,,Main,True
+650000.0,SJE,27.0,0,San Jose Earthquakes,rodrigues,TAM Player,,2025,2026,Main,True
+425000.0,SJE,30.0,0,San Jose Earthquakes,daniel,TAM Player,,2024,2025,Main,True
+300000.0,SJE,29.0,0,San Jose Earthquakes,paul marie,Squad Player,,2026,,Main,False
+71401.0,SJE,23.0,1,San Jose Earthquakes,jamar ricketts,Squad Player,,2024,"2025, 2026, 2027",Supplemental,False
+292000.0,SJE,24.0,1,San Jose Earthquakes,benji kikanovic,Squad Player,,2025,2026,Main,False
+550000.0,SJE,31.0,0,San Jose Earthquakes,carlos akapo,Squad Player,,2024,,Main,True
 270000.0,STL,23.0,1,St. Louis City SC,indiana vassilev,Squad Player,,2024,"2025, 2026",Main,False
 250000.0,STL,30.0,1,St. Louis City SC,jake nerwinski,Squad Player,,2024,2025,Main,False
 71401.0,STL,22.0,0,St. Louis City SC,hosei kijima,Squad Player,,2024,"2025, 2026, 2027",Supplemental,True
