@@ -8,7 +8,6 @@ rule_checking = asi_data.copy()
 team_data = pd.read_csv('./Data/Team_Models.csv')
 
 st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
-#st.write(team_data)
 
 # App title
 st.markdown(

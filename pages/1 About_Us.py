@@ -25,9 +25,22 @@ with col2:
 # Divider Line
 st.markdown("---")
 
-# Version Docs Section
-st.header("Version Documentation")
-st.write("""
-Here are the release notes for the current and previous versions of our project:
-- **Version 1.0.0**: Initial release with core functionalities.
-""")
+col3, col4 = st.columns(2)
+with col3: 
+    # Version Docs Section
+    st.header("Version Documentation")
+    st.write("""
+    Here are the release notes for the current and previous versions of our project:
+    - **Version 1.0.0**: Initial release with core functionalities.
+    """)
+
+with col4: 
+    # Version Docs Section
+    st.header("Report an Issue")
+    st.write("""
+    Report an Issue here:
+    """)
+    st.markdown("[Github](https://github.com/naveenelliott/MLS_Trade_Machine/issues)", unsafe_allow_html=True)
+
+
+
