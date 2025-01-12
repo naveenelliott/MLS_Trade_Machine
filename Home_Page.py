@@ -480,6 +480,9 @@ team1_shortfall_players = [
 team2_players_acquired.extend(team2_resolved_acquisitions)
 team1_players_acquired.extend(team1_resolved_acquisitions)
 
+selected_players_team1 = pd.DataFrame(selected_players_team1)
+selected_players_team2 = pd.DataFrame(selected_players_team2)
+
 # Display results for Team 2
 if team2_players_acquired:
     st.success(f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining.")
