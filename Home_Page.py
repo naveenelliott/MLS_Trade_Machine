@@ -156,9 +156,6 @@ asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['a
 # have to use 2024 records
 asi_data.loc[(asi_data['ROSTER DESIGNATION'] == 'U22 Initiative') & (asi_data['age'] <= 25) & (asi_data['age'] >= 21), 'base_salary'] = 200000
 
-# need to eventually go through and for each TAM Player in the range of 683750 to 1683750, need to buy them down to 683750 until we use it all up
-# the remaining gets converted into GAM amount
-
 
 # getting the amount spent by each team
 raw_salaries = asi_data.groupby(['team_name', 'team_abbreviation'])['base_salary'].sum().reset_index()
@@ -169,11 +166,62 @@ cap = 5950000
 # getting the tam for 2025
 tam = 2225000
 
-# subtracting TAM
-raw_salaries['base_salary'] = raw_salaries['base_salary'] - tam
+# creating an account for team TAM
+team_tam = pd.read_csv('Data/Teams_Data_ASI.csv')
+team_tam['TAM'] = tam
+team_tam = team_tam[['team_name', 'team_abbreviation', 'TAM']]
+
+# finding the players that are TAM level but not DPs
+for index, row in asi_data.iterrows():
+    if row['base_salary'] > 743750:
+        # Find the current team TAM
+        team_abbr = row['team_abbreviation']
+        team_index = team_tam[team_tam['team_abbreviation'] == team_abbr].index[0]
+        tam_available = team_tam.at[team_index, 'TAM']
+
+        # Calculate TAM needed to buy down to 743750 (below the DP threshold)
+        tam_needed = row['base_salary'] - 743750
+
+        if tam_available >= tam_needed:
+            # Update the TAM that the team has remaining after this transaction
+            team_tam.at[team_index, 'TAM'] -= tam_needed
+            # Use TAM to buy down the salary
+            asi_data.at[index, 'TAM Adj. Salary'] = row['base_salary'] - tam_needed
+        else:
+            # Print error if TAM is insufficient
+            asi_data.at[index, 'TAM Adj. Salary'] = row['base_salary'] - tam_available
+    else:
+        asi_data.at[index, 'TAM Adj. Salary'] = row['base_salary']
+
+
 
 # getting the gam for 2025
 gam = pd.read_csv('./Data/2025 GAM.csv')
+
+gam['Remaining GAM'] = gam['2025 GAM']
+
+# for salaries that are still over the DP limit, but the players are TAM Players, we need to convert those salaries to non DP deals with GAM 
+# (just two players in this dataset)
+for index, row in asi_data.iterrows():
+    if row['TAM Adj. Salary'] > 743750:
+        # Find the current team GAM
+        team_abbr = row['team_abbreviation']
+        team_index = gam[gam['Team'] == team_abbr].index[0]
+        gam_available = gam.at[team_index, '2025 GAM']
+
+        # Calculate GAM needed to buy down to 743750 (below the DP threshold)
+        gam_needed = row['TAM Adj. Salary'] - 743750
+
+        if gam_available >= gam_needed:
+            # Update the GAM that the team has remaining after this transaction
+            gam.at[team_index, 'Remaining GAM'] -= gam_needed
+            # Use GAM to buy down the salary
+            asi_data.at[index, 'TAM Adj. Salary'] = row['TAM Adj. Salary'] - gam_needed
+
+
+# TEMPORARY FIX FOR TAM because need to figure out how to allocate at the moment
+gam['2025 GAM'] = gam['2025 GAM'] + tam
+
 raw_salaries = pd.merge(raw_salaries, gam, left_on='team_abbreviation', right_on='Team')
 
 # Calculate total salary for each team
@@ -498,7 +546,7 @@ team1_players_acquired.extend(team1_resolved_acquisitions)
 if team2_players_acquired:
     message = {
                 "type": "success",
-                "message": f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM remaining."
+                "message": f"{selected_team2} have acquired players: {', '.join(team2_players_acquired)}. Total GAM/TAM spent: \${int(team2_gam_spent):,}. {selected_team2} still have \${int(team2_remaining_gam):,} GAM/TAM remaining."
             }
     team2_notifications.append(message)
 if team2_shortfall_players:
@@ -507,16 +555,18 @@ if team2_shortfall_players:
             selected_players_team1['NAME'].isin(team2_shortfall_players), 'base_salary'
         ].sum()
     )
+    # Adding any international slot charges
+    total_team2_shortfall += team2_international_gam_spent
     message = {
                 "type": "error",
-                "message": f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team2_shortfall):,}."
+                "message": f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team2_shortfall_players)} is \${int(total_team2_shortfall):,}."
             }
     team2_notifications.append(message)
 
 if team1_players_acquired:
     message = {
                 "type": "success",
-                "message": f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM remaining."
+                "message": f"{selected_team} have acquired players: {', '.join(team1_players_acquired)}. Total GAM/TAM spent: \${int(team1_gam_spent):,}. {selected_team} still have \${int(team1_remaining_gam):,} GAM/TAM remaining."
             }
     team1_notifications.append(message)
 if team1_shortfall_players:
@@ -525,9 +575,11 @@ if team1_shortfall_players:
             selected_players_team2['NAME'].isin(team1_shortfall_players), 'base_salary'
         ].sum()
     )
+    # Adding any international slot charges
+    total_team1_shortfall += team1_international_gam_spent
     message = {
                 "type": "error",
-                "message": f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The additional GAM needed after all transactions: \${int(total_team1_shortfall):,}."
+                "message": f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team1_shortfall_players)} is \${int(total_team1_shortfall):,}."
             }
     team1_notifications.append(message)
 
