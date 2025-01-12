@@ -54,40 +54,40 @@ CJ Fodrey,Generation adidas,,2025,"2026, 2027",Supplemental,ATX,False
 Hector Jimenez,,,2024,,Supplemental,ATX,False
 Damian Las,Homegrown Player,Unavailable - On Loan,2026,2027,Supplemental,ATX,False
 Owen Wolff,Homegrown Player,,2027,2028,Supplemental,ATX,False
-Liel Abada,Young Designated Player,,2026.0,2027,Main,CLT,True
-Ben Bender,,Unavailable - On Loan,2025.0,,Main,CLT,False
-Pep Biel,Designated Player,Loan Player,2024.0,PT: 2026; 2027,Main,CLT,True
-Brandt Bronico,,,2025.0,2026,Main,CLT,False
-Nathan Byrne,TAM Player,,2024.0,2025,Main,CLT,False
-Djibril Diani,,,2025.0,2026,Main,CLT,True
-Kristijan Kahlina,TAM Player,,2024.0,2025,Main,CLT,False
-Jaylin Lindsey,,,2024.0,2025,Main,CLT,False
-Adilson Malanda,,,2026.0,2027,Main,CLT,True
-Jamie Paterson,,,2024.0,2025,Main,CLT,True
-João Pedro,,,2026.0,2027,Main,CLT,True
-Nikola Petkovic,U22 Initiative,,2026.0,2027,Main,CLT,True
-Tim Ream,TAM Player,,2026.0,2027,Main,CLT,False
-Karol Swiderski,Designated Player,,2025.0,2026,Main,CLT,True
-luri Tavares,,,2026.0,2027,Main,CLT,True
-Idan Toklomati,U22 Initiative,,2027.0,2028,Main,CLT,True
-Bill Tuiloma,,,2025.0,2026,Main,CLT,False
-Jere Uronen,TAM Player,,2025.0,2026,Main,CLT,True
-Júnior Urso,,,2024.0,2025,Main,CLT,True
-Kerwin Vargas,U22 Initiative,,2027.0,2028,Main,CLT,False
-Ashley Westwood,TAM Player,,2026.0,2027,Main,CLT,True
-Patrick Agyemang,,,2024.0,"2025, 2026",Supplemental,CLT,False
-Nimfasha Berchimas,Homegrown Player,,2026.0,2027,Supplemental,CLT,False
-David Bingham,,,2025.0,,Supplemental,CLT,False
-Brandon Cambridge,Homegrown Player,,2024.0,"2025, 2026",Supplemental,CLT,False
-Hamady Diop,Generation adidas,Unavailable - On Loan,2024.0,"2025, 2026",Supplemental,CLT,False
-Jahlane Forbes,,,2024.0,"2025, 2026, 2027",Supplemental,CLT,False
-George Marks,,Unavailable - On Loan,2024.0,2025,Supplemental,CLT,False
-Andrew Privett,,,2028.0,2029,Supplemental,CLT,False
-Nicholas Scardina,,,2024.0,"2025, 2026",Supplemental,CLT,False
-Tyger Smalls,,,2024.0,"2025, 2026, 2027",Supplemental,CLT,False
-Chituru Odunze,31,Unavailable - On Loan,2027.0,2028,Supplenatal31,CLT,False
-Jack Neeley,Homegrown Player,,2026.0,2027,Off,CLT,False
-Brian Romero,Homegrown Player,,2026.0,2027,Off,CLT,False
+Liel Abada,Young Designated Player,,2026,2027,Main,CLT,True
+Ben Bender,,Unavailable - On Loan,2025,,Main,CLT,False
+Pep Biel,Designated Player,Loan Player,2024,PT: 2026; 2027,Main,CLT,True
+Brandt Bronico,,,2025,2026,Main,CLT,False
+Nathan Byrne,TAM Player,,2024,2025,Main,CLT,False
+Djibril Diani,,,2025,2026,Main,CLT,True
+Kristijan Kahlina,TAM Player,,2024,2025,Main,CLT,False
+Jaylin Lindsey,,,2024,2025,Main,CLT,False
+Adilson Malanda,,,2026,2027,Main,CLT,True
+Jamie Paterson,,,2024,2025,Main,CLT,True
+João Pedro,,,2026,2027,Main,CLT,True
+Nikola Petkovic,U22 Initiative,,2026,2027,Main,CLT,True
+Tim Ream,TAM Player,,2026,2027,Main,CLT,False
+Karol Swiderski,Designated Player,,2025,2026,Main,CLT,True
+luri Tavares,,,2026,2027,Main,CLT,True
+Idan Toklomati,U22 Initiative,,2027,2028,Main,CLT,True
+Bill Tuiloma,,,2025,2026,Main,CLT,False
+Jere Uronen,TAM Player,,2025,2026,Main,CLT,True
+Júnior Urso,,,2024,2025,Main,CLT,True
+Kerwin Vargas,U22 Initiative,,2027,2028,Main,CLT,False
+Ashley Westwood,TAM Player,,2026,2027,Main,CLT,True
+Patrick Agyemang,,,2024,"2025, 2026",Supplemental,CLT,False
+Nimfasha Berchimas,Homegrown Player,,2026,2027,Supplemental,CLT,False
+David Bingham,,,2025,,Supplemental,CLT,False
+Brandon Cambridge,Homegrown Player,,2024,"2025, 2026",Supplemental,CLT,False
+Hamady Diop,Generation adidas,Unavailable - On Loan,2024,"2025, 2026",Supplemental,CLT,False
+Jahlane Forbes,,,2024,"2025, 2026, 2027",Supplemental,CLT,False
+George Marks,,Unavailable - On Loan,2024,2025,Supplemental,CLT,False
+Andrew Privett,,,2028,2029,Supplemental,CLT,False
+Nicholas Scardina,,,2024,"2025, 2026",Supplemental,CLT,False
+Tyger Smalls,,,2024,"2025, 2026, 2027",Supplemental,CLT,False
+Chituru Odunze,31,Unavailable - On Loan,2027,2028,Supplenatal31,CLT,False
+Jack Neeley,Homegrown Player,,2026,2027,Off,CLT,False
+Brian Romero,Homegrown Player,,2026,2027,Off,CLT,False
 Kellyn Acosta,TAM Player,,2026,2027,Main,CHI,False
 Allan Arigoni,,Loan Player,2024,"PT: 2025; 2026, 2027",Main,CHI,True
 Tom Barlow,,,2025,2026,Main,CHI,False
@@ -271,6 +271,38 @@ Jackson Hopkins,Homegrown Player,,2025,"2026, 2027",Supplemental,DCU,False
 Jacob Murrell,,,2026,"2027, 2028",Supplemental,DCU,False
 Hayden Sargis,,,2024,"2025, 2026",Supplemental,DCU,False
 Garrison Tubbs,Homegrown Player,,2024,"2025, 2026, 2027",Supplemental,DCU,False
+Ibrahim Aliyu,U22 Initiative,,2025,"2026, 2027",Main,HOU,True
+Artur,TAM Player,,2025,"2026, 2027",Main,HOU,False
+Exon Arzú,,,2026,"2027, 2028, 2029",Main,HOU,False
+Ethan Bartlow,,,2025,2026,Main,HOU,False
+Amine Bassi,TAM Player,,2024,"2025, 2026",Main,HOU,False
+Latif Blessing,TAM Player,,2024,2025,Main,HOU,True
+Adalberto Carrasquilla,TAM Player,,2025,"2026, 2027",Main,HOU,False
+Steve Clark,TAM Player,,2024,2025,Main,HOU,False
+Griffin Dorsey,,,2025,2026,Main,HOU,False
+Lawrence Ennali,U22 Initiative,Unavailable - SEI,2026,2027,Main,HOU,True
+Franco Escobar,,,2024,2025,Main,HOU,False
+Sebastián Ferreira,Designated Player,,2025,2026,Main,HOU,False
+Héctor Herrera,Designated Player,,2024,2025,Main,HOU,False
+Sebastian Kowalczyk,TAM Player,,2024,"2025, 2026",Main,HOU,True
+Micael,,,2024,"2025, 2026",Main,HOU,True
+Junior Moreno,,,2024,2025,Main,HOU,False
+Ezequiel Ponce,Designated Player,,June 2027,"2027, 2028",Main,HOU,True
+Nelson Quiñones,U22 Initiative,Unavailable - SEI,2025,2026,Main,HOU,True
+Brad Smith,,,2024," 2025, 2026",Main,HOU,False
+Daniel Steres,,,2024,2025,Main,HOU,False
+Erik Sviatchenko,Designated Player,,2024,2025,Main,HOU,True
+Andrew Tarbell,,,2024,2025,Main,HOU,False
+Stephen Annor Gyamfi,Generation adidas,Unavailable - On Loan,2025,"2026, 2027",Supplemental,HOU,True
+McKinze Gaines,,,2024,,Supplemental,HOU,False
+Ján Greguš,,,2024,2025,Supplemental,HOU,False
+Brooklyn Raines,Homegrown Player,,2025,2026,Supplemental,HOU,False
+Kieran Sargeant,Homegrown Player,,2025,"2026, 2027",Supplemental,HOU,False
+Tate Schmitt,Homegrown Player,,2024,2025,Supplemental,HOU,False
+Gabe Segal,,,2024,2025,Supplemental,HOU,False
+Ousmane Sylla,,Unavailable - On Loan,2024,"2025, 2026, 2027",Supplemental,HOU,True
+Xavier Valdez,Homegrown Player,,2024,2025,Supplemental,HOU,False
+Jefferson Valverde,,,2025,"2026, 2027",Supplemental,HOU,True
 Jordi Alba,TAM Player,,2024,2025,Main,MIA,True
 Tomás Avilés,U22 Initiative,,2026,"2027, 2028",Main,MIA,True
 Sergio Busquets,Designated Player,,2025,,Main,MIA,True
@@ -683,6 +715,39 @@ Axel Kei,Homegrown Player,,2025,2026,Off,RSL,False
 Luca Moisa,Homegrown Player,,2027,2028,Off,RSL,False
 Luis Rivera,Homegrown Player,,2026,2027,Off,RSL,False
 Jude Wellings,Homegrown Player,Unavailable - On Loan,2025,2026,Off,RSL,False
+Carlos Akapo,,,2024,,Main,SJE,True
+Tanner Beason,,,2024,2025,Main,SJE,False
+Ousseni Bouda,,,2024,2025,Main,SJE,False
+Vitor Costa,,,2025,2026,Main,SJE,True
+Daniel,TAM Player,,2024,2025,Main,SJE,True
+Jeremy Ebobisse,TAM Player,,2024,2025,Main,SJE,False
+Cristian Espinoza,Designated Player,,2025,2026,Main,SJE,False
+Carlos Gruezo,Designated Player,,2025,2026,Main,SJE,False
+Benji Kikanovic,,,2025,2026,Main,SJE,False
+Hernán López,Designated Player,,2026,"2027, 2028",Main,SJE,True
+JT Marcinkowski,,Unavailable - SEI,2024,2025,Main,SJE,False
+Paul Marie,,,2026,,Main,SJE,False
+Alfredo Morales,,,2024,2025,Main,SJE,False
+Amahl Pellegrino,TAM Player,,2025,,Main,SJE,True
+Rodrigues,TAM Player,,2025,2026,Main,SJE,True
+Jack Skahan,,,2025,2026,Main,SJE,False
+Bruno Wilson,TAM Player,,2025,2026,Main,SJE,True
+William Yarbrough,,,2024,2025,Main,SJE,False
+Jackson Yueill,TAM Player,,2024,,Main,SJE,False
+Michael Baldisimo,Homegrown Player,,2024,,Supplemental,SJE,False
+Jacob Jackson,,,2024,2025,Supplemental,SJE,False
+Preston Judd,,,2024,,Supplemental,SJE,False
+Daniel Munie,,,2024,"2025, 2026",Supplemental,SJE,False
+Emmanuel Ochoa,Homegrown Player,,2027,"2028, 2029",Supplemental,SJE,False
+Will Richmond,Homegrown Player,,2024,2025,Supplemental,SJE,False
+Jamar Ricketts,,,2024,"2025, 2026, 2027",Supplemental,SJE,False
+Tommy Thompson,Homegrown Player,,2024,2025,Supplemental,SJE,False
+Niko Tsakiris,Homegrown Player,,2025,2026,Supplemental,SJE,False
+Oscar Verhoeven,Homegrown Player,,2025,"2026, 2027",Supplemental,SJE,False
+Casey Walls,Homegrown Player,,2024,,Supplemental,SJE,False
+Chance Cowell,Homegrown Player,,2027,2028,Off,SJE,False
+Cruz Medina,Homegrown Player,,2026,2027,Off,SJE,False
+Edwyn Mendoza,Homegrown Player,,2027,2028,Off,SJE,False
 Josh Atencio,U22 Initiative,,2027,2028,Main,SEA,False
 Léo Chú,U22 Initiative,,2024,2025,Main,SEA,False
 Pedro de la Vega,Young Designated Player,,2027,2028,Main,SEA,True
