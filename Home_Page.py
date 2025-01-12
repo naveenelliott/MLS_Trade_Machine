@@ -59,7 +59,7 @@ st.markdown(
 with st.expander("Instructions", expanded=True):
     st.write(
         """
-        1) Select the two teams you would like to make a transaction between OR select a first team and toggle the free agents button.
+        1) Select the two teams you would like to make a transaction between.
         2) If two teams are selected, then toggle the player(s) you would like to trade between teams.
         3) Look at trade notifications to see whether a team can make that transaction.
         """
