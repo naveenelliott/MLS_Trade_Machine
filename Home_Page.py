@@ -310,6 +310,8 @@ transfer_team2 = selected_team
 selected_players_team2 = pd.DataFrame(selected_players_team2)
 selected_players_team2['Transfer Team'] = transfer_team2
 
+st.write(selected_players_team1)
+st.write(selected_players_team2)
 players_to_remove_team2 = []
 
 for _, new_player in selected_players_team2.iterrows():
@@ -526,7 +528,7 @@ if team1_shortfall_players:
             }
     team1_notifications.append(message)
 
-with st.expander(f"{selected_team2} to {selected_team} Trade notifications", expanded=True):
+with st.expander(f"🔔 {selected_team2} to {selected_team} Trade notifications", expanded=True):
     for notification in team1_notifications:
         # Display each notification with an icon based on the type
         if notification['type'] == 'success':
@@ -536,7 +538,7 @@ with st.expander(f"{selected_team2} to {selected_team} Trade notifications", exp
         elif notification['type'] == 'info':
             st.info(notification['message'])
 
-with st.expander(f"{selected_team} to {selected_team2} Trade notifications", expanded=True):
+with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications", expanded=True):
     for notification in team2_notifications:
         # Display each notification with an icon based on the type
         if notification['type'] == 'success':
