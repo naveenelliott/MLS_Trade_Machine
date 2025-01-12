@@ -273,7 +273,7 @@ transfer_team = selected_team2
 selected_players_team1 = pd.DataFrame(selected_players_team1)
 selected_players_team1['Transfer Team'] = transfer_team
 players_to_remove_team1 = []
-st.write(selected_players_team1)
+
 for _, new_player in selected_players_team1.iterrows():
     if new_player['ROSTER DESIGNATION'] == 'Designated Player':
         temp_player = pd.DataFrame([new_player])
