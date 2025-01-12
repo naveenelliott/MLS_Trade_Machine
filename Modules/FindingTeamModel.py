@@ -1,6 +1,6 @@
 import pandas as pd
 
-end = pd.read_csv('FinalCombinedDataset.csv')
+end = pd.read_csv('Data/FinalCombinedDataset.csv')
 
 filtered = end[end['ROSTER DESIGNATION'].isin(['Designated Player', 'U22 Initiative', 'Young Designated Player'])]
 
@@ -28,10 +28,10 @@ designation_counts['Max U22 Initiative Players'] = designation_counts['Total Des
     lambda x: 3 if x == 3 else 4
 )
 
-slot_numbers = pd.read_csv('INT_SLOT_NUMBERS.csv')
+slot_numbers = pd.read_csv('Data/INT_SLOT_NUMBERS.csv')
 
 final = pd.merge(designation_counts, slot_numbers, left_on=['team_abbreviation'], right_on=['Team'], how='inner')
 
 del final['Team']
 
-final.to_csv('Team_Models.csv', index=False)
+final.to_csv('Data/Team_Models.csv', index=False)
