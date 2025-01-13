@@ -11,7 +11,10 @@ col1, col2 = st.columns(2)
 with col1:
     st.header("Naveen Elliott")
     st.write("""   
-    **Bio:** John specializes in developing machine learning models and AI-driven solutions. With a passion for innovation, he has contributed to several cutting-edge projects.
+    **Bio:** Current senior at Ohio State studying Data Analytics and working for Ohio State Sports Science, Ohio State Baseball, 
+             and the Boston Bolts. With Ohio State, both roles are mostly project-driven with projects on the transfer portal and the application of 
+             Sports Science to gameday performance. With the Bolts, I have created two automated apps for IDPs and Post-Match Review's. Always happy to 
+             have a conversation via LinkedIn!
     """)
     st.markdown("[LinkedIn Profile](https://www.linkedin.com/in/naveen-elliott-86ba7620a/)", unsafe_allow_html=True)
 
