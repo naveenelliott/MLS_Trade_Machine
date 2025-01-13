@@ -3,6 +3,7 @@ import streamlit as st
 # Page Title
 st.title("About Us")
 
+st.divider()
 # Create two columns for team member introductions
 col1, col2 = st.columns(2)
 
