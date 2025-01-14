@@ -368,7 +368,7 @@ for _, new_player in selected_players_team2.iterrows():
     if new_player['ROSTER DESIGNATION'] == 'Designated Player':
         temp_player = pd.DataFrame([new_player])
         temp_player = pd.merge(temp_player, team_data, left_on='Transfer Team', right_on='team_name', how='inner').reset_index(drop=True)
-        if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0] and ( temp_player['Model'].iloc[0] != "Three Designated Player Model"):
+        if temp_player['Total Designated Players'].iloc[0] >= temp_player['Max Designated Players'].iloc[0]:
             team2_dps = first_team_players.loc[first_team_players['ROSTER DESIGNATION'] == 'Designated Player']
             team2_dps = team2_dps['NAME']
             message = {
