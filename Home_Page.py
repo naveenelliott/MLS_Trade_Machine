@@ -98,7 +98,7 @@ with col3:
 
 with col2:    
     if (team_1_data['Total Designated Players'][0] != 3) and (team_1_data['U22 Initiative'][0] != 4):
-        st.write(f'{selected_team} has roster flexibility. Choose a model to build a roster around. More info here.')
+        st.write(f'{selected_team} has roster flexibility. Choose a model to build a roster around.')
         
         # Radio for Team 1 with a unique key
         selected_roster_option_team1 = st.radio(
@@ -118,7 +118,7 @@ with col2:
 
 
     if (team_2_data['Total Designated Players'][0] != 3) and (team_2_data['U22 Initiative'][0] != 4):
-        st.write(f'{selected_team2} has roster flexibility. Choose a model to build a roster around. More info here.')
+        st.write(f'{selected_team2} has roster flexibility. Choose a model to build a roster around.')
         
         # Radio for Team 2 with a unique key
         selected_roster_option_team2 = st.radio(
