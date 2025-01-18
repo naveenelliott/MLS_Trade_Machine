@@ -449,6 +449,7 @@ team1_remaining_gam = (
     + team2_gam_spent
 )
 
+
 team2_remaining_gam = (
     raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
     - team2_gam_spent
