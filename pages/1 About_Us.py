@@ -22,8 +22,7 @@ with col1:
 with col2:
     st.header("Atif Siddiqui")
     st.write("""
-    **Bio:** Currently working as Software Engineer at Just Play Sports Solution, where I bring integrating soccer into their product suite.  
-             Passionate about everything soccer data, I specialize in integrating advanced data solutions into products that redefine the game. 
+    **Bio:** Currently working as Software Engineer at Just Play Sports Solution, where I am integrating soccer into their product suite. Passionate about everything soccer data, I specialize in integrating advanced data solutions into products that redefine the game. 
              From data engineering to data science, I’ve collaborated on impactful projects that turn raw information into actionable insights.
     """)
     st.markdown("[LinkedIn Profile](https://www.linkedin.com/in/atifsiddiqui10/)", unsafe_allow_html=True)
