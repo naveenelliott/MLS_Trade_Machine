@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import unicodedata
 
 # Load the data
 asi_data = pd.read_csv('./Data/FinalCombinedDataset.csv')
@@ -7,7 +8,47 @@ asi_data['NAME'] = asi_data['NAME'].str.title()
 rule_checking = asi_data.copy()
 team_data = pd.read_csv('./Data/Team_Models.csv')
 
+# adding predicted salary in
+predicted_salary = pd.read_csv('./Data/PredictedSalaries.csv')
+
 st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
+
+
+predicted_salary = predicted_salary[['Player', 'Team', 'Predicted Salary']]
+
+# Sort by Player and Predicted Salary (higher first)
+predicted_salary = predicted_salary.sort_values(by=["Player", "Predicted Salary"], ascending=[True, False])
+
+# Drop duplicates, keeping the row with the higher predicted salary
+predicted_salary = predicted_salary.drop_duplicates(subset="Player", keep="first").reset_index(drop=True)
+
+def normalize_name(name):
+    return unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
+
+predicted_salary['Player'] = predicted_salary['Player'].str.lower().apply(normalize_name)
+
+predicted_salary['Player'] = predicted_salary['Player'].replace('aleksey miranchuk', 'alexey miranchuk')
+predicted_salary['Player'] = predicted_salary['Player'].replace('anthony markanich', 'anthony markanich jr')
+predicted_salary['Player'] = predicted_salary['Player'].replace('charles sharp', 'charlie sharp')
+predicted_salary['Player'] = predicted_salary['Player'].replace('christopher olney jr.', 'cj olney')
+predicted_salary['Player'] = predicted_salary['Player'].replace('derrick etienne jr.', 'derrick etienne jr')
+predicted_salary['Player'] = predicted_salary['Player'].replace('maxi moralez', 'maximiliano moralez')
+predicted_salary['Player'] = predicted_salary['Player'].replace('monsef bakrar', 'mounsef bakrar')
+predicted_salary['Player'] = predicted_salary['Player'].replace('jeong sang-bin', 'sang bin jeong')
+predicted_salary['Player'] = predicted_salary['Player'].replace('serge ngoma', 'serge ngoma jr.')
+predicted_salary['Player'] = predicted_salary['Player'].replace('tani oluwaseyi', 'tanitoluwa oluwaseyi')
+predicted_salary['Player'] = predicted_salary['Player'].replace('coco carrasquilla', 'adalberto carrasquilla')
+
+predicted_salary['Player'] = predicted_salary['Player'].str.title()
+
+total_predicted_salary = pd.merge(asi_data, predicted_salary, right_on=['Player', 'Team'], left_on=['NAME', 'team_abbreviation'], how='outer')
+
+total_predicted_salary.drop(columns=['Player', 'Team'], inplace=True)
+
+st.write(total_predicted_salary)
+
+
+
 
 # App title
 st.markdown(
@@ -218,7 +259,9 @@ for index, row in asi_data.iterrows():
             asi_data.at[index, 'TAM Adj. Salary'] = row['TAM Adj. Salary'] - gam_needed
 
 
+
 # TEMPORARY FIX FOR TAM because need to figure out how to allocate at the moment
+# this is going to be incorrect because TAM can't be traded but I don't know if this is a big deal - TALK TO PEOPLE
 gam['2025 GAM'] = gam['2025 GAM'] + tam
 
 raw_salaries = pd.merge(raw_salaries, gam, left_on='team_abbreviation', right_on='Team')
@@ -287,6 +330,34 @@ with col3:
     selected_players_team2 = second_team_players[
         second_team_players['NAME'].isin(selected_players_team2_names)
     ]
+
+
+# adding GAM slider
+with col1:
+    # get the remaining GAM/TAM after making the roster compliant
+    team_1_gam = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].values[0]
+
+    # this is the GAM team 1 contributes to the trade
+    team_1_trade_gam = st.number_input(
+        label="Type/Add GAM to Trade",
+        min_value=0,
+        max_value=int(team_1_gam),
+        value=0,  # Default value
+        step=100000,  # Increment step
+    )
+
+with col3:
+    # get the remaining GAM/TAM after making the roster compliant
+    team_2_gam = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].values[0]
+
+    # this is the GAM team 2 contributes to the trade
+    team_2_trade_gam = st.number_input(
+        label="Type/Add GAM to Trade",
+        min_value=0,
+        max_value=int(team_2_gam),
+        value=0,  # Default value
+        step=100000,  # Increment step
+    )
 
 combined_players = pd.concat([selected_players_team1, selected_players_team2])
 
@@ -414,6 +485,8 @@ team1_shortfall_players = []
 
 # Temporary GAM tracker for Team 2
 team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
+# adding the GAM involved in the trade
+team2_remaining_gam_temp = team2_remaining_gam_temp + team_1_trade_gam
 
 for _, player in selected_players_team1.iterrows():
     player_name = player['NAME']
@@ -430,6 +503,9 @@ for _, player in selected_players_team1.iterrows():
 
 # Temporary GAM tracker for Team 1
 team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
+# adding the GAM involved in the trade
+team1_remaining_gam_temp = team1_remaining_gam_temp + team_2_trade_gam
+
 for _, player in selected_players_team2.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
@@ -447,6 +523,8 @@ team1_remaining_gam = (
     raw_salaries.loc[raw_salaries['team_name'] == selected_team, 'Remaining GAM'].iloc[0]
     - team1_gam_spent
     + team2_gam_spent
+    # adding gam that was traded
+    + team_2_trade_gam
 )
 
 
@@ -454,6 +532,8 @@ team2_remaining_gam = (
     raw_salaries.loc[raw_salaries['team_name'] == selected_team2, 'Remaining GAM'].iloc[0]
     - team2_gam_spent
     + team1_gam_spent
+    # adding gam that was traded
+    + team_1_trade_gam
 )
 
 # Temporary GAM tracker for international slot charges
