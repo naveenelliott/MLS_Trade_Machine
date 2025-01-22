@@ -13,7 +13,7 @@ predicted_salary = pd.read_csv('./Data/PredictedSalaries.csv')
 
 st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
 
-
+# selecting only the columns that we need
 predicted_salary = predicted_salary[['Player', 'Team', 'Predicted Salary']]
 
 # Sort by Player and Predicted Salary (higher first)
@@ -22,11 +22,12 @@ predicted_salary = predicted_salary.sort_values(by=["Player", "Predicted Salary"
 # Drop duplicates, keeping the row with the higher predicted salary
 predicted_salary = predicted_salary.drop_duplicates(subset="Player", keep="first").reset_index(drop=True)
 
+# this removes accents and other weird formations to names
 def normalize_name(name):
     return unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
-
 predicted_salary['Player'] = predicted_salary['Player'].str.lower().apply(normalize_name)
 
+# changing player names to fit with asi_data
 predicted_salary['Player'] = predicted_salary['Player'].replace('aleksey miranchuk', 'alexey miranchuk')
 predicted_salary['Player'] = predicted_salary['Player'].replace('anthony markanich', 'anthony markanich jr')
 predicted_salary['Player'] = predicted_salary['Player'].replace('charles sharp', 'charlie sharp')
@@ -38,16 +39,12 @@ predicted_salary['Player'] = predicted_salary['Player'].replace('jeong sang-bin'
 predicted_salary['Player'] = predicted_salary['Player'].replace('serge ngoma', 'serge ngoma jr.')
 predicted_salary['Player'] = predicted_salary['Player'].replace('tani oluwaseyi', 'tanitoluwa oluwaseyi')
 predicted_salary['Player'] = predicted_salary['Player'].replace('coco carrasquilla', 'adalberto carrasquilla')
-
 predicted_salary['Player'] = predicted_salary['Player'].str.title()
 
-total_predicted_salary = pd.merge(asi_data, predicted_salary, right_on=['Player', 'Team'], left_on=['NAME', 'team_abbreviation'], how='outer')
-
-total_predicted_salary.drop(columns=['Player', 'Team'], inplace=True)
-
-st.write(total_predicted_salary)
-
-
+# merging predicted salary with the overall data
+asi_data = pd.merge(asi_data, predicted_salary, right_on=['Player', 'Team'], left_on=['NAME', 'team_abbreviation'], how='outer')
+asi_data.drop(columns=['Player', 'Team'], inplace=True)
+asi_data.dropna(subset='team_name', inplace=True)
 
 
 # App title
@@ -360,6 +357,8 @@ with col3:
     )
 
 combined_players = pd.concat([selected_players_team1, selected_players_team2])
+
+#st.write(combined_players)
 
 for _, player in combined_players.iterrows():
     if player['ROSTER DESIGNATION'] == 'Designated Player':
@@ -682,3 +681,10 @@ with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications"
             st.error(notification['message'])
         elif notification['type'] == 'info':
             st.info(notification['message'])
+
+# this is the winner of the trade based on the predicted model
+with st.expander('🏆 Trade Winner'):
+    if all(notification['type'] == 'success' for notification in team1_notifications) and \
+   all(notification['type'] == 'success' for notification in team2_notifications):
+
+        st.write('I win everything!')
