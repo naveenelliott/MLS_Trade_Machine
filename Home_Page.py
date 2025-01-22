@@ -487,15 +487,38 @@ team2_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selecte
 # adding the GAM involved in the trade
 team2_remaining_gam_temp = team2_remaining_gam_temp + team_1_trade_gam
 
+# this is the total value that we will use to determine who wins the trade
+total_value_team_2 = team_1_trade_gam
+
+# this checks if the player is a DP
+# if they are, then we can't determine a trade winner
+dp_flag = 0
+# this checks if the player has played enough minutes
+# if they haven't, then we can't determine a trade winner
+na_flag = 0
+
 for _, player in selected_players_team1.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
+    # getting the predicted salary
+    predicted_salary = player['Predicted Salary']
+    roster_desig = player['ROSTER DESIGNATION']
 
     # Check if the player can be acquired with the temporary GAM
     if team2_remaining_gam_temp >= player_salary:
         team2_gam_spent += player_salary
         team2_players_acquired.append(player_name)
         team2_remaining_gam_temp -= player_salary  # Deduct temporarily
+
+        if pd.isna(predicted_salary):
+            # if they are designated player or don't have enough minutes, we can't add them in
+            if roster_desig == 'Designated Player':
+                dp_flag = 1
+            else:
+                na_flag = 1
+        else:
+            # add to the value
+            total_value_team_2 += predicted_salary
     else:
         team2_shortfall_players.append(player)
 
@@ -505,15 +528,30 @@ team1_remaining_gam_temp = raw_salaries.loc[raw_salaries['team_name'] == selecte
 # adding the GAM involved in the trade
 team1_remaining_gam_temp = team1_remaining_gam_temp + team_2_trade_gam
 
+total_value_team_1 = team_2_trade_gam
+
 for _, player in selected_players_team2.iterrows():
     player_name = player['NAME']
     player_salary = player['base_salary']
+    # getting the predicted salary
+    predicted_salary = player['Predicted Salary']
+    roster_desig = player['ROSTER DESIGNATION']
 
     # Check if the player can be acquired with the temporary GAM
     if team1_remaining_gam_temp >= player_salary:
         team1_gam_spent += player_salary
         team1_players_acquired.append(player_name)
         team1_remaining_gam_temp -= player_salary  # Deduct temporarily
+
+        if pd.isna(predicted_salary):
+            # if they are designated player or don't have enough minutes, we can't add them in
+            if roster_desig == 'Designated Player':
+                dp_flag = 1
+            else:
+                na_flag = 1
+        else:
+            # add to the value
+            total_value_team_1 += predicted_salary
     else:
         team1_shortfall_players.append(player)
 
@@ -558,6 +596,9 @@ for _, player in selected_players_team1.iterrows():
             team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
             team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
 
+# factoring in international roster spots
+total_value_team_2 -= team2_international_gam_spent
+
 # Process Team 2 to Team 1 transactions
 for _, player in selected_players_team2.iterrows():
     if player['INTERNATIONAL']:
@@ -576,6 +617,9 @@ for _, player in selected_players_team2.iterrows():
             team_abbr = temp_player['Transfer Team'].iloc[0]
             team_data.loc[team_data['team_name'] == team_abbr, 'Slot Numbers'] += 1
             team_data.loc[team_data['team_name'] == team_abbr, 'Unfilled Slots'] -= 1
+
+# factoring in international roster spots
+total_value_team_1 -= team1_international_gam_spent
 
 # Adjust remaining GAM after international slot charges
 team2_remaining_gam -= team2_international_gam_spent
@@ -684,7 +728,20 @@ with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications"
 
 # this is the winner of the trade based on the predicted model
 with st.expander('🏆 Trade Winner'):
-    if all(notification['type'] == 'success' for notification in team1_notifications) and \
-   all(notification['type'] == 'success' for notification in team2_notifications):
-
-        st.write('I win everything!')
+    if all(notification['type'] != 'error' for notification in team1_notifications) and \
+   all(notification['type'] != 'error' for notification in team2_notifications):
+        if dp_flag == 1:
+            st.error('We cannot determine the winner of this trade since one of these players is a DP. DPs have wide-ranging salaries and there are fewer of them, so it is difficult to estimate their value.')
+        elif na_flag == 1:
+            st.error('We cannot determine the winner of this trade since one of these players does not meet the minimum minutes requirement for our model. It is difficult to estimate a players value without having data to support it.')
+        else:
+            if total_value_team_1 > total_value_team_2:
+                difference = total_value_team_1 - total_value_team_2
+                difference = int(difference)
+                st.write(f'{selected_team} have won the trade according to our algorithm. The difference in predicted salaries is {difference:,}.')
+            elif total_value_team_1 < total_value_team_2:
+                difference = total_value_team_2 - total_value_team_1
+                difference = int(difference)
+                st.write(f'{selected_team2} have won the trade according to our algorithm. The difference in predicted salaries is {difference:,}.')
+            else:
+                st.write('This is a fair trade according to our algorithm!')
