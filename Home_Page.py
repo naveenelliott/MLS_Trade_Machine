@@ -1,11 +1,13 @@
 import pandas as pd
 import streamlit as st
+from Modules.knn_trade_recommend import recommend_players
 
 # Load the data
 asi_data = pd.read_csv('./Data/FinalCombinedDataset.csv')
 asi_data['NAME'] = asi_data['NAME'].str.title()
 rule_checking = asi_data.copy()
 team_data = pd.read_csv('./Data/Team_Models.csv')
+knn_data = pd.read_csv('./Data/RawDataForModel.csv')
 
 st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
 
@@ -320,7 +322,8 @@ transfer_team = selected_team2
 selected_players_team1 = pd.DataFrame(selected_players_team1)
 selected_players_team1['Transfer Team'] = transfer_team
 players_to_remove_team1 = []
-
+similar_players_for_team1 = []
+similar_players_for_team2 = []
 for _, new_player in selected_players_team1.iterrows():
     if new_player['ROSTER DESIGNATION'] == 'Designated Player':
         temp_player = pd.DataFrame([new_player])
@@ -333,6 +336,7 @@ for _, new_player in selected_players_team1.iterrows():
                 "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team1_dps)}."
             }
             team2_notifications.append(message)
+            similar_players_for_team2.append(new_player['NAME'])
             players_to_remove_team1.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team2, 'Total Designated Players'] += 1
@@ -348,6 +352,7 @@ for _, new_player in selected_players_team1.iterrows():
                 "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team1_u22)}."
             }
             team2_notifications.append(message)
+            similar_players_for_team2.append(new_player['NAME'])
             players_to_remove_team1.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team2, 'U22 Initiative'] += 1
@@ -376,6 +381,7 @@ for _, new_player in selected_players_team2.iterrows():
                 "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team2_dps)}."
             }
             team1_notifications.append(message)
+            similar_players_for_team1.append(new_player['NAME'])
             players_to_remove_team2.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team, 'Total Designated Players'] += 1
@@ -391,6 +397,7 @@ for _, new_player in selected_players_team2.iterrows():
                 "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team2_u22)}."
             }
             team1_notifications.append(message)
+            similar_players_for_team1.append(new_player['NAME'])
             players_to_remove_team2.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team, 'U22 Initiative'] += 1
@@ -561,6 +568,7 @@ if team2_shortfall_players:
                 "message": f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team2_shortfall_players)} is \${int(total_team2_shortfall):,}."
             }
     team2_notifications.append(message)
+    similar_players_for_team2.append(player for player in team2_shortfall_players)
 
 if team1_players_acquired:
     message = {
@@ -581,7 +589,10 @@ if team1_shortfall_players:
                 "message": f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team1_shortfall_players)} is \${int(total_team1_shortfall):,}."
             }
     team1_notifications.append(message)
+    similar_players_for_team1.append(player for player in team1_shortfall_players)
 
+requires_recommendations_2 = False
+requires_recommendations_1 = False
 with st.expander(f"🔔 {selected_team2} to {selected_team} Trade notifications", expanded=True):
     for notification in team1_notifications:
         # Display each notification with an icon based on the type
@@ -589,6 +600,13 @@ with st.expander(f"🔔 {selected_team2} to {selected_team} Trade notifications"
             st.success(notification['message'])
         elif notification['type'] == 'error':
             st.error(notification['message'])
+            recommendations = recommend_players(similar_players_for_team1, knn_data)
+            for player, similar_players in recommendations.items():
+                if isinstance(similar_players, list):
+                    similar_players_str = ", ".join(similar_players)
+                    st.info(f"Similar players to {player}: {similar_players_str}")
+                else:
+                    st.info(f"Similar players to {player}: {similar_players}")
         elif notification['type'] == 'info':
             st.info(notification['message'])
 
@@ -599,5 +617,22 @@ with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications"
             st.success(notification['message'])
         elif notification['type'] == 'error':
             st.error(notification['message'])
+            recommendations = recommend_players(similar_players_for_team2, knn_data)
+            for player, similar_players in recommendations.items():
+                if isinstance(similar_players, list):
+                    similar_players_str = ", ".join(similar_players)
+                    st.info(f"Similar players to {player}: {similar_players_str}")
+                else:
+                   st.info(f"Similar players to {player}: {similar_players}")
         elif notification['type'] == 'info':
             st.info(notification['message'])
+
+
+# free agents ticker
+# need to figure out who the free agents are
+# Add model in to say who wins the trade
+# issue with model is that it will always undersell the top players
+# TAM model undersells players with high TAM (over 1M)
+# DP threshold model undersells players making 500-600k
+# ask Andrew/George about this?
+# add trading GAM
