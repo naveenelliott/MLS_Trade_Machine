@@ -20,17 +20,20 @@ def recommend_players(players, data):
     ]
     data = data.fillna(0)
     columns_to_consider = [col for col in columns_to_consider if col in data.columns]
+    numeric_columns = [col for col in columns_to_consider if col in data.columns]
+    data_aggregated = data.groupby(['Player', 'Team'], as_index=False)[numeric_columns].mean()
+
     scaler = StandardScaler()
-    scaled_features = scaler.fit_transform(data[columns_to_consider])
+    scaled_features = scaler.fit_transform(data_aggregated[columns_to_consider])
 
     # Train the KNN model
     knn = NearestNeighbors(n_neighbors=n_similar, metric='euclidean')
     knn.fit(scaled_features)
 
     for player_name in players:
-        data_fil = data[data['Player'] != player_name]
+        data_fil = data_aggregated[data_aggregated['Player'] != player_name]
         # Get stats for the selected player
-        selected_player_stats = data[data['Player'] == player_name][columns_to_consider]
+        selected_player_stats = data_aggregated[data_aggregated['Player'] == player_name][columns_to_consider]
 
         if selected_player_stats.empty:
             recommendations[player_name] = ["Player not found in dataset"]
