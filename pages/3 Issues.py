@@ -5,7 +5,7 @@ from streamlit_gsheets import GSheetsConnection
 # Establish connection to Google Sheets
 conn = st.connection('gsheets', type=GSheetsConnection)
 
-# Read existing data
+# Read google sheets data
 existing_data = conn.read(worksheet='Player_New_Team', ttl=0)
 existing_data.dropna(how='all', inplace=True)
 existing_data['Player'] = existing_data['Player'].fillna('').astype(str)
@@ -30,6 +30,7 @@ with col1:
         key="single_player_multiselect"
     )
 
+# Getting their current team if a player is selected
 if selected_player:
     selected_team = asi_data.loc[asi_data['NAME'].isin(selected_player), 'team_name'].values[0]
 else:
