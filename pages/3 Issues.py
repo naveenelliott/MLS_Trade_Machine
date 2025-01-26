@@ -18,7 +18,38 @@ asi_data['NAME'] = asi_data['NAME'].str.title()
 
 player_names = asi_data['NAME'].unique()
 team_names = asi_data['team_name'].unique()
-team_names.append('No Team')
+team_names = list(team_names)  # Convert to a Python list
+team_names.append('No Team (Free Agent)')
+
+st.markdown(
+    """
+    <style>
+    @font-face {
+        font-family: 'AccidentalPresidency';
+        src: url('./Fonts/AccidentalPresidency.ttf');
+    }
+    .center-title {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        font-family: 'AccidentalPresidency', sans-serif;
+    }
+    </style>
+    <h1 class="center-title">Report a Transferred Player</h1>
+    """,
+    unsafe_allow_html=True
+)
+
+with st.expander("Instructions", expanded=True):
+    st.write(
+        """
+        1) Select a player that has left the team that they are currently listed on.
+        2) Their current team should be automatically generated. 
+        3) Select a player that has left the team that they have changed to if they are not on a team, select No Team (Free Agent).
+        4) Submit and we will process the change shortly!
+        """
+    )
+st.divider()
 
 col1, col2, col3 = st.columns(3)
 
