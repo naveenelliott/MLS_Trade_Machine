@@ -18,6 +18,7 @@ asi_data['NAME'] = asi_data['NAME'].str.title()
 
 player_names = asi_data['NAME'].unique()
 team_names = asi_data['team_name'].unique()
+team_names.append('No Team')
 
 col1, col2, col3 = st.columns(3)
 
