@@ -602,12 +602,12 @@ with st.expander(f"🔔 {selected_team2} to {selected_team} Trade notifications"
         elif notification['type'] == 'error':
             st.error(notification['message'])
             recommendations = recommend_players(similar_players_for_team1, knn_data)
-            for player, similar_players in recommendations.items():
-                if isinstance(similar_players, list):
-                    similar_players_str = ", ".join(similar_players)
-                    # st.info(f"Similar players to {player}: {similar_players_str}")
-                else:
-                    # st.info(f"Similar players to {player}: {similar_players}")
+            # for player, similar_players in recommendations.items():
+            #     if isinstance(similar_players, list):
+            #         similar_players_str = ", ".join(similar_players)
+            #         st.info(f"Similar players to {player}: {similar_players_str}")
+            #     else:
+            #         st.info(f"Similar players to {player}: {similar_players}")
         elif notification['type'] == 'info':
             st.info(notification['message'])
 
@@ -619,12 +619,12 @@ with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications"
         elif notification['type'] == 'error':
             st.error(notification['message'])
             recommendations = recommend_players(similar_players_for_team2, knn_data)
-            for player, similar_players in recommendations.items():
-                if isinstance(similar_players, list):
-                    similar_players_str = ", ".join(similar_players)
-                    # st.info(f"Similar players to {player}: {similar_players_str}")
-                else:
-                #    st.info(f"Similar players to {player}: {similar_players}")
+            # for player, similar_players in recommendations.items():
+            #     if isinstance(similar_players, list):
+            #         similar_players_str = ", ".join(similar_players)
+            #         st.info(f"Similar players to {player}: {similar_players_str}")
+            #     else:
+            #        st.info(f"Similar players to {player}: {similar_players}")
         elif notification['type'] == 'info':
             st.info(notification['message'])
 
