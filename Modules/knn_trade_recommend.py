@@ -19,10 +19,11 @@ def recommend_players(players, data):
     'Touch %_attack'
     ]
     data = data.fillna(0)
+    data = data[data['Season'] == 2024]
     columns_to_consider = [col for col in columns_to_consider if col in data.columns]
     numeric_columns = [col for col in columns_to_consider if col in data.columns]
     data_aggregated = data.groupby(['Player', 'Team'], as_index=False)[numeric_columns].mean()
-
+    
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(data_aggregated[columns_to_consider])
 
