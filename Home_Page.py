@@ -7,6 +7,7 @@ asi_data = pd.read_csv('./Data/FinalCombinedDataset.csv')
 asi_data['NAME'] = asi_data['NAME'].str.title()
 rule_checking = asi_data.copy()
 team_data = pd.read_csv('./Data/Team_Models.csv')
+knn_data = pd.read_csv('./Data/RawDataForModel.csv')
 
 # adding predicted salary in
 predicted_salary = pd.read_csv('./Data/PredictedSalaries.csv')
@@ -390,7 +391,8 @@ transfer_team = selected_team2
 selected_players_team1 = pd.DataFrame(selected_players_team1)
 selected_players_team1['Transfer Team'] = transfer_team
 players_to_remove_team1 = []
-
+similar_players_for_team1 = []
+similar_players_for_team2 = []
 for _, new_player in selected_players_team1.iterrows():
     if new_player['ROSTER DESIGNATION'] == 'Designated Player':
         temp_player = pd.DataFrame([new_player])
@@ -403,6 +405,7 @@ for _, new_player in selected_players_team1.iterrows():
                 "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team1_dps)}."
             }
             team2_notifications.append(message)
+            similar_players_for_team2.append(new_player['NAME'])
             players_to_remove_team1.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team2, 'Total Designated Players'] += 1
@@ -418,6 +421,7 @@ for _, new_player in selected_players_team1.iterrows():
                 "message": f"{selected_team2} could not acquire players: {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team1_u22)}."
             }
             team2_notifications.append(message)
+            similar_players_for_team2.append(new_player['NAME'])
             players_to_remove_team1.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team2, 'U22 Initiative'] += 1
@@ -446,6 +450,7 @@ for _, new_player in selected_players_team2.iterrows():
                 "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many DPs. They need to move on from one of these players: {', '.join(team2_dps)}."
             }
             team1_notifications.append(message)
+            similar_players_for_team1.append(new_player['NAME'])
             players_to_remove_team2.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team, 'Total Designated Players'] += 1
@@ -461,6 +466,7 @@ for _, new_player in selected_players_team2.iterrows():
                 "message": f"{selected_team} could not acquire player(s): {new_player['NAME']} because there are too many U22 Initiative players. They need to move on from one of these players: {', '.join(team2_u22)}."
             }
             team1_notifications.append(message)
+            similar_players_for_team1.append(new_player['NAME'])
             players_to_remove_team2.append(new_player['NAME'])
         else:
             team_data.loc[team_data['team_name'] == selected_team, 'U22 Initiative'] += 1
@@ -685,6 +691,7 @@ if team2_shortfall_players:
                 "message": f"{selected_team2} could not acquire players: {', '.join(team2_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team2_shortfall_players)} is \${int(total_team2_shortfall):,}."
             }
     team2_notifications.append(message)
+    similar_players_for_team2.append(player for player in team2_shortfall_players)
 
 if team1_players_acquired:
     message = {
@@ -705,7 +712,10 @@ if team1_shortfall_players:
                 "message": f"{selected_team} could not acquire players: {', '.join(team1_shortfall_players)}. The total GAM/TAM needed to acquire {', '.join(team1_shortfall_players)} is \${int(total_team1_shortfall):,}."
             }
     team1_notifications.append(message)
+    similar_players_for_team1.append(player for player in team1_shortfall_players)
 
+requires_recommendations_2 = False
+requires_recommendations_1 = False
 with st.expander(f"🔔 {selected_team2} to {selected_team} Trade notifications", expanded=True):
     for notification in team1_notifications:
         # Display each notification with an icon based on the type
@@ -726,22 +736,4 @@ with st.expander(f"🔔 {selected_team} to {selected_team2} Trade notifications"
         elif notification['type'] == 'info':
             st.info(notification['message'])
 
-# this is the winner of the trade based on the predicted model
-with st.expander('🏆 Trade Winner'):
-    if all(notification['type'] != 'error' for notification in team1_notifications) and \
-   all(notification['type'] != 'error' for notification in team2_notifications):
-        if dp_flag == 1:
-            st.error('We cannot determine the winner of this trade since one of these players is a DP. DPs have wide-ranging salaries and there are fewer of them, so it is difficult to estimate their value.')
-        elif na_flag == 1:
-            st.error('We cannot determine the winner of this trade since one of these players does not meet the minimum minutes requirement for our model. It is difficult to estimate a players value without having data to support it.')
-        else:
-            if total_value_team_1 > total_value_team_2:
-                difference = total_value_team_1 - total_value_team_2
-                difference = int(difference)
-                st.write(f'{selected_team} have won the trade according to our algorithm. The difference in predicted salaries is {difference:,}.')
-            elif total_value_team_1 < total_value_team_2:
-                difference = total_value_team_2 - total_value_team_1
-                difference = int(difference)
-                st.write(f'{selected_team2} have won the trade according to our algorithm. The difference in predicted salaries is {difference:,}.')
-            else:
-                st.write('This is a fair trade according to our algorithm!')
+
