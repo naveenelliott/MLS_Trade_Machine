@@ -7,7 +7,7 @@ asi_data = pd.read_csv('./Data/FinalCombinedDataset.csv')
 asi_data['NAME'] = asi_data['NAME'].str.title()
 rule_checking = asi_data.copy()
 team_data = pd.read_csv('./Data/Team_Models.csv')
-knn_data = pd.read_csv('./Data/RawDataForModel.csv')
+knn_data = pd.read_csv('./Data/knnData.csv')
 
 st.set_page_config(layout="wide", page_title='MLS Trade Machine', page_icon='Handshake.png')
 
